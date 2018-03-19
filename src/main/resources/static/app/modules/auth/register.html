@@ -1,0 +1,101 @@
+<!-- BACKGROUND IMAGE -->
+    <!--===================================================-->
+    <div id="bg-overlay"></div>
+
+
+    <!-- REGISTRATION FORM -->
+    <!--===================================================-->
+    <div class="cls-content">
+        <div class="cls-content-lg panel">
+            <div class="panel-body">
+                <div class="mar-ver pad-btm">
+                    <img src="http://tenece.com/ten/img/logo.png"><br><br>
+                    <h3 class="h4 mar-no">Create a New Account</h3>
+                    <p class="text-muted">StartHub! Let's set up your account.</p>
+                    <!--@if($errors->any())-->
+                    <!--<span style="color:red;">{{ $errors->first() }}</span>-->
+                    <!--@endif-->
+                </div>
+                <form data-ng-submit="register()">
+                    <!--<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="text" data-ng-model="user.fullName" class="form-control" placeholder="Full Name" name="fullName"
+                                       required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" data-ng-model="user.username" class="form-control" placeholder="Username" name="username" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input type="email" data-ng-model="user.email" class="form-control" placeholder="E-mail Address" name="email"
+                                       required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" data-ng-model="user.password" class="form-control" placeholder="Password" name="password"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <select name="sex" data-ng-model="user.gender" id="demo-nav-offcanvas" class="form-control" required>
+                                    <option value="" selected disabled="disabled">-- Select Gender --</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="checkbox pad-btm text-left">
+                        <input id="demo-form-checkbox" class="magic-checkbox" type="checkbox">
+                        <label for="demo-form-checkbox">I agree with the
+                            <a href="#" class="btn-link">Terms and Conditions</a>
+                        </label>
+                    </div> -->
+                    <button class="btn btn-primary btn-block" type="submit">Register</button>
+                </form>
+            </div>
+            <div class="pad-all">
+                Already have an account ?
+                <a href="javascript:;" ui-sref="login" class="btn-link mar-rgt">Sign In</a>
+
+                <!-- <div class="media pad-top bord-top">
+                    <div class="pull-right">
+                        <a href="#" class="pad-rgt">
+                            <i class="demo-psi-facebook icon-lg text-primary"></i>
+                        </a>
+                        <a href="#" class="pad-rgt">
+                            <i class="demo-psi-twitter icon-lg text-info"></i>
+                        </a>
+                        <a href="#" class="pad-rgt">
+                            <i class="demo-psi-google-plus icon-lg text-danger"></i>
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!--===================================================-->
+
+
+    <!-- DEMO PURPOSE ONLY -->
+    <!--===================================================-->
+    <div class="demo-bg">
+        <div id="demo-bg-list">
+            <div class="demo-loading">
+                <i class="psi-repeat-2"></i>
+            </div>
+            <img class="demo-chg-bg bg-trans active" src="img/bg-img/thumbs/bg-trns.jpg" alt="Background Image">
+            <img class="demo-chg-bg" src="img/bg-img/thumbs/bg-img-1.jpg" alt="Background Image">
+            <img class="demo-chg-bg" src="img/bg-img/thumbs/bg-img-2.jpg" alt="Background Image">
+            <img class="demo-chg-bg" src="img/bg-img/thumbs/bg-img-3.jpg" alt="Background Image">
+            <img class="demo-chg-bg" src="img/bg-img/thumbs/bg-img-4.jpg" alt="Background Image">
+            <img class="demo-chg-bg" src="img/bg-img/thumbs/bg-img-5.jpg" alt="Background Image">
+            <img class="demo-chg-bg" src="img/bg-img/thumbs/bg-img-6.jpg" alt="Background Image">
+            <img class="demo-chg-bg" src="img/bg-img/thumbs/bg-img-7.jpg" alt="Background Image">
+        </div>
+    </div>
+    <!--===================================================-->
+

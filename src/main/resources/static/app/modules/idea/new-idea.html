@@ -1,0 +1,154 @@
+<!--Page Title-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div id="page-title">
+    <h1 class="page-header text-overflow">New Idea</h1>
+
+    <!--Searchbox-->
+    <div class="searchbox">
+        <div class="input-group custom-search-form">
+            <input type="text" class="form-control" placeholder="Search..">
+            <span class="input-group-btn">
+                <button class="text-muted" type="button">
+                    <i class="demo-pli-magnifi-glass"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!--Breadcrumb-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<ol class="breadcrumb">
+    <li>
+        <a href="#">Home</a>
+    </li>
+    <li>
+        <a href="#">Forms</a>
+    </li>
+    <li class="active">Text Editor</li>
+</ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End breadcrumb-->
+
+<!--Page content-->
+<!--===================================================-->
+<div id="page-content">
+    <div class="fixed-fluid">
+        <div class="fixed-sm-200 fixed-md-250 pull-sm-left">
+            <div class="panel">
+                <p class="pad-hor text-main text-bold">Tags</p>
+                <ul class="list-inline mar-hor">
+                    <li class="tag tag-sm" data-ng-repeat="tag in tags">
+                        <a href="#">
+                            <i class="demo-pli-tag"></i> Family</a>
+                    </li>
+                    <li class="tag tag-sm">
+                        <a href="#">
+                            <i class="demo-pli-tag"></i> Home</a>
+                    </li>
+                    <li class="tag tag-sm">
+                        <a href="#">
+                            <i class="demo-pli-tag"></i> Work</a>
+                    </li>
+                    <li class="tag tag-sm">
+                        <a href="#">
+                            <i class="demo-pli-tag"></i> Film</a>
+                    </li>
+                    <li class="tag tag-sm">
+                        <a href="#">
+                            <i class="demo-pli-tag"></i> Music</a>
+                    </li>
+                    <li class="tag tag-sm">
+                        <a href="#">
+                            <i class="demo-pli-tag"></i> Photography</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fluid">
+            <!-- COMPOSE EMAIL -->
+            <!--===================================================-->
+            <div class="panel panel-default panel-left">
+                <div class="panel-body">
+                    <div class="mar-btm pad-btm clearfix">
+                        <!--Cc & bcc toggle buttons-->
+                        <div class="pull-right pad-btm">
+                            <div class="btn-group">
+                                <button id="demo-toggle-cc" data-toggle="button" type="button"
+                                        class="btn btn-sm btn-default btn-active-info">Cc
+                                </button>
+                                <button id="demo-toggle-bcc" data-toggle="button" type="button"
+                                        class="btn btn-sm btn-default btn-active-info">Bcc
+                                </button>
+                            </div>
+                        </div>
+
+                        <h1 class="page-header text-overflow">
+                            Compose Idea
+                        </h1>
+                    </div>
+
+
+                    <!--Input form-->
+                    <form role="form" class="form-horizontal">
+
+                        <div class="form-group">
+                            <label class="col-lg-1 control-label text-left" for="inputSubject">Subject</label>
+                            <div class="col-lg-11">
+                                <input type="text" id="inputSubject" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+
+
+                    <!--Attact file button-->
+                    <div class="media pad-btm">
+                        <div class="media-left">
+                                            <span class="btn btn-default btn-file">
+                                                Attachment
+                                                <input type="file">
+                                            </span>
+                        </div>
+                        <div id="demo-attach-file" class="media-body"></div>
+                    </div>
+
+
+                    <!--Wysiwyg editor : Summernote placeholder-->
+                    <!--<div id="idea"></div>-->
+
+                    <summernote height="300" focus="true" data-ng-model="idea.body"></summernote>
+
+                    <p class="text-main text-bold">Select Tags</p>
+                    <!-- Multiple Select Choosen -->
+                    <!--===================================================-->
+                    <select id="tags" data-ng-options="tag.id as tag.name for tag in tags" data-placeholder="Choose a Country..." multiple tabindex="4">
+                    </select>
+
+                    <div class="pad-ver">
+
+                        <!--Send button-->
+                        <button id="mail-send-btn" type="button" data-ng-click="postIdea()" class="btn btn-primary">
+                            <i class="demo-psi-mail-send icon-lg icon-fw"></i> Post Idea
+                        </button>
+
+                        <!--Save draft button-->
+                        <button id="mail-save-btn" type="button" class="btn btn-default">
+                            <i class="demo-pli-mail-unread icon-lg icon-fw"></i> Save Draft
+                        </button>
+
+                        <!--Discard button-->
+                        <button id="mail-discard-btn" type="button" class="btn btn-default">
+                            <i class="demo-pli-mail-remove icon-lg icon-fw"></i> Discard Idea
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--===================================================-->
+            <!-- END COMPOSE EMAIL -->
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#tags').chosen({width:'100%'});
+</script>

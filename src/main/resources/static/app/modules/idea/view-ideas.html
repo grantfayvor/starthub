@@ -1,0 +1,74 @@
+<!--Page Title-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<div id="page-title" data-ng-init="getRecentIdeas()">
+    <h1 class="page-header text-overflow">View Recent Ideas</h1>
+
+    <!--Searchbox-->
+    <div class="searchbox">
+        <div class="input-group custom-search-form">
+            <input type="text" class="form-control" placeholder="Search..">
+            <span class="input-group-btn">
+                <button class="text-muted" type="button">
+                    <i class="demo-pli-magnifi-glass"></i>
+                </button>
+            </span>
+        </div>
+    </div>
+</div>
+
+<!--Breadcrumb-->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<ol class="breadcrumb">
+    <li>
+        <a href="#">Home</a>
+    </li>
+    <li>
+        <a href="#">Forms</a>
+    </li>
+    <li class="active">Text Editor</li>
+</ol>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!--End breadcrumb-->
+
+<!--Page content-->
+<!--===================================================-->
+<div id="page-content">
+
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">Recent Ideas</h3>
+        </div>
+        <div class="panel-body">
+
+            <!--Summernote-->
+            <!--===================================================-->
+            <div id="demo-summernote-airmode" data-ng-repeat="idea in ideas" data-ng-init="initializeSummernote($index)">
+                <h4>Select a text to reveal the toolbar.</h4>
+                <p>Air-mode gives clearer interface with hidden toolbar.
+                    <br> To reveal toolbar, select a text where you want to shape up. Simply turn on
+                    <code>airMode</code> and just focus on text.</p>
+                <br>
+                <p>This is an Air-mode editable area.</p>
+                <ul>
+                    <li>Select a text to reveal the toolbar.</li>
+                    <li>Edit
+                        <b>rich document on-the-fly, so elastic!</b>
+                    </li>
+                </ul>
+                <p>End of air-mode area</p>
+            </div>
+            <!--===================================================-->
+            <!-- End Summernote -->
+
+        </div>
+    </div>
+
+
+</div>
+<!--===================================================-->
+<!--End page content-->
+
+
+</div>
+<!--===================================================-->
+<!--END CONTENT CONTAINER-->
