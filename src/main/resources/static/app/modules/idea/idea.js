@@ -2,17 +2,34 @@
  * Created by Harrison on 03/03/2018.
  */
 
-app.controller('IdeaController', ['$rootScope', '$scope', '$state'/*, '$stateParam'*/, 'IdeaService', 'TagService',
-    function ($rootScope, $scope, $state/*, $stateParam*/, IdeaService, TagService) {
+app.controller('IdeaController', ['$rootScope', '$scope', '$state', '$timeout' /*, '$stateParam'*/ , 'IdeaService', 'TagService',
+    function ($rootScope, $scope, $state, $timeout /*, $stateParam*/ , IdeaService, TagService) {
 
         $scope.idea = {};
         $scope.ideas = [];
+        $scope.success = false;
 
         $scope.postIdea = function () {
+            $scope.idea.tags = [];
+            $('#tags').val().forEach(function(tag) {
+                $scope.idea.tags.push({name : tag});
+            });
+            // $scope.idea.tags = $('#tags').chosen().val();
             IdeaService.addIdea($scope.idea, function (response) {
+                if (response.data === true) {
+                    console.log("the post has successfully been sent");
+                    $scope.idea = {};
+                    $scope.sumbitMessage = "The Idea was successfully posted";
+                    $scope.success = true;
+                } else {
+                    $scope.sumbitMessage = "An error occurred while trying to post the idea. Please try again";
+                    $scope.success = false;
+                }
 
             }, function (response) {
                 console.error(response);
+                $scope.sumbitMessage = "An error occurred while trying to post the idea. Please try again";
+                $scope.success = false;
             });
         };
 
@@ -24,14 +41,20 @@ app.controller('IdeaController', ['$rootScope', '$scope', '$state'/*, '$statePar
             });
         };
 
-        $scope.getTags = function() {
-            TagService.getTags(function(response) {
+        $scope.getTags = function () {
+            TagService.getTags(function (response) {
                 $scope.tags = response.data;
+                $timeout(function () {
+                    $('#tags').chosen({
+                        width: '100%'
+                    });
+                });
             }, function (response) {
                 console.log("an error occurred while trying to fetch the tags");
             });
         };
-}]);
+    }
+]);
 
 app.service('IdeaService', ['APIService', function (APIService) {
 

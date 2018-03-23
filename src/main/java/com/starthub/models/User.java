@@ -20,18 +20,18 @@ public class User implements UserDetails {
     private long id;
     @Column
     private String fullName;
-    @Column
+    @Column(unique = true)
     private String username;
     @Column
     private String email;
     @Column
-    @ColumnDefault(value = "false")
+    @ColumnDefault(value = "0")
     private boolean locked;
     @Column
-    @ColumnDefault(value = "true")
+    @ColumnDefault(value = "1")
     private boolean enabled;
     @Column
-    @ColumnDefault(value = "false")
+    @ColumnDefault(value = "0")
     private boolean expired;
     @Column
     private String password;

@@ -1,10 +1,7 @@
 package com.starthub.controllers;
 
 import com.starthub.services.IService;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.Serializable;
 import java.util.List;
@@ -21,7 +18,7 @@ public abstract class CRUDController<T, ID extends Serializable> {
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public boolean save(@RequestBody T t) {
+    public T save(@RequestBody T t) {
         return service.save(t);
     }
 
@@ -31,11 +28,11 @@ public abstract class CRUDController<T, ID extends Serializable> {
     }
 
     @RequestMapping("/{id}")
-    public T findOne(@RequestParam("id") ID id) throws Exception {
+    public T findOne(@PathVariable("id") ID id) throws Exception {
         return service.findOne(id);
     }
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public boolean delete(@RequestParam("id") ID id) {
+    public boolean delete(@PathVariable("id") ID id) {
         return service.delete(id);
     }
 }

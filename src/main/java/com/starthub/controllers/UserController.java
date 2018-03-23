@@ -25,7 +25,7 @@ public class UserController extends CRUDController<User, Long> {
 
     @RequestMapping("/register")
     @Override
-    public boolean save(@RequestBody User user) {
+    public User save(@RequestBody User user) {
         return super.save(user);
     }
 }

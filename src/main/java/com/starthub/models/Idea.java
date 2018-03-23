@@ -1,10 +1,6 @@
 package com.starthub.models;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
-import javax.validation.constraints.Null;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -13,30 +9,16 @@ import java.util.List;
 
 @Entity
 @Table(name = "ideas")
-public class Idea {
+public class Idea extends Auditable<String>{
 
     @Id
     @GeneratedValue
     private long id;
-    @Column
+    @Column(columnDefinition = "longtext not null")
     private String body;
-    @Column
+    @Column(insertable = false, updatable = false)
     @OneToMany
-    @Null
     private List<Tag> tags;
-    @Column
-    @DateTimeFormat
-    private Date createdAt;
-    @Column
-    @DateTimeFormat
-    private Date updatedAt;
-
-    public Idea () {
-        if (this.createdAt == null) {
-            this.createdAt = new Date();
-        }
-        this.updatedAt = new Date();
-    }
 
     public String getBody() {
         return body;
@@ -62,12 +44,8 @@ public class Idea {
         this.tags = tags;
     }
 
-    public Date getCreatedAt() {
-        return createdAt;
+    @Override
+    public String toString(){
+        return "body= " + body + " & tags= " + tags.toString() + " & tagsSize= " + tags.size();
     }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
 }

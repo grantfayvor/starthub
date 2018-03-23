@@ -903,7 +903,7 @@
 
                                 <!--Menu list item-->
                                 <li class="active-link">
-                                    <a href="javascript:;" ui-sref = "home.dashboard" ui-sref-active>
+                                    <a href="javascript:;" ui-sref = "home.dashboard" ui-sref-active="active">
                                         <i class="demo-psi-home"></i>
                                             <span class="menu-title">
                                                 <strong>DASHBOARD</strong>
@@ -911,10 +911,11 @@
                                     </a>
                                 </li>
 
+
                                 <!--Menu list item-->
                                 <li>
-                                    <a href="#">
-                                        <i class="demo-psi-split-vertical-2"></i>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#idea_menu" ui-sref-active="active">
+                                        <i class="demo-psi--car-coins"></i>
                                             <span class="menu-title">
                                                 <strong>IDEA</strong>
                                             </span>
@@ -922,15 +923,30 @@
                                     </a>
 
                                     <!--Submenu-->
-                                    <ul class="collapse">
+                                    <ul id="idea_menu" class="collapse">
                                         <li>
-                                            <a href="javascript:;" ui-sref="home.new-idea" ui-sref-active>New Idea</a>
+                                            <a href="javascript:;" ui-sref="home.new-idea">New Idea</a>
                                         </li>
                                         <li>
-                                            <a href="javascript:;" ui-sref="home.my-ideas" ui-sref-active>My Ideas</a>
+                                            <a href="javascript:;" ui-sref="home.my-ideas">My Ideas</a>
                                         </li>
                                         <li>
-                                            <a href="javascript:;" ui-sref="home.drafts" ui-sref-active>Drafts</a>
+                                            <a href="javascript:;" ui-sref="home.drafts">Drafts</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:;" data-toggle="collapse" data-target="#settings_menu">
+                                        <i class="demo-psi-computer-secure"></i>
+                                        <span class="menu-title">
+                                            <strong>SETTINGS</strong>
+                                        </span>
+                                        <i class="arrow"></i>
+                                    </a>
+                                    <ul id="settings_menu" class="collapse">
+                                        <li>
+                                            <a href="javascript:;">TEST</a>
                                         </li>
                                     </ul>
                                 </li>

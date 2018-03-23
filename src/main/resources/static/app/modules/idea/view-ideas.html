@@ -40,6 +40,8 @@
         </div>
         <div class="panel-body">
 
+            <summernote data-ng-repeat="idea in ideas" data-ng-bind="idea.body" height="100px" airMode></summernote>
+
             <!--Summernote-->
             <!--===================================================-->
             <div id="demo-summernote-airmode" data-ng-repeat="idea in ideas" data-ng-init="initializeSummernote($index)">

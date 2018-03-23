@@ -13,7 +13,7 @@ public class Tag {
     @Id
     @GeneratedValue
     private long id;
-    @Column
+    @Column(unique = true)
     private String name;
 
     public long getId() {

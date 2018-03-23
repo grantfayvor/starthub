@@ -16,11 +16,12 @@ public abstract class AbstractService<T, ID extends Serializable> implements ISe
         this.repository = repository;
     }
 
-    public boolean save(T t) {
+    public T save(T t) {
         try {
-            return repository.save(t) != null;
+            return repository.save(t);
         } catch (Exception ex) {
-            return false;
+            System.out.println(ex);
+            return null;
         }
     }
 

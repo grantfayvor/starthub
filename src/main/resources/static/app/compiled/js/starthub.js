@@ -43693,51 +43693,117 @@ angular.module('summernote', [])
 app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider',
     function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
 
-        $httpProvider.defaults.headers.common['Accept'] = "application/json";
+        $httpProvider.defaults.headers.common.Accept = "application/json";
         $httpProvider.defaults.headers.common['Content-Type'] = "application/json";
-        $httpProvider.defaults.useXDomain = true;
+        // $httpProvider.defaults.useXDomain = true;
 
         $locationProvider.html5Mode(true);
 
         $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.when('/', 'dashboard');
 
         $stateProvider
-            .state('dashboard', {
+            .state('home', {
                 url: '/',
+                templateUrl: '/app/home.html',
+                controller: 'MainController'
+            })
+            .state('home.dashboard', {
+                url: 'dashboard',
                 templateUrl: '/app/dashboard.html',
                 controller: 'MainController'
             })
-            .state('new-idea', {
-                url: '/new-idea',
+            .state('home.new-idea', {
+                url: 'new-idea',
                 templateUrl: '/app/modules/idea/new-idea.html',
                 controller: 'IdeaController'
             })
-            .state('my-ideas', {
-                url: '/my-ideas',
+            .state('home.my-ideas', {
+                url: 'my-ideas',
                 templateUrl: '/app/modules/idea/view-ideas.html',
                 controller: 'IdeaController'
             })
-            .state('drafts', {
-                url: '/drafts',
+            .state('home.drafts', {
+                url: 'drafts',
                 templateUrl: '/app/modules/idea/drafts.html',
                 controller: 'IdeaController'
             })
-            .state('view-users', {
-                url: '/view-users',
+            .state('home.view-users', {
+                url: 'view-users',
                 templateUrl: '/app/modules/user/view-users.html',
                 controller: 'UserController'
+            })
+            .state('login', {
+                url: '/login',
+                templateUrl: '/app/modules/auth/login.html',
+                controller: 'AuthController'
+            })
+            .state('register', {
+                url: '/register',
+                templateUrl: '/app/modules/auth/register.html',
+                controller: 'AuthController'
             });
 
-    }]);
-
-    app.run(['$http', '$rootScope', '$cookies', function($http, $rootScope, $cookies) {
-
-    }]);;/**
+    }
+]);
+;/**
  * Created by Harrison on 3/17/2018.
  */
 
 app.constant('tagUrl', '/api/tag')
-    .constant('authUrl', '/api/user');;app.service('APIService', ['$http', function ($http) {
+    .constant('userUrl', '/api/user')
+    .constant('baseUrl', 'localhost:9000')
+    .constant('authInfo', {
+        clientId: 'starthubclientidforextremeusers',
+        clientSecret: 'XY7kmzoNzl100',
+        grantType: 'password'
+    });;/**
+ * Created by Harrison on 3/19/2018.
+ */
+
+app.run(['$http', '$rootScope', '$cookies', '$state', '$timeout', function ($http, $rootScope, $cookies, $state, $timeout) {
+
+    var token = window.sessionStorage.getItem('authorization');
+
+    if (token) {
+        $http.defaults.headers.common.Authorization = 'Bearer ' + token;
+        $http.get('/oauth/check_token?token=' + token)
+            .then(function (response) {
+                // console.log(response.data);
+                $rootScope.isAuthorized = typeof response.data != 'undefined' || response.data != null;
+                if($rootScope.isAuthorized) $timeout(function () { $state.go('home'); });
+                else $timeout(function () { 
+                    delete $http.defaults.headers.common.Authorization;
+                    window.sessionStorage.removeItem('authorization');
+                    $state.go('login'); 
+                });
+            }, function (response) {
+                $rootScope.isAuthorized = false;
+                $timeout(function () { 
+                    delete $http.defaults.headers.common.Authorization;
+                    window.sessionStorage.removeItem('authorization');
+                    $state.go('login'); 
+                });
+            });
+    } else {
+        $timeout(function () { $state.go('login'); });
+    }
+
+    // $rootScope.$on('$stateChangeStart', function (event, toState) {
+    //     if (!angular.isFunction(toState.data.rule)) {
+    //         event.preventDefault();
+    //         return;
+    //     }
+
+    //     if (!$rootScope.isAuthorized) {
+    //         event.preventDefault();
+    //         $timeout(function () { $state.go('login'); });
+    //     }
+
+    //     event.preventDefault();
+    //     $timeout(function () { $state.go(toState); });
+    // });
+}]);;app.service('APIService', ['$http', function ($http) {
 
     this.get = function (url, successHandler, errorHandler) {
         $http.get(url)
@@ -43788,41 +43854,6 @@ app.constant('tagUrl', '/api/tag')
 
 
 }]);;app.controller('MainController', ['$rootScope', '$scope', '$cookies', '$state', 'MainService', function ($rootScope, $scope, $cookies, $state, MainService) {
-
-    var state = $cookies.get('state');
-    if(state) {
-        $state.go(state);
-        $cookies.remove('state');
-    }
-
-    $rootScope.formatDate = function (timeStamp) {
-        var date = new Date(timeStamp);
-        var day = date.getDay();
-        switch(day) {
-            case 0 :
-                day = 'Sunday';
-                break;
-            case 1 :
-                day = 'Monday';
-                break;
-            case 2 :
-                day = 'Tuesday';
-                break;
-            case 3 : 
-                day = 'Wednesday';
-                break;
-            case 4 :
-                day = 'Thursday';
-                break;
-            case 5 :
-                day = 'Friday';
-                break;
-            case 6 : 
-                day = 'Saturday';
-                break;
-        }
-        return day + ', ' + date.toLocaleString();
-    };
     
 }]);
 
@@ -43832,9 +43863,50 @@ app.service('MainService', ['APIService', function (APIService) {
  * Created by Harrison on 3/17/2018.
  */
 
-app.service('AuthService', ['APIService', 'authUrl', function(APIService, authUrl) {
+app.controller('AuthController', ['$rootScope', '$scope', '$state', 'AuthService',
+    function ($rootScope, $scope, $state, AuthService) {
+        
+        $rootScope.$state = $state;
+        $scope.user = {};
 
-    
+        $scope.register = function () {
+            AuthService.registerUser($scope.user, function (response) {
+                if(response.data === true) $scope.login();
+                else console.log("an error occurred while trying to register the user");
+            }, function (response) {
+                console.log("an error occurred while trying to register the user");
+            });
+        };
+
+        $scope.login = function () {
+            AuthService.login($scope.user.username, $scope.user.password, function (response) {
+                window.sessionStorage.setItem('authorization', response.data.access_token);
+                AuthService.setHttpAuthorizationHeader(response.data.access_token);
+                $state.go('home.dashboard');
+            }, function (response) {
+                console.log("an error occurred while trying to login to the system");
+                console.log(response);
+            });
+        };
+    }
+]);
+
+app.service('AuthService', ['$http', 'APIService', 'authInfo', 'baseUrl', function ($http, APIService, authInfo, baseUrl) {
+
+    this.login = function (username, password, successHandler, errorHandler) {
+        APIService.post('http://' + authInfo.clientId + ':' + authInfo.clientSecret + '@' + baseUrl +
+            '/oauth/token?username=' + username + '&password=' + password + '&grant_type=' + authInfo.grantType, {},
+            successHandler, errorHandler);
+    };
+
+    this.registerUser = function (userDetails, successHandler, errorHandler) {
+        APIService.post('/api/user/register', userDetails, successHandler, errorHandler);
+    };
+
+    this.setHttpAuthorizationHeader = function (data) {
+        $http.defaults.headers.common.Authorization = 'Bearer ' + data;
+    };
+
 }]);;/**
  * Created by Harrison on 03/03/2018.
  */
@@ -43863,17 +43935,34 @@ app.service('FeedService', ['APIService', function (APIService) {
  * Created by Harrison on 03/03/2018.
  */
 
-app.controller('IdeaController', ['$rootScope', '$scope', '$state'/*, '$stateParam'*/, 'IdeaService', 'TagService',
-    function ($rootScope, $scope, $state/*, $stateParam*/, IdeaService, TagService) {
+app.controller('IdeaController', ['$rootScope', '$scope', '$state', '$timeout' /*, '$stateParam'*/ , 'IdeaService', 'TagService',
+    function ($rootScope, $scope, $state, $timeout /*, $stateParam*/ , IdeaService, TagService) {
 
         $scope.idea = {};
         $scope.ideas = [];
+        $scope.success = false;
 
         $scope.postIdea = function () {
+            $scope.idea.tags = [];
+            $('#tags').val().forEach(function(tag) {
+                $scope.idea.tags.push({name : tag});
+            });
+            // $scope.idea.tags = $('#tags').chosen().val();
             IdeaService.addIdea($scope.idea, function (response) {
+                if (response.data === true) {
+                    console.log("the post has successfully been sent");
+                    $scope.idea = {};
+                    $scope.sumbitMessage = "The Idea was successfully posted";
+                    $scope.success = true;
+                } else {
+                    $scope.sumbitMessage = "An error occurred while trying to post the idea. Please try again";
+                    $scope.success = false;
+                }
 
             }, function (response) {
                 console.error(response);
+                $scope.sumbitMessage = "An error occurred while trying to post the idea. Please try again";
+                $scope.success = false;
             });
         };
 
@@ -43885,14 +43974,20 @@ app.controller('IdeaController', ['$rootScope', '$scope', '$state'/*, '$statePar
             });
         };
 
-        $scope.getTags = function() {
-            TagService.getTags(function(response) {
+        $scope.getTags = function () {
+            TagService.getTags(function (response) {
                 $scope.tags = response.data;
+                $timeout(function () {
+                    $('#tags').chosen({
+                        width: '100%'
+                    });
+                });
             }, function (response) {
                 console.log("an error occurred while trying to fetch the tags");
             });
         };
-}]);
+    }
+]);
 
 app.service('IdeaService', ['APIService', function (APIService) {
 

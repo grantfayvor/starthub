@@ -7,7 +7,7 @@ import java.util.List;
  */
 public interface IService<T, ID> {
 
-    boolean save(T t);
+    T save(T t);
     List<T> findAll() throws Exception;
     T findOne(ID id) throws Exception;
     boolean delete(ID id);

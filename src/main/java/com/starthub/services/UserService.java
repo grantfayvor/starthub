@@ -29,13 +29,14 @@ public class UserService extends AbstractService<User, Long> implements UserDeta
     }
 
     @Override
-    public boolean save(User user) {
+    public User save(User user) {
         try {
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(ENCODING_STRENGTH);
             user.setPassword(passwordEncoder.encode(user.getPassword()));
-            return repository.save(user) != null;
+            return repository.save(user);
         }catch (Exception ex) {
-            return false;
+            System.out.println(ex);
+            return null;
         }
     }
 

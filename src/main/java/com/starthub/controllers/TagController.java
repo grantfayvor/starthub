@@ -1,27 +1,24 @@
 package com.starthub.controllers;
 
-import com.starthub.models.Idea;
 import com.starthub.models.Tag;
-import com.starthub.services.IdeaService;
+import com.starthub.services.TagService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by Harrison on 03/03/2018.
+ * Created by Harrison on 3/20/2018.
  */
 
 @RestController
-@RequestMapping("api/idea")
-public class IdeaController extends CRUDController<Idea, Long> {
+@RequestMapping("api/tag")
+public class TagController extends CRUDController<Tag, Long> {
 
     @Autowired
-    private IdeaService service;
+    private TagService service;
 
-    public IdeaController(IdeaService service) {
+    public TagController(TagService service) {
         super(service);
         this.service = service;
     }
-
 }

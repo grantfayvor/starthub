@@ -1,6 +1,6 @@
 <!--Page Title-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<div id="page-title">
+<div id="page-title" data-ng-init="getTags();">
     <h1 class="page-header text-overflow">New Idea</h1>
 
     <!--Searchbox-->
@@ -34,6 +34,8 @@
 <!--===================================================-->
 <div id="page-content">
     <div class="fixed-fluid">
+        <div class="col-sm-8 pull-right alert alert-dismissible" data-ng-bind="submitMessage" data-ng-show="submitMessage" data-ng-class="{'alert-success': success, 'alert-danger': !success}">
+        </div>
         <div class="fixed-sm-200 fixed-md-250 pull-sm-left">
             <div class="panel">
                 <p class="pad-hor text-main text-bold">Tags</p>
@@ -121,7 +123,8 @@
                     <p class="text-main text-bold">Select Tags</p>
                     <!-- Multiple Select Choosen -->
                     <!--===================================================-->
-                    <select id="tags" data-ng-options="tag.id as tag.name for tag in tags" data-placeholder="Choose a Country..." multiple tabindex="4">
+                    <select id="tags" data-placeholder="Choose related tags..." multiple tabindex="4">
+                        <option value="{{tag.name}}" data-ng-repeat="tag in tags">{{tag.name}}</option>
                     </select>
 
                     <div class="pad-ver">
@@ -150,5 +153,5 @@
 </div>
 
 <script type="text/javascript">
-    $('#tags').chosen({width:'100%'});
+    // $('#tags').chosen({width:'100%'});
 </script>

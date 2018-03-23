@@ -75,6 +75,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 .failureUrl("/login?error=true")
                 .and()
                 .logout()
+                .logoutSuccessUrl("/")
                 .and()
                 .csrf()
                 .disable();
