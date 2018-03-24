@@ -1,5 +1,7 @@
 package com.starthub.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -17,7 +19,7 @@ public class Idea extends Auditable<String>{
     @Column(columnDefinition = "longtext not null")
     private String body;
     @Column(insertable = false, updatable = false)
-    @OneToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     private List<Tag> tags;
 
     public String getBody() {
@@ -46,6 +48,6 @@ public class Idea extends Auditable<String>{
 
     @Override
     public String toString(){
-        return "body= " + body + " & tags= " + tags.toString() + " & tagsSize= " + tags.size();
+        return "body= " + body + " & tags= " + tags.toString() + " & tagsSize= " + tags.size() + " tags [\n" + tags + "\n ]";
     }
 }

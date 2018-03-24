@@ -1,11 +1,9 @@
 package com.starthub.controllers;
 
 import com.starthub.models.Idea;
-import com.starthub.models.Tag;
 import com.starthub.services.IdeaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,10 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/idea")
 public class IdeaController extends CRUDController<Idea, Long> {
 
-    @Autowired
     private IdeaService service;
 
-    public IdeaController(IdeaService service) {
+    public IdeaController(@Autowired IdeaService service) {
         super(service);
         this.service = service;
     }

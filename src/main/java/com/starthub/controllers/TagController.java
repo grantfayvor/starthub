@@ -14,10 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/tag")
 public class TagController extends CRUDController<Tag, Long> {
 
-    @Autowired
     private TagService service;
 
-    public TagController(TagService service) {
+    public TagController(@Autowired TagService service) {
         super(service);
         this.service = service;
     }

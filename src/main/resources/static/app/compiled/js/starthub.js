@@ -43728,6 +43728,11 @@ app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stat
                 templateUrl: '/app/modules/idea/drafts.html',
                 controller: 'IdeaController'
             })
+            .state('home.feed', {
+                url: 'feed',
+                templateUrl: '/app/modules/feed/view-feed.html',
+                controller: 'FeedController'
+            })
             .state('home.view-users', {
                 url: 'view-users',
                 templateUrl: '/app/modules/user/view-users.html',
@@ -43751,6 +43756,8 @@ app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stat
  */
 
 app.constant('tagUrl', '/api/tag')
+    .constant('ideaUrl', '/api/idea')
+    .constant('feedUrl', '/api/feed')
     .constant('userUrl', '/api/user')
     .constant('baseUrl', 'localhost:9000')
     .constant('authInfo', {
@@ -43769,7 +43776,6 @@ app.run(['$http', '$rootScope', '$cookies', '$state', '$timeout', function ($htt
         $http.defaults.headers.common.Authorization = 'Bearer ' + token;
         $http.get('/oauth/check_token?token=' + token)
             .then(function (response) {
-                // console.log(response.data);
                 $rootScope.isAuthorized = typeof response.data != 'undefined' || response.data != null;
                 if($rootScope.isAuthorized) $timeout(function () { $state.go('home'); });
                 else $timeout(function () { 
@@ -43803,7 +43809,32 @@ app.run(['$http', '$rootScope', '$cookies', '$state', '$timeout', function ($htt
     //     event.preventDefault();
     //     $timeout(function () { $state.go(toState); });
     // });
-}]);;app.service('APIService', ['$http', function ($http) {
+}]);;app.factory('socketProvider', function() {
+
+    var socket = new SockJS('/gs-guide-websocket');
+
+    var provider = {
+        getSocket : function() {
+            return socket;
+        },
+        getStompClient : function () {
+            return Stomp.over(socket);
+        },
+        sendMessage: function(recipient, data, options) {
+            provider.getStompClient().send(recipient, options, JSON.stringify(data));
+        },
+        subscribe : function (subscriber, publisher) {
+            provider.connectToSocket(function (frame) {
+                console.log('Connected: ' + frame);
+                provider.getStompClient().subscribe(subscriber, publisher);
+            });
+        },
+        connectToSocket : function (callback) {
+            provider.getStompClient().connect({}, callback);
+        }
+    };
+    return provider;
+});;app.service('APIService', ['$http', function ($http) {
 
     this.get = function (url, successHandler, errorHandler) {
         $http.get(url)
@@ -43871,7 +43902,7 @@ app.controller('AuthController', ['$rootScope', '$scope', '$state', 'AuthService
 
         $scope.register = function () {
             AuthService.registerUser($scope.user, function (response) {
-                if(response.data === true) $scope.login();
+                if(Boolean(response.data) === true || response.data === true) $scope.login();
                 else console.log("an error occurred while trying to register the user");
             }, function (response) {
                 console.log("an error occurred while trying to register the user");
@@ -43879,6 +43910,7 @@ app.controller('AuthController', ['$rootScope', '$scope', '$state', 'AuthService
         };
 
         $scope.login = function () {
+            console.log($scope.user.username + ' === ' + $scope.user.password);
             AuthService.login($scope.user.username, $scope.user.password, function (response) {
                 window.sessionStorage.setItem('authorization', response.data.access_token);
                 AuthService.setHttpAuthorizationHeader(response.data.access_token);
@@ -43891,7 +43923,8 @@ app.controller('AuthController', ['$rootScope', '$scope', '$state', 'AuthService
     }
 ]);
 
-app.service('AuthService', ['$http', 'APIService', 'authInfo', 'baseUrl', function ($http, APIService, authInfo, baseUrl) {
+app.service('AuthService', ['$http', 'APIService', 'authInfo', 'baseUrl', 'userUrl', 
+    function ($http, APIService, authInfo, baseUrl, userUrl) {
 
     this.login = function (username, password, successHandler, errorHandler) {
         APIService.post('http://' + authInfo.clientId + ':' + authInfo.clientSecret + '@' + baseUrl +
@@ -43900,7 +43933,7 @@ app.service('AuthService', ['$http', 'APIService', 'authInfo', 'baseUrl', functi
     };
 
     this.registerUser = function (userDetails, successHandler, errorHandler) {
-        APIService.post('/api/user/register', userDetails, successHandler, errorHandler);
+        APIService.post(userUrl + '/register', userDetails, successHandler, errorHandler);
     };
 
     this.setHttpAuthorizationHeader = function (data) {
@@ -43911,25 +43944,53 @@ app.service('AuthService', ['$http', 'APIService', 'authInfo', 'baseUrl', functi
  * Created by Harrison on 03/03/2018.
  */
 
-app.controller('FeedController', ['$rootScope', '$scope', '$state', '$stateParam', 'FeedService',
-    function ($rootScope, $scope, $state, $stateParam, FeedService) {
+app.controller('FeedController', ['$rootScope', '$scope', '$state', 'FeedService',
+    function ($rootScope, $scope, $state, FeedService) {
 
         $scope.feeds = [];
 
+        FeedService.subscribeSocket(function (feed) {
+            $scope.feed = JSON.parse(feed);
+            $scope.feeds.filter(function(feed) {
+                feed.id == $scope.feed.id;
+            }).map(function(feed) {
+                feed = $scope.feed;
+            });
+            console.log("######################33 the particular feed is");
+            console.log($scope.feed);
+            console.log("=========== i just updated feeds"); 
+            console.log($scope.feeds);
+        });
+
         $scope.getIdeasFeed = function () {
             FeedService.getIdeasFeed(function (response) {
-                $scope.feeds = response;
+                $scope.feeds = response.data;
             }, function (response) {
                 console.log(response);
             });
         };
+
+        $scope.vote = function (upVote, feedId) {
+            console.log("the current vote is " + upVote);
+            FeedService.vote(upVote, feedId);
+        };
     }
 ]);
 
-app.service('FeedService', ['APIService', function (APIService) {
+app.service('FeedService', ['APIService', 'feedUrl', 'socketProvider', function (APIService, feedUrl, socketProvider) {
 
+    var self = this;
+    
     this.getIdeasFeed = function (successHandler, errorHandler) {
-        APIService.get('/api/feed', successHandler, errorHandler);
+        APIService.get(feedUrl, successHandler, errorHandler);
+    };
+
+    this.vote = function (upVote, feedId) {
+        socketProvider.sendMessage('/ws/vote', { upVote: upVote, feedId: feedId });
+    };
+
+    this.subscribeSocket = function (publisher) {
+        socketProvider.subscribe('/topic/feed', publisher);
     };
 }]);;/**
  * Created by Harrison on 03/03/2018.
@@ -43945,17 +44006,20 @@ app.controller('IdeaController', ['$rootScope', '$scope', '$state', '$timeout' /
         $scope.postIdea = function () {
             $scope.idea.tags = [];
             $('#tags').val().forEach(function(tag) {
-                $scope.idea.tags.push({name : tag});
+                var data = tag.split(",");
+                $scope.idea.tags.push({
+                    id: data[0], 
+                    name : data[1]
+                });
             });
-            // $scope.idea.tags = $('#tags').chosen().val();
             IdeaService.addIdea($scope.idea, function (response) {
-                if (response.data === true) {
-                    console.log("the post has successfully been sent");
+                if (Boolean(response.data) === true || response.data === true) {
                     $scope.idea = {};
-                    $scope.sumbitMessage = "The Idea was successfully posted";
+                    $('.chosen-choices').html('<li class="search-field"><input type="text" value="Choose related tags..." class="default" autocomplete="off" style="width: 152.203px;" tabindex="4"></li>');
+                    $scope.submitMessage = "The Idea was successfully posted";
                     $scope.success = true;
                 } else {
-                    $scope.sumbitMessage = "An error occurred while trying to post the idea. Please try again";
+                    $scope.submitMessage = "An error occurred while trying to post the idea. Please try again";
                     $scope.success = false;
                 }
 
@@ -43989,14 +44053,14 @@ app.controller('IdeaController', ['$rootScope', '$scope', '$state', '$timeout' /
     }
 ]);
 
-app.service('IdeaService', ['APIService', function (APIService) {
+app.service('IdeaService', ['APIService', 'ideaUrl', function (APIService, ideaUrl) {
 
     this.addIdea = function (idea, successHandler, errorHandler) {
-        APIService.post('/api/idea', idea, successHandler, errorHandler);
+        APIService.post(ideaUrl, idea, successHandler, errorHandler);
     };
 
     this.getRecentIdeas = function (successHandler, errorHandler) {
-        APIService.get('/api/idea', successHandler, errorHandler);
+        APIService.get(ideaUrl, successHandler, errorHandler);
     };
 }]);;app.factory('TagService', ['APIService', 'tagUrl', function (APIService, tagUrl) {
 

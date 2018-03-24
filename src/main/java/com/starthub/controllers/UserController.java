@@ -15,17 +15,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("api/user")
 public class UserController extends CRUDController<User, Long> {
 
-    @Autowired
     private UserService service;
 
-    public UserController(UserService service) {
+    public UserController(@Autowired UserService service) {
         super(service);
         this.service = service;
     }
 
     @RequestMapping("/register")
     @Override
-    public User save(@RequestBody User user) {
+    public boolean save(@RequestBody User user) {
         return super.save(user);
     }
 }

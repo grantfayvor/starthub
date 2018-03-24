@@ -34,29 +34,74 @@
 <!--===================================================-->
 <div id="page-content">
 
-    <div class="panel">
-        <div class="panel-heading">
-            <h3 class="panel-title">Ideas Feed</h3>
-        </div>
-        <div class="panel-body">
+    <div class="fixed-fluid">
 
-            <!--Summernote-->  
-            <!--===================================================-->
-            <div id="demo-summernote-airmode" data-ng-repeat="feed in feeds" data-ng-init="initializeSummernote($index)">
-                <h4>Select a text to reveal the toolbar.</h4>
-                <p>Air-mode gives clearer interface with hidden toolbar.
-                    <br> To reveal toolbar, select a text where you want to shape up. Simply turn on
-                    <code>airMode</code> and just focus on text.</p>
-                <br>
-                <p>This is an Air-mode editable area.</p>
-                <ul>
-                    <li>Select a text to reveal the toolbar.</li>
-                    <li>Edit
-                        <b>rich document on-the-fly, so elastic!</b>
-                    </li>
-                </ul>
-                <p>End of air-mode area</p>
-                <p><span class="ion-checkmark-circled"></span>17 <span class="ion-close-circled"></span>5</p>
+        <div class="fluid">
+
+            <!--Summernote-->
+
+            <div class="panel" data-ng-repeat="feed in feeds">
+                <div class="panel-body">
+                    <div class="media-block">
+                        <a class="media-left" href="#">
+                            <img class="img-circle img-sm" alt="Profile Picture" src="img/profile-photos/10.png">
+                        </a>
+                        <div class="media-body">
+                            <div class="pad-btm">
+                                <a href="#" class="btn-link text-semibold media-heading box-inline">
+                                    <span data-ng-bind="feed.idea.createdBy">
+                                </a>
+                                added a new idea
+                                <!-- <span class="text-semibold">General photos</span> -->
+
+                                <p class="text-muted text-sm">
+                                    <i class="demo-pli-smartphone-3 icon-lg"></i> - From Mobile - 11 min ago</p>
+
+                            </div>
+                            <summernote height="100" airmode editable="false" data-ng-model="feed.idea.body"></summernote>
+                        </div>
+                        <div class="media">
+                            <div class="media-right">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="javascript:;" data-ng-click="vote(false, feed.id)">
+                                            <i class="demo-pli-remove icon-lg "></i>
+                                        </a>
+                                        <span class="text-semibold" data-ng-bind="feed.downVote"></span>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" data-ng-click="vote(true, feed.id)">
+                                            <i class="demo-pli-heart-2 icon-lg"></i>
+                                        </a>
+                                        <span class="text-semibold" data-ng-bind="feed.upVote"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="media-body">
+                                <!-- <ul class="list-inline mar-no">
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-xs img-circle" src="img/profile-photos/9.png" alt="Profile Picture">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-xs img-circle" src="img/profile-photos/3.png" alt="Profile Picture">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-xs img-circle" src="img/profile-photos/1.png" alt="Profile Picture">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="text-bold text-sm">14+</a>
+                                    </li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!--===================================================-->
             <!-- End Summernote -->
@@ -70,6 +115,6 @@
 <!--End page content-->
 
 
-</div>
+<!-- </div> -->
 <!--===================================================-->
 <!--END CONTENT CONTAINER-->

@@ -1,7 +1,10 @@
 package com.starthub.controllers;
 
 import com.starthub.services.IService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.Serializable;
 import java.util.List;
@@ -18,8 +21,8 @@ public abstract class CRUDController<T, ID extends Serializable> {
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public T save(@RequestBody T t) {
-        return service.save(t);
+    public boolean save(@RequestBody T t) {
+        return service.save(t) != null;
     }
 
     @RequestMapping("")

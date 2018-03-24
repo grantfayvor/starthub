@@ -5,8 +5,6 @@ import com.starthub.repositories.TagRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 /**
  * Created by Harrison on 3/20/2018.
  */
@@ -14,10 +12,9 @@ import java.util.List;
 @Service
 public class TagService extends AbstractService<Tag, Long>{
 
-    @Autowired
     private TagRepository tagRepository;
 
-    public TagService(TagRepository repository) {
+    public TagService(@Autowired TagRepository repository) {
         super(repository);
         this.tagRepository = repository;
     }
@@ -26,7 +23,4 @@ public class TagService extends AbstractService<Tag, Long>{
         return tagRepository.findByName(name);
     }
 
-//    public List<Tag> findByIdea(long ideaId) {
-//        return tagRepository.findByIdea(ideaId);
-//    }
 }

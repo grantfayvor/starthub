@@ -38,6 +38,11 @@ app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stat
                 templateUrl: '/app/modules/idea/drafts.html',
                 controller: 'IdeaController'
             })
+            .state('home.feed', {
+                url: 'feed',
+                templateUrl: '/app/modules/feed/view-feed.html',
+                controller: 'FeedController'
+            })
             .state('home.view-users', {
                 url: 'view-users',
                 templateUrl: '/app/modules/user/view-users.html',

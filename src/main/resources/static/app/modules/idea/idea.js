@@ -12,17 +12,20 @@ app.controller('IdeaController', ['$rootScope', '$scope', '$state', '$timeout' /
         $scope.postIdea = function () {
             $scope.idea.tags = [];
             $('#tags').val().forEach(function(tag) {
-                $scope.idea.tags.push({name : tag});
+                var data = tag.split(",");
+                $scope.idea.tags.push({
+                    id: data[0], 
+                    name : data[1]
+                });
             });
-            // $scope.idea.tags = $('#tags').chosen().val();
             IdeaService.addIdea($scope.idea, function (response) {
-                if (response.data === true) {
-                    console.log("the post has successfully been sent");
+                if (Boolean(response.data) === true || response.data === true) {
                     $scope.idea = {};
-                    $scope.sumbitMessage = "The Idea was successfully posted";
+                    $('.chosen-choices').html('<li class="search-field"><input type="text" value="Choose related tags..." class="default" autocomplete="off" style="width: 152.203px;" tabindex="4"></li>');
+                    $scope.submitMessage = "The Idea was successfully posted";
                     $scope.success = true;
                 } else {
-                    $scope.sumbitMessage = "An error occurred while trying to post the idea. Please try again";
+                    $scope.submitMessage = "An error occurred while trying to post the idea. Please try again";
                     $scope.success = false;
                 }
 
@@ -56,13 +59,13 @@ app.controller('IdeaController', ['$rootScope', '$scope', '$state', '$timeout' /
     }
 ]);
 
-app.service('IdeaService', ['APIService', function (APIService) {
+app.service('IdeaService', ['APIService', 'ideaUrl', function (APIService, ideaUrl) {
 
     this.addIdea = function (idea, successHandler, errorHandler) {
-        APIService.post('/api/idea', idea, successHandler, errorHandler);
+        APIService.post(ideaUrl, idea, successHandler, errorHandler);
     };
 
     this.getRecentIdeas = function (successHandler, errorHandler) {
-        APIService.get('/api/idea', successHandler, errorHandler);
+        APIService.get(ideaUrl, successHandler, errorHandler);
     };
 }]);

@@ -10,7 +10,6 @@ app.run(['$http', '$rootScope', '$cookies', '$state', '$timeout', function ($htt
         $http.defaults.headers.common.Authorization = 'Bearer ' + token;
         $http.get('/oauth/check_token?token=' + token)
             .then(function (response) {
-                // console.log(response.data);
                 $rootScope.isAuthorized = typeof response.data != 'undefined' || response.data != null;
                 if($rootScope.isAuthorized) $timeout(function () { $state.go('home'); });
                 else $timeout(function () { 

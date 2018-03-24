@@ -34,8 +34,7 @@
 <!--===================================================-->
 <div id="page-content">
     <div class="fixed-fluid">
-        <div class="col-sm-8 pull-right alert alert-dismissible" data-ng-bind="submitMessage" data-ng-show="submitMessage" data-ng-class="{'alert-success': success, 'alert-danger': !success}">
-        </div>
+
         <div class="fixed-sm-200 fixed-md-250 pull-sm-left">
             <div class="panel">
                 <p class="pad-hor text-main text-bold">Tags</p>
@@ -72,15 +71,15 @@
             <!--===================================================-->
             <div class="panel panel-default panel-left">
                 <div class="panel-body">
+                    <div class="col-sm-8 pull-right alert alert-dismissible" data-ng-bind="submitMessage" data-ng-show="submitMessage" data-ng-class="{'alert-success': success, 'alert-danger': !success}">
+                    </div>
                     <div class="mar-btm pad-btm clearfix">
                         <!--Cc & bcc toggle buttons-->
                         <div class="pull-right pad-btm">
                             <div class="btn-group">
-                                <button id="demo-toggle-cc" data-toggle="button" type="button"
-                                        class="btn btn-sm btn-default btn-active-info">Cc
+                                <button id="demo-toggle-cc" data-toggle="button" type="button" class="btn btn-sm btn-default btn-active-info">Cc
                                 </button>
-                                <button id="demo-toggle-bcc" data-toggle="button" type="button"
-                                        class="btn btn-sm btn-default btn-active-info">Bcc
+                                <button id="demo-toggle-bcc" data-toggle="button" type="button" class="btn btn-sm btn-default btn-active-info">Bcc
                                 </button>
                             </div>
                         </div>
@@ -106,10 +105,10 @@
                     <!--Attact file button-->
                     <div class="media pad-btm">
                         <div class="media-left">
-                                            <span class="btn btn-default btn-file">
-                                                Attachment
-                                                <input type="file">
-                                            </span>
+                            <span class="btn btn-default btn-file">
+                                Attachment
+                                <input type="file">
+                            </span>
                         </div>
                         <div id="demo-attach-file" class="media-body"></div>
                     </div>
@@ -124,7 +123,7 @@
                     <!-- Multiple Select Choosen -->
                     <!--===================================================-->
                     <select id="tags" data-placeholder="Choose related tags..." multiple tabindex="4">
-                        <option value="{{tag.name}}" data-ng-repeat="tag in tags">{{tag.name}}</option>
+                        <option value="{{tag.id + ',' + tag.name}}" data-ng-repeat="tag in tags">{{tag.name}}</option>
                     </select>
 
                     <div class="pad-ver">

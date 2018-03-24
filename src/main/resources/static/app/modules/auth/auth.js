@@ -10,7 +10,7 @@ app.controller('AuthController', ['$rootScope', '$scope', '$state', 'AuthService
 
         $scope.register = function () {
             AuthService.registerUser($scope.user, function (response) {
-                if(response.data === true) $scope.login();
+                if(Boolean(response.data) === true || response.data === true) $scope.login();
                 else console.log("an error occurred while trying to register the user");
             }, function (response) {
                 console.log("an error occurred while trying to register the user");
@@ -18,6 +18,7 @@ app.controller('AuthController', ['$rootScope', '$scope', '$state', 'AuthService
         };
 
         $scope.login = function () {
+            console.log($scope.user.username + ' === ' + $scope.user.password);
             AuthService.login($scope.user.username, $scope.user.password, function (response) {
                 window.sessionStorage.setItem('authorization', response.data.access_token);
                 AuthService.setHttpAuthorizationHeader(response.data.access_token);
@@ -30,7 +31,8 @@ app.controller('AuthController', ['$rootScope', '$scope', '$state', 'AuthService
     }
 ]);
 
-app.service('AuthService', ['$http', 'APIService', 'authInfo', 'baseUrl', function ($http, APIService, authInfo, baseUrl) {
+app.service('AuthService', ['$http', 'APIService', 'authInfo', 'baseUrl', 'userUrl', 
+    function ($http, APIService, authInfo, baseUrl, userUrl) {
 
     this.login = function (username, password, successHandler, errorHandler) {
         APIService.post('http://' + authInfo.clientId + ':' + authInfo.clientSecret + '@' + baseUrl +
@@ -39,7 +41,7 @@ app.service('AuthService', ['$http', 'APIService', 'authInfo', 'baseUrl', functi
     };
 
     this.registerUser = function (userDetails, successHandler, errorHandler) {
-        APIService.post('/api/user/register', userDetails, successHandler, errorHandler);
+        APIService.post(userUrl + '/register', userDetails, successHandler, errorHandler);
     };
 
     this.setHttpAuthorizationHeader = function (data) {

@@ -17,13 +17,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService extends AbstractService<User, Long> implements UserDetailsService {
 
-    @Autowired
     private UserRepository repository;
 
     @Value("${security.encoding-strength}")
     private int ENCODING_STRENGTH;
 
-    public UserService(UserRepository repository) {
+    public UserService(@Autowired UserRepository repository) {
         super(repository);
         this.repository = repository;
     }
