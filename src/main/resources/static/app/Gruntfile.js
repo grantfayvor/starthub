@@ -9,6 +9,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: [
+                    'lib/stomp.js',
                     'angular/angular.js',
 //                    'angular/angular-sanitize.js',
                     'angular/angular-cookies.js',
@@ -40,7 +41,8 @@ module.exports = function (grunt) {
             options: {
                 globals: {
                     jQuery: true,
-                }
+                },
+                'esversion': 6
             }
         },
         watch: {

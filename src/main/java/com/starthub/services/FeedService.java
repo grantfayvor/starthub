@@ -1,8 +1,11 @@
 package com.starthub.services;
 
+import com.starthub.messages.FeedMessage;
 import com.starthub.models.Feed;
 import com.starthub.repositories.FeedRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 /**
@@ -19,12 +22,14 @@ public class FeedService extends AbstractService<Feed, Long> {
         this.repository = repository;
     }
 
-    public Feed vote(boolean upVote, long feedId) throws Exception {
-        if (upVote == true) upVote(feedId);
-        else downVote(feedId);
-        Feed feed = super.findOne(feedId);
-//        System.out.println("the current feed is " + feed.toString());
-        return feed;
+    public Page<Feed> findAll(int pageNumber, int pageSize) {
+        return repository.findAllByOrderByUpdatedAtDesc(new PageRequest(pageNumber, pageSize));
+    }
+
+    public Feed vote(FeedMessage message) throws Exception {
+        if (message.isUpVote()) upVote(message.getFeedId());
+        else downVote(message.getFeedId());
+        return super.findOne(message.getFeedId());
     }
 
     private int upVote(long feedId) {

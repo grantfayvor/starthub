@@ -1,6 +1,8 @@
 package com.starthub.repositories;
 
 import com.starthub.models.Feed;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -13,6 +15,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 public interface FeedRepository extends JpaRepository<Feed, Long> {
+
+    Page<Feed> findAllByOrderByUpdatedAtDesc(Pageable pageable);
 
     @Query("UPDATE Feed f SET f.upVote = f.upVote + 1 WHERE f.id=?1")
     @Transactional

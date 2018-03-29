@@ -1,25 +1,51 @@
-app.factory('socketProvider', function() {
+app.factory('socketProvider', function () {
 
-    var socket = new SockJS('/gs-guide-websocket');
+    var socket = new SockJS('/starthub-ws');
 
     var provider = {
-        getSocket : function() {
+        getSocket: function () {
             return socket;
         },
-        getStompClient : function () {
+        getStompClient: function () {
             return Stomp.over(socket);
         },
-        sendMessage: function(recipient, data, options) {
-            provider.getStompClient().send(recipient, options, JSON.stringify(data));
+        sendMessage: function (recipient, data, options) {
+            provider.getStompClient().send(recipient, options, data);
         },
-        subscribe : function (subscriber, publisher) {
+        executeRequest: function (subscriber, onMessageReceived, recipient, data, options) {
+            if (Array.prototype.slice.call(arguments).length > 2) {
+                options = recipient;
+                data = onMessageReceived;
+                recipient = subscriber;
+                subscriber = null;
+                onMessageReceived = null;
+                provider.connectToSocket(function (frame) {
+                    console.log('Connected: ' + frame);
+                    provider.getStompClient().subscribe(subscriber, onMessageReceived);
+                    provider.getStompClient().send(recipient, options, data);
+                });
+            } else {
+                provider.subscribe(subscriber, onMessageReceived);
+            }
+        },
+        subscribe: function (subscriber, options, onMessageReceived) {
+            if (Array.prototype.slice.call(arguments) == 2) {
+                onMessageReceived = options;
+                options = {};
+            }
             provider.connectToSocket(function (frame) {
                 console.log('Connected: ' + frame);
-                provider.getStompClient().subscribe(subscriber, publisher);
+                provider.getStompClient().subscribe(subscriber, onMessageReceived, options);
             });
         },
-        connectToSocket : function (callback) {
+        unsubscribe: function(id, options) {
+            provider.getStompClient().unsubscribe(id, options);
+        },
+        connectToSocket: function (callback) {
             provider.getStompClient().connect({}, callback);
+        },
+        disconnectSocket: function () {
+            provider.getStompClient().disconnect();
         }
     };
     return provider;

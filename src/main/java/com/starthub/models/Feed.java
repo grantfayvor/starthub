@@ -13,7 +13,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "feeds")
-public class Feed {
+public class Feed extends Auditable<String> {
 
     @Id
     @GeneratedValue

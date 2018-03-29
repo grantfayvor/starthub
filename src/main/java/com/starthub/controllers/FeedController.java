@@ -4,11 +4,14 @@ import com.starthub.messages.FeedMessage;
 import com.starthub.models.Feed;
 import com.starthub.services.FeedService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -29,8 +32,8 @@ public class FeedController {
 
     @RequestMapping("")
     @ResponseBody
-    public List<Feed> findAll() throws Exception {
-        return feedService.findAll();
+    public Page<Feed> findAll(@RequestParam("pageNumber") int pageNumber, @RequestParam("pageSize") int pageSize) throws Exception {
+        return feedService.findAll(pageNumber, pageSize);
     }
 
     @RequestMapping("/{id}")
@@ -40,9 +43,8 @@ public class FeedController {
     }
 
     @MessageMapping("/vote")
-    @SendTo("/topic/feed")
-    public Feed vote(FeedMessage feedMessage) throws Exception{
-        System.out.println("the feed message is " + feedMessage.toString());
-        return feedService.vote(feedMessage.isUpVote(), feedMessage.getFeedId());
+    @SendTo("/exchange/feed")
+    public Feed vote(@Payload FeedMessage feedMessage) throws Exception{
+        return feedService.vote(feedMessage);
     }
 }

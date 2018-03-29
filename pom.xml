@@ -9,7 +9,7 @@
 	<packaging>jar</packaging>
 
 	<name>starthub</name>
-	<description>StartHub project for startups to get funding</description>
+	<description>StartHub project for start ups to get funding</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

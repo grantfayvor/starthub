@@ -1,6 +1,6 @@
 <!--Page Title-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<div id="page-title" data-ng-init="getIdeasFeed()">
+<div id="page-title" data-ng-init="getIdeasFeed(0, 10)">
     <h1 class="page-header text-overflow">Ideas Feed</h1>
 
     <!--Searchbox-->
@@ -40,7 +40,7 @@
 
             <!--Summernote-->
 
-            <div class="panel" data-ng-repeat="feed in feeds">
+            <div class="panel" data-ng-repeat="feed in feeds.content">
                 <div class="panel-body">
                     <div class="media-block">
                         <a class="media-left" href="#">

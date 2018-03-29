@@ -2,26 +2,24 @@
  * Created by Harrison on 03/03/2018.
  */
 
-app.controller('FeedController', ['$rootScope', '$scope', '$state', 'FeedService',
-    function ($rootScope, $scope, $state, FeedService) {
+app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 'FeedService',
+    function ($rootScope, $scope, $state, $timeout, FeedService) {
 
         $scope.feeds = [];
+        var SUBSCRIBER_ID = 'feed-subscriber-007';
 
-        FeedService.subscribeSocket(function (feed) {
-            $scope.feed = JSON.parse(feed);
-            $scope.feeds.filter(function(feed) {
-                feed.id == $scope.feed.id;
-            }).map(function(feed) {
-                feed = $scope.feed;
+        FeedService.subscribeToService('/exchange/feed', {id: SUBSCRIBER_ID}, function (feed) {
+            $scope.feed = JSON.parse(feed.body);
+            $scope.feeds.content = $scope.feeds.content.map(function (feed) {
+                return feed.id == $scope.feed.id ? $scope.feed : feed;
             });
-            console.log("######################33 the particular feed is");
-            console.log($scope.feed);
-            console.log("=========== i just updated feeds"); 
-            console.log($scope.feeds);
+            $timeout(function() {
+                $scope.$apply();
+            });
         });
 
-        $scope.getIdeasFeed = function () {
-            FeedService.getIdeasFeed(function (response) {
+        $scope.getIdeasFeed = function (pageNumber, pageSize) {
+            FeedService.getIdeasFeed(pageNumber, pageSize, function (response) {
                 $scope.feeds = response.data;
             }, function (response) {
                 console.log(response);
@@ -29,25 +27,57 @@ app.controller('FeedController', ['$rootScope', '$scope', '$state', 'FeedService
         };
 
         $scope.vote = function (upVote, feedId) {
-            console.log("the current vote is " + upVote);
-            FeedService.vote(upVote, feedId);
+            FeedService.vote({
+                upVote: upVote,
+                feedId: feedId
+            });
         };
+
+        $scope.$on('$destroy', function() {
+            FeedService.unsubscribeFromService(SUBSCRIBER_ID, {});
+            FeedService.disconnectSocket();
+        });
     }
 ]);
 
 app.service('FeedService', ['APIService', 'feedUrl', 'socketProvider', function (APIService, feedUrl, socketProvider) {
 
     var self = this;
-    
-    this.getIdeasFeed = function (successHandler, errorHandler) {
-        APIService.get(feedUrl, successHandler, errorHandler);
+
+    this.getIdeasFeed = function (pageNumber, pageSize, successHandler, errorHandler) {
+        APIService.get(feedUrl + '?pageNumber=' + pageNumber + '&pageSize=' + pageSize,
+            successHandler, errorHandler);
     };
 
-    this.vote = function (upVote, feedId) {
-        socketProvider.sendMessage('/ws/vote', { upVote: upVote, feedId: feedId });
+    this.vote = function (data) {
+        socketProvider.sendMessage('/ws/vote', JSON.stringify(data), {});
     };
 
-    this.subscribeSocket = function (publisher) {
-        socketProvider.subscribe('/topic/feed', publisher);
+    this.subscribeToService = function (subscriber, options, onMessageReceived) {
+        socketProvider.subscribe(subscriber, options, onMessageReceived);
+    };
+
+    this.unsubscribeFromService = function(id, options) {
+        socketProvider.unsubscribe(id, options);
+    };
+
+    this.disconnectSocket = function() {
+        socketProvider.disconnectSocket();
+    };
+
+    this.setSubscription = function (id, callback) {
+        socketProvider.getStompClient().subscriptions[id] = callback;
+    };
+
+    this.getStompClient = function() {
+        return socketProvider.getStompClient();
+    };
+
+    this.getSocket = function () {
+        return socketProvider.getSocket();
+    };
+
+    this.executeRequest = function (subscriber, onMessageReceived, recipient, data, options) {
+        socketProvider.executeRequest(subscriber, onMessageReceived, recipient, data, options);
     };
 }]);

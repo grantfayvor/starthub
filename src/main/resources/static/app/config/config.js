@@ -1,7 +1,7 @@
 var app = angular.module('starthub', ['ui.router', 'ngCookies', 'summernote']);
 
-app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider',
-    function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
+app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', /* 'socketProvider', */
+function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider, $urlRouterProvider/*, socketProvider*/) {
 
         $httpProvider.defaults.headers.common.Accept = "application/json";
         $httpProvider.defaults.headers.common['Content-Type'] = "application/json";
@@ -42,6 +42,7 @@ app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stat
                 url: 'feed',
                 templateUrl: '/app/modules/feed/view-feed.html',
                 controller: 'FeedController'
+                // onExit: socketProvider.disconnectSocket()
             })
             .state('home.view-users', {
                 url: 'view-users',
