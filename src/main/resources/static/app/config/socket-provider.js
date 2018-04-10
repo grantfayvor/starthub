@@ -10,7 +10,7 @@ app.factory('socketProvider', function () {
             return Stomp.over(socket);
         },
         sendMessage: function (recipient, data, options) {
-            provider.getStompClient().send(recipient, options, data);
+            this.getStompClient().send(recipient, options, data);
         },
         executeRequest: function (subscriber, onMessageReceived, recipient, data, options) {
             if (Array.prototype.slice.call(arguments).length > 2) {
@@ -19,13 +19,13 @@ app.factory('socketProvider', function () {
                 recipient = subscriber;
                 subscriber = null;
                 onMessageReceived = null;
-                provider.connectToSocket(function (frame) {
+                this.connectToSocket(function (frame) {
                     console.log('Connected: ' + frame);
                     provider.getStompClient().subscribe(subscriber, onMessageReceived);
                     provider.getStompClient().send(recipient, options, data);
                 });
             } else {
-                provider.subscribe(subscriber, onMessageReceived);
+                this.subscribe(subscriber, onMessageReceived);
             }
         },
         subscribe: function (subscriber, options, onMessageReceived) {
@@ -33,19 +33,19 @@ app.factory('socketProvider', function () {
                 onMessageReceived = options;
                 options = {};
             }
-            provider.connectToSocket(function (frame) {
+            this.connectToSocket(function (frame) {
                 console.log('Connected: ' + frame);
                 provider.getStompClient().subscribe(subscriber, onMessageReceived, options);
             });
         },
         unsubscribe: function(id, options) {
-            provider.getStompClient().unsubscribe(id, options);
+            this.getStompClient().unsubscribe(id, options);
         },
         connectToSocket: function (callback) {
-            provider.getStompClient().connect({}, callback);
+            this.getStompClient().connect({}, callback);
         },
         disconnectSocket: function () {
-            provider.getStompClient().disconnect();
+            this.getStompClient().disconnect();
         }
     };
     return provider;
