@@ -7,6 +7,10 @@ app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 
 
         $scope.feeds = [];
         var SUBSCRIBER_ID = 'feed-subscriber-007';
+        
+        $timeout(function() {
+            $(".note-editable").attr("contenteditable","false");
+        }, 10);
 
         FeedService.subscribeToService('/exchange/feed', {id: SUBSCRIBER_ID}, function (feed) {
             $scope.feed = JSON.parse(feed.body);
@@ -27,10 +31,15 @@ app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 
         };
 
         $scope.vote = function (upVote, feedId) {
+            Pace.restart();
             FeedService.vote({
                 upVote: upVote,
                 feedId: feedId
             });
+        };
+
+        $scope.viewPost = function(post) {
+            $scope.post = post;
         };
 
         $scope.$on('$destroy', function() {

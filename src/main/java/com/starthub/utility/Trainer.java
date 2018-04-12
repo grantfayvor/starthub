@@ -1,7 +1,9 @@
 package com.starthub.utility;
 
+import weka.classifiers.AbstractClassifier;
 import weka.classifiers.Classifier;
 import weka.classifiers.lazy.IBk;
+import weka.classifiers.trees.J48;
 import weka.core.Instances;
 
 /**
@@ -9,8 +11,12 @@ import weka.core.Instances;
  */
 public class Trainer{
 
-    private static IBk classifier;
+    private static AbstractClassifier classifier;
     public Instances instances;
+
+    public Trainer(AbstractClassifier classifier) {
+        this.classifier = classifier;
+    }
 
     public Instances getInstances() {
         return instances;
@@ -20,21 +26,15 @@ public class Trainer{
         this.instances = instances;
     }
 
-    public Trainer(IBk classifier) {
-        this.classifier = classifier;
-    }
-
-    public IBk trainClassifier(String path) throws Exception {
+    public AbstractClassifier trainClassifier(String path) throws Exception {
         instances = DataSetUtil.constructInstances(path);
-        int lastIndex = instances.numAttributes() - 1;
         instances.setClassIndex(0);
         classifier.buildClassifier(instances);
         return classifier;
     }
 
-    public IBk trainClassifier(Instances dataSet) throws Exception {
+    public AbstractClassifier trainClassifier(Instances dataSet) throws Exception {
         this.instances = dataSet;
-        int lastIndex = this.instances.numAttributes() - 1;
         this.instances.setClassIndex(0);
         classifier.buildClassifier(this.instances);
         return classifier;
@@ -46,4 +46,5 @@ public class Trainer{
         instances.setClassIndex(lastIndex);
         classifier.buildClassifier(instances);
     }
+
 }

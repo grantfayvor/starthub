@@ -3,6 +3,7 @@ package com.starthub.utility;
 import weka.core.Instances;
 import weka.core.SparseInstance;
 import weka.core.converters.ConverterUtils;
+import weka.core.converters.DictionarySaver;
 import weka.core.stemmers.LovinsStemmer;
 import weka.core.tokenizers.NGramTokenizer;
 import weka.core.tokenizers.WordTokenizer;
@@ -41,9 +42,20 @@ public class DataSetUtil {
         return dataSet;
     }
 
-    public static Instances constructInstancesFromTrainingData() {
+    public static Instances constructInstancesFromTrainingData(String dataPath) {
         Instances dataSet = null;
-        try(BufferedReader reader = new BufferedReader(new FileReader(TRAINING_DATA))) {
+        try(BufferedReader reader = new BufferedReader(new FileReader(dataPath))) {
+            dataSet = new Instances(reader);
+            return dataSet;
+        } catch (IOException ex) {
+            System.out.println(ex);
+            return dataSet;
+        }
+    }
+
+    public static Instances constructInstancesFromTokenizedData(String dataPath) {
+        Instances dataSet = null;
+        try(BufferedReader reader = new BufferedReader(new FileReader(dataPath))) {
             dataSet = new Instances(reader);
             return dataSet;
         } catch (IOException ex) {

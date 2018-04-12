@@ -1,7 +1,7 @@
 <!--Page Title-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <div id="page-title" data-ng-init="getIdeasFeed(0, 10)">
-    <h1 class="page-header text-overflow">Ideas Feed</h1>
+    <!-- <h1 class="page-header text-overflow">Ideas Feed</h1> -->
 
     <!--Searchbox-->
     <div class="searchbox">
@@ -18,7 +18,7 @@
 
 <!--Breadcrumb-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<ol class="breadcrumb">
+<!-- <ol class="breadcrumb">
     <li>
         <a href="#">Home</a>
     </li>
@@ -26,7 +26,7 @@
         <a href="#">Forms</a>
     </li>
     <li class="active">Text Editor</li>
-</ol>
+</ol> -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!--End breadcrumb-->
 
@@ -40,7 +40,7 @@
 
             <!--Summernote-->
 
-            <div class="panel" data-ng-repeat="feed in feeds.content">
+            <div class="panel col-sm-5 col-xs-5" data-ng-repeat="feed in feeds.content">
                 <div class="panel-body">
                     <div class="media-block">
                         <a class="media-left" href="#">
@@ -58,7 +58,7 @@
                                     <i class="demo-pli-smartphone-3 icon-lg"></i> - From Mobile - 11 min ago</p>
 
                             </div>
-                            <summernote height="100" airmode editable="false" data-ng-model="feed.idea.body"></summernote>
+                            <summernote height="100" airmode editable="false" data-ng-click="viewPost(feed)" data-ng-model="feed.idea.body"></summernote>
                         </div>
                         <div class="media">
                             <div class="media-right">

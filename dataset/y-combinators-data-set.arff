@@ -1,0 +1,1412 @@
+@relation 'y-combinators-data-set-weka.filters.unsupervised.attribute.Reorder-R2,3,4,5,6,7,8,1-weka.filters.unsupervised.attribute.NominalToString-Cfirst-weka.filters.unsupervised.attribute.NominalToString-C1-weka.filters.unsupervised.attribute.NominalToString-C1-6-weka.filters.unsupervised.attribute.NominalToString-C7'
+
+@attribute 'Company Name' string
+@attribute 'Website & Crunchbase links' string
+@attribute 'Cohort Date' string
+@attribute 'Exit Value' string
+@attribute H/M/L string
+@attribute Funding string
+@attribute Description string
+@attribute State {Exited,Operating,Dead}
+
+@data
+Reddit,http://www.reddit.com,Jun-05,'$20,000,000',M,'$250,100,000','Acquired by Conde Nast in 2006.A social news website that displays news based on your preferences and what the community likes',Exited
+Loopt,http://www.loopt.com,Jun-05,'$43,400,000',H,'$39,105,997 ','Acquired by Green Dot for $43.4MM.Loopt is a social service that connects people to their community',Exited
+Kiko,http://kiko.com,Jun-05,'$258,100',H,'$50,000','Sold for $258k on eBay.Kiko was a web calendar for anyone who wants to keep and share a calendar online.',Exited
+Parakey,http://www.parakey.com,Jun-05,'$5,000,000',L,?,'Acquired by Facebook in July 2007.Parakey was a Web-based computer user interface',Exited
+TextPayMe,http://www.textpayme.com,Jun-05,'$3,000,000',L,?,'Acquired by Amazon for ~$3MM.An SMS payment service that lets you send money to other people using cell phone text messaging',Exited
+ClickFacts,http://clickfacts.com,Jun-05,?,?,'$847,708 ','ClickFacts is a Malware Software Solutions company for buyers and sellers of online media.',Operating
+Simmery,None,Jun-05,?,?,?,?,Operating
+Infogami,http://infogami.co.uk,Jun-05,?,?,?,'Merged with Reddit.Infogami is a wiki application framework built on web.py',Operating
+Memamp,None,Jun-05,?,?,?,'A better desktop search solution',Dead
+Wufoo,http://wufoo.com,Jan-06,'$35,000,000',H,'$118,000','Acquired by SurveyMonkey for $35MM in 2011.Wufoos HTML form builder helps you create online web forms',Exited
+Snipshot,http://snipshot.com,Jan-06,?,?,?,'Acquired by Ark in 2013.Snipshot is a photo editor that lets you start editing any photo with one click of a bookmarklet',Exited
+ProjectWedding,http://www.projectwedding.com,Jan-06,'$4,000,000',L,?,?,Exited
+Clustrix,http://www.clustrix.com,Jan-06,?,?,'$71,650,000','Clustrix has built a NewSQL database with no limits',Operating
+InklingMarkets,http://inklingmarkets.com,Jan-06,?,?,'$20,000','Inkling provides a platform for companies to run their own internal or external prediction marketplaces',Operating
+AudioBeta,None,Jan-06,?,?,?,?,Dead
+Flagr,http://flagr.com,Jan-06,?,?,?,'Flagr enables users to share places, adding photos, video and descriptions from their mobile phone',Dead
+Xobni,http://www.xobni.com,Jun-06,'$48,000,000',H,'$41,752,000','Acquired by Yahoo for ~70MM in 2013.Xobni (the word inbox spelled backwards) makes your inbox and address book smarter',Exited
+OMGPOP,http://omgpop.com,Jun-06,'$200,000,000',H,'$16,600,000','Acquired by Zynga for ~$180MM in 2012.A developer/publisher of multiplayer, social and mobile games. Created Draw Something',Exited
+Scribd,http://scribd.com,Jun-06,?,?,'$47,762,000','Join the membership for readers, and get monthly access to books, audiobooks, and more',Operating
+Talkito,None,Jun-06,?,?,?,'A service that enables its users to meet and chat when they visit the same websites.',Operating
+JumpChat,https://jumpch.at,Jun-06,?,?,?,'A platform bridging mobile text messages, email, and IM communication without needing to download anything',Operating
+PollGround,https://pollground.wordpress.com,Jun-06,?,?,?,'A social polling site. Easily create surveys and allow the wisdom of the crowd to answer your questions',Operating
+Shoutfit,None,Jun-06,?,?,?,'Upload images to create an online closet, and build a network of fashionable friends',Operating
+JamGlue,http://www.jamglue.com,Jun-06,?,?,?,'An online community where you can listen to or mix music from a library of user-contributed music',Dead
+LikeBetter,https://www.likebetter.com,Jun-06,?,?,?,'An online personality test game, where you look at two photos and choose which one you like better',Dead
+Thinkature,None,Jun-06,?,?,?,'An online collaboration environment that allows users to chat and draw diagrams on a shared whiteboard.',Dead
+Twitch,http://www.twitch.tv,Jan-07,'$970,000,000',H,'$35,000,000',?,Exited
+Heysan,http://www.heysan.com,Jan-07,'$4,000,000',L,'$875,000','Acquired by Good Technology in May 2009.Heysan was a free mobile messaging and community',Exited
+Auctomatic,http://auctomatic.com,Jan-07,'$5,000,000',H,'$400,000','Acquired by Live Current Media in 2008.An auction and marketplace management system for individual sellers on sites like Ebay and Amazon',Exited
+Octopart,http://octopart.com,Jan-07,?,?,'$374,999 ','A search engine for electronic parts',Exited
+Zenter,None,Jan-07,'$4,000,000',L,'$15,000','Acquired by Google in June 2007.Zenter provided software for creating online slide presentations',Exited
+Weebly,http://www.weebly.com,Jan-07,?,?,'$39,826,763 ','Weebly is an AJAX website creator that allows you to create pages with template skins and content widgets',Operating
+Buxfer,http://www.buxfer.com,Jan-07,?,?,'$315,000','Buxfer is the next-generation personal finance solution, taking money management to the web',Operating
+VirtualMin,http://www.virtualmin.com,Jan-07,?,?,?,'A powerful and flexible web hosting control panel for Linux and BSD systems',Operating
+View3,https://view3.com,Jan-07,?,?,?,?,Operating
+Writewith,http://writewith.com,Jan-07,?,?,?,'A collaborative writing web app, enabling you to easily write, edit, and publish a document with a group',Dead
+SocialMoth,http://socialmoth.com,Jan-07,?,?,?,'Socialmoth is a community to post your thoughts anonymously',Dead
+Tsumobi,http://tsumobi.com,Jan-07,?,?,?,'A J2ME compatible programming language to download mobile apps for Tsumobi-enabled sites',Dead
+'Whitenoise Networks',http://www.whitenoisenetworks.com,Jan-07,?,?,?,'Whitenoise is like a social network for the music industry',Dead
+Songkick,http://songkick.com,Jun-07,'$5,000,000',?,'$60,815,000','An online database of concerts for music enthusiasts',Exited
+Disqus,http://www.disqus.com,Jun-07,'$90,000,000',?,'$10,500,000','Beautiful, real-time, engaging discussions for your website',Exited
+Zecter,http://www.zecter.com,Jun-07,'$10,000,000',L,'$2,515,000','Acquired by Motorola in 2010.Zecter created technology to make it easy to share files with others over the internet',Exited
+Appjet,http://appjet.com,Jun-07,'$9,000,000',L,'$715,000','Acquired by Google in 2009.AppJet ws an online programming tool for building simple web apps.',Exited
+SocialPicks,http://www.socialpicks.com,Jun-07,'$8,000,000',L,'$500,000','Acquired by FinancialContent in 2009.An online community where investors share investment ideas with each other',Exited
+Clickpass,None,Jun-07,'$1,000,000',L,'$20,000','Acquired by Yola in 2008.Clickpass made OpenID easy to use',Exited
+Anywhere.fm,http://www.anywhere.fm,Jun-07,'$2,000,000',H,'$15,000','Acquired by imeem in 2008.Anywhere.fm lets you upload your music collection and play your music anywhere from the web',Exited
+Dropbox,http://www.dropbox.com,Jun-07,?,?,'$2,057,215,000','A file hosting service that offers cloud storage, file synchronization, and personal cloud software',Operating
+Bountii,http://bountii.com,Jun-07,?,?,'$15,000','Acquired by Yola in 2008.Clickpass made OpenID easy to use',Operating
+BlueFrogGaming,http://www.bluefroggaming.com,Jun-07,?,?,?,'Fantasy sports fans can sign up and play pickup games against other players on the site for virtual dollars or for real money',Operating
+Eivod,http://,Jun-07,?,?,?,?,Operating
+HelloChair,http://www.hellochair.com,Jun-07,?,?,'$889,999 ',?,Dead
+Fuzzwich,http://fuzzwich.com,Jun-07,?,?,'$15,000','A browser-based 2D animation studio',Dead
+Splashup,http://splashup.com,Jun-07,?,?,'$10,000','An online image editing service that provided advanced tools with image editing layer effects',Dead
+iJigg,http://ijigg.com,Jun-07,?,?,?,'A social music site that lets users vote on submitted singles using Digg-like voting',Dead
+ContestMachine,http://www.contestmachine.com,Jun-07,?,?,?,'ContestMachine is a web service that makes running promotions from any website easy.',Dead
+SlapVid,http://slapvid.com,Jun-07,?,?,?,'A video site built on P2P technology that allows users to find and watch videos pulled from top video sites',Dead
+Biographicon,http://www.biographicon.com,Jun-07,?,?,?,'Biographicon was a wiki-based website containing biographies of famous and non-famous people.',Dead
+Reble,http://reble.fm,Jun-07,?,?,?,'Windows software that allows users to stream music from friends who also have installed Reble',Dead
+Heroku,http://www.heroku.com,Jan-08,'$250,000,000',H,'$13,020,000','Acquired by Salesforce for $212 MM in 2010.Heroku is a multi-language cloud application platform, or platform-as-a-service',Exited
+'280 North',http://280north.com,Jan-08,'$20,000,000',H,'$250,000','Acquired by Motorola for $20 MM in 2010.280 North was a web application company based on their application framework, Cappuccino',Exited
+Omnisio,http://omnisio.com,Jan-08,'$15,000,000',H,?,'Acquired by Google for $15 MM in 2008.Omnisio lets users annotate videos and mash various clips up',Exited
+FathomDB,http://www.fathomdb.com,Jan-08,?,?,?,'Databases as a service, taking care of the many tasks database admins deal with, and letting them focus on more complex issues',Exited
+'Machine Zone',http://www.mz.com,Jan-08,?,?,'$390,300,000',?,Operating
+Trigger.io,http://trigger.io,Jan-08,?,?,'$1,604,400',?,Operating
+RescueTime,http://rescuetime.com,Jan-08,?,?,'$920,000','A web-based time management tool that keeps track of what you do and for how long when you are on your computer',Operating
+'A Thinking Ape',http://www.chatterous.com,Jan-08,?,?,?,?,Operating
+Ninite,http://ninite.com,Jan-08,?,?,?,'The easiest, fastest way to update or install software',Operating
+Joberator,http://joberator.com,Jan-08,?,?,?,'A search, recruitment and talent acquisition platform connecting skilled professionals with in-demand employers',Operating
+Insoshi,http://insoshi.com,Jan-08,?,?,?,'Insoshi is an open-source open networking platform.',Operating
+Tipjoy,http://www.tipjoy.com,Jan-08,?,?,'$1,000,000','A social payments engine that allowed userse to easily collect tips from their followings as Paypal transfers',Dead
+'Kirkland North',http://www.playturf.net,Jan-08,?,?,'$225,000','A game that pits sections of campuses against each other in a virtual battle for university-wide domination',Dead
+YumDots,http://yumdots.com,Jan-08,?,?,?,'YumDots wants to be the go-to mobile application for finding places to eat when out on the town',Dead
+Deluux,http://deluux.com,Jan-08,?,?,?,'Deluux aims to relocate the center of peoples online identities to their personal websites instead of a single social network',Dead
+MightyQuiz,http://mightyquiz.com,Jan-08,?,?,?,'User-generated quiz questions that can be answered and rated on-site or through a distributable widget',Dead
+Socialbrowse,http://www.socialbrowse.com,Jan-08,?,?,?,'SocialBrowse is a Firefox extension for sharing links.',Dead
+Wundrbar,http://wundrbar.com,Jan-08,?,?,?,'Wundrbar wants to improve upon the search bar experience by providing users with powerful inline commands',Dead
+Snaptalent,http://snaptalent.com,Jan-08,?,?,?,'Snaptalent powers a distributed job advertisement network primarily meant for developer listings',Dead
+Mixwit,http://mixwit.com,Jan-08,?,?,?,'Mixwit describes itself as a combination of Slide and iTunes',Dead
+Cloudant,http://cloudant.com,Jun-08,?,?,'$18,250,000','The Cloudant Data Layer is the cloud database service managed by experts',Exited
+Posterous,http://posterous.com,Jun-08,'$10,000,000',H,'$10,140,000','Posterous was focused on making blogging simple - as simple as sending an email.',Exited
+Backtype,http://www.backtype.com,Jun-08,'$5,000,000',L,'$1,315,000','BackType is a marketing intelligence platform that helps brands and agencies understand the business impact of social media.',Exited
+JustSpotted,http://www.justspotted.com,Jun-08,?,?,'$765,000','The artist-formerly-known-as Scoopler is a real-time search engine.',Exited
+Slinkset,http://slinkset.com,Jun-08,'$100,000',L,'$15,000','Slinkset is a white label social news platform that allows anyone to start a social news site and integrate it into their own website.',Exited
+'Vidly / Fliggo',http://m.vid.ly,Jun-08,?,?,'$500,000','Vidly, formerly known as TwitVid (or Twitvid.io), wants to be the easiest way to share video on the web.',Operating
+PollEverywhere,http://www.polleverywhere.com,Jun-08,?,?,'$20,000','The best way to create stylish real-time experiences for events using mobile devices.',Operating
+TeamApart,http://www.meetcast.com,Jun-08,?,?,?,?,Operating
+Precognate,None,Jun-08,?,?,?,?,Operating
+Anyvite,http://www.anyvite.com,Jun-08,?,?,?,'Anyvite is a free site dedicated to event invitation creation and group organization.',Operating
+ClaimSpotting,http://www.urbantakeover.co.uk,Jun-08,?,?,?,?,Operating
+'YC Stealth YC S08 #24',http://,Jun-08,?,?,?,?,Operating
+TicketStumbler,http://ticketstumbler.com,Jun-08,?,?,'$15,000','TicketStumbler is a secondary ticket market search engine and comparison website.',Dead
+Snipd,http://www.snipd.com,Jun-08,?,?,'$15,000','Grab pieces of enjoyable content from any page, save them online, and share without having to copy/paste using a simple bookmarklet.',Dead
+Frogmetrics,http://frogmetrics.com,Jun-08,?,?,?,'Touchscreen platforms for effortless data collection.',Dead
+JobAlchemy,http://www.startuply.com,Jun-08,?,?,?,?,Dead
+PopCuts,http://www.popcuts.com,Jun-08,?,?,?,'Popcuts is a unique online music store. Buy music. Make money.',Dead
+CO2Stats,http://co2stats.com,Jun-08,?,?,?,'Helps website owners understand the electricity usage and carbon emissions associated with site usage, then helps them manage their carbon footprint',Dead
+OhLife,http://ohlife.com,Jun-08,?,?,?,'Write in private about your life',Dead
+'People and Pages',http://www.peopleandpages.com,Jun-08,?,?,?,'A service similar to Google Groups, allowing group organizers to manage email lists and publish to the web in one place',Dead
+Picwing,http://www.picwing.com,Jun-08,'$100,000',L,?,'Picwing is a photo sharing platform that enables users to share their photos through a variety of sources.',Dead
+Youlicit,http://www.youlicit.com,Jun-08,?,?,?,'A web content recommendation engine that leverages the wisdom of the crowds to return the most recommended sites related to a website or topic',Dead
+AwesomeHighlighter,http://www.awesomehighlighter.com,Jun-08,?,?,?,'A company that provides a tool that enables you to go to a website and highlight information to save for later or share with your friends',Dead
+Heyzap,http://www.heyzap.com,Jan-09,'$45,000,000',?,'$7,995,000','Heyzap is a premier mobile ad network that helps millions of users discover apps they love.',Exited
+Cloudkick,http://cloudkick.com,Jan-09,'$30,000,000',H,'$2,750,000','Cloudkick is a centralized web-based control hub for cloud servers.',Exited
+Divvyshot,http://divvyshot.com,Jan-09,'$5,000,000',L,'$10,000','Divvyshot allows groups of friends to share their photos easily, at their full resolutions.',Exited
+reMail,http://www.remail.com,Jan-09,'$3,000,000',L,?,'ReMail is an email app that downloads all your email to your iPhone and offers a comprehensive email search.',Exited
+Echodio,http://www.echodio.com,Jan-09,'$5,000,000',L,?,'Echodio makes it easy to keep iTunes music libraries in sync, securely backed up and streamable from anywhere.',Exited
+AirBnb,http://airbnb.com,Jan-09,?,?,'$4,398,082,100','A community marketplace for people to list, discover, and book unique spaces around the world  online or from a mobile phone',Operating
+Volantio,http://adioso.com,Jan-09,?,?,'$355,000',?,Operating
+Wattvision,http://wattvision.com,Jan-09,?,?,?,'Wattvision offers a simple idea - Monitor your energy consumption in realtime from the web.',Operating
+Recurious,http://thesixtyone.com,Jan-09,?,?,?,?,Operating
+Propable,None,Jan-09,?,?,?,'Propable was a suite of online management and investment analysis tools for property investors.',Operating
+Foodoro,http://foodoro.com,Jan-09,?,?,?,'Foodoro is a marketplace where people can buy specialty food directly from artisanal Foodmakers.',Operating
+Picurio,http://picurio.com,Jan-09,?,?,?,'Picurio is web-based photo sharing and photo management software.',Operating
+Voxli,http://www.voxli.com,Jan-09,?,?,'$15,000','Voxli offers browser-based group voice chat for gamers and teams.',Dead
+Nambii,http://www.nambii.com,Jan-09,?,?,?,'Nambii is an online dating service with iPhone applications that allow users to send and receive flirts with people around them.',Dead
+Skysheet,http://www.skysheet.com,Jan-09,?,?,?,'Skysheet is a web-based spreadsheet, in stealth mode as of March 2009.',Dead
+PocketFunGames,http://pocketfungames.com,Jan-09,?,?,?,'pocketfungames is a game developer for the iPhone that focuses on games with strong social components.',Dead
+WePay,http://go.wepay.com,Jun-09,'$400,000,000',?,'$74,150,000','WePay is an online payments platform for individuals, organizations, and businesses.',Exited
+RethinkDB,http://www.rethinkdb.com,Jun-09,'$25,000',?,'$23,200,000','RethinkDB is designed to be extremely fast, and implements powerful features that are cumbersome and inefficient with rotational storage',Exited
+Bump,http://bu.mp,Jun-09,'$30,000,000',H,'$19,900,000','Acquired by Google in 2013.Mobile applications and APIs that allow two smartphones to identify each other and connect by being bumped together',Exited
+DailyBooth,http://dailybooth.com/,Jun-09,'$10,000,000',L,'$7,015,000','Acquired by Airbnb in 2012.DailyBooth lets users follow their friends and update them in real-time through the use of pictures and status updates.',Exited
+Flightcaster,http://flightcaster.com,Jun-09,'$15,000,000',L,'$1,300,000','Acquired by Next Jump in 2011.FlightCaster predicts flight delays',Exited
+GraffitiGeo,http://graffitigeo.com,Jun-09,'$100,000',L,'$20,000','Acquired by Loopt.Users leave brief reviews of restaurants, or just a thumbs up or thumbs down, like a highly condensed version of Yelp',Exited
+Lingt,http://www.lingt.com,Jun-09,'$3,000,000',L,?,'Acquired by dictionary.com in 2010.Lingt is a service for learning languages that helps teachers enable their students to speak',Exited
+Stripe,http://stripe.com,Jun-09,?,?,'$478,652,942 ','Stripe is a simple, developer-friendly way to accept payments online',Operating
+Mixpanel,http://www.mixpanel.com,Jun-09,?,?,'$77,015,000','Mixpanel is an advanced analytics service that helps improve web and mobile applications by tracking how users interact & engage with them',Operating
+Listia,http://www.listia.com,Jun-09,?,?,'$26,165,000','Listia, which launched in August 2009, is eBay for free stuff.',Operating
+HighlightCam,http://www.HighlightCam.com,Jun-09,?,?,'$3,000,000','Create amazing movies right from your iOS or Android device - automatically!',Operating
+Lockitron,http://lockitron.com,Jun-09,?,?,'$2,200,000','Keyless entry using your phone.',Operating
+RentHop,https://www.renthop.com,Jun-09,?,?,'$25,000','Search NYC Apartments and Listings by Location. Find New York City Apartment Rentals. Contact Landlords Online.',Operating
+FanChatter,http://fanchatter.com,Jun-09,?,?,'$20,000','FanChatter fuels your fans so they can promote you better than any ad ever could.',Operating
+DirectedEdge,http://www.directededge.com,Jun-09,?,?,'$15,000','Directed Edge delivers e-commerce and social recommendations using existing data such as purchase or click histories',Operating
+Jobspice,http://www.jobspice.com,Jun-09,?,?,?,'JobSpice is a surprisingly easy-to-use, intuitive online tool for creating a resume.',Operating
+'YC S09 Stealth - #25',http://,Jun-09,?,?,?,?,Operating
+'YC S09 Stealth - #24',http://,Jun-09,?,?,?,?,Operating
+Olark,https://www.olark.com,Jun-09,?,?,?,'Olark is a lightweight tool to chat with visitors to your website using your existing instant messaging client.',Operating
+AdThrow,http://,Jun-09,?,?,?,?,Operating
+RoboHR,http://,Jun-09,?,?,?,?,Operating
+Souper,http://www.souper.me,Jun-09,?,?,?,?,Operating
+Stackq,http://,Jun-09,?,?,?,?,Operating
+CarWoo,http://a9car.com/,Jun-09,?,?,'$10,850,000','CarWoo! is an online new-car buying service and marketplace.',Dead
+NudgePad,http://nudgepad.com,Jun-09,?,?,?,?,Dead
+Wakemate,http://www.wakemate.com,Jun-09,?,?,?,'Personalized alarm clocks that sync with a users body and their iPhone, enabling the alarm to sound after a REM cycle',Dead
+Tuxebo,http://www.tuxebo.co.uk,Jun-09,?,?,?,'Tuxebo connects people looking for things to rent from local rental companies.',Dead
+InstantQ,http://www.instantq.com,Jun-09,?,?,?,'InstantQ allows restaurants to fill tables by varying prices to increase demand.',Dead
+Plurchase,http://plurchase.com,Jun-09,?,?,?,'Plurchase is an online social shopping site.',Dead
+500Friends,http://www.500Friends.com,Jan-10,?,?,'$12,900,000','500friends enables retailers to acquire and retain high value customers.',Exited
+Cue,http://www.cueup.com,Jan-10,'$50,000,000',H,'$4,715,000','Know whats next.',Exited
+Mertado,http://www.mertado.com,Jan-10,'$10,000,000',L,'$2,300,000','Mertado is a social shopping company that lets consumers discover and buy new products within the online communities that they frequent.',Exited
+Zencoder,http://zencoder.com,Jan-10,'$30,000,000',H,'$2,000,000','Zencoder is web-based video encoding software as a service, designed to quickly convert any video into web and mobile compatible formats',Exited
+Meetings.io,http://meetings.io,Jan-10,'$2,000,000',L,'$1,800,000','With Meetings.io you can meet face to face with anyone from around the world within your web browser.',Exited
+Movity,http://www.movity.com,Jan-10,'$15,000,000',L,'$1,300,000','Movity.com surfaces geodata (crime, noise, pricing, etc) to help home buyers make better decisions.',Exited
+Embedly,http://embed.ly,Jan-10,?,?,'$1,020,000','Embedly provides a platform and suite of tools to make embedding and previewing links simple.',Exited
+Etacts,http://www.etacts.com,Jan-10,'$3,000,000',L,'$740,000','Etacts is a CRM for people - it helps you keep in touch with people in your address book.',Exited
+'Data Marketplace',http://www.datamarketplace.com,Jan-10,'$600,000',L,?,'Data Marketplace helps people find, buy and sell data online.',Exited
+CardPool,http://www.cardpool.com,Jan-10,'$50,000,000',L,?,'Cardpool is a gift card exchange marketplace where anybody can buy, sell, or trade their new or pre-owned gift cards.',Exited
+Crocodoc,http://www.crocodoc.com,Jan-10,?,?,?,'Acquired by Box.Crocodoc is the trusted leader in HTML5 document viewing.',Exited
+Optimizely,http://optimizely.com,Jan-10,?,?,'$146,200,000','Simple, fast, and powerful.',Operating
+OwnLocal,http://www.ownlocal.com,Jan-10,?,?,'$3,447,000','Web-based software for local newspapers that gives them a white-label service for selling online ads and services to local businesses',Operating
+Allscreen,http://140fire.com,Jan-10,'$85,000,000',H,'$500,000',?,Operating
+'Creative Market',http://www.chromaom.com,Jan-10,?,?,?,?,Operating
+Zenedy,http://zenedy.com,Jan-10,?,?,?,'Learn something new every day with new articles written daily about topics discovered from all around the web.',Operating
+Gamador,http://www.gamador.com,Jan-10,?,?,?,'Gamador is a social game developer that has released three games so far.',Operating
+Fabricly,http://www.dakotaplainsfabrication.com,Jan-10,?,?,?,'Fabricly is a great way for designers to gain extra exposure, whether youre already selling online or if youre just getting started.',Operating
+LaunchHear,None,Jan-10,?,?,?,'LaunchHear is a way for bloggers to get early review copies of new products.',Operating
+Newcope,http://,Jan-10,?,?,?,?,Operating
+Browsarity,None,Jan-10,?,?,?,'Browsarity.com is a browser application that allows people to donate to charity while shopping online.',Dead
+Fithub,http://fithub.com,Jan-10,?,?,?,?,Dead
+Notifo,http://notifo.com,Jan-10,?,?,?,'Notifo is a mobile application and platform which allows any web site or service to easily create mobile notifications.',Dead
+Nowmov,http://nowbox.com,Jan-10,?,?,?,'Nowmov is an endless stream of videos recommended to users based on their interests, friends and whats trending around the world.',Dead
+NewsLabs,http://www.newslabs.com,Jan-10,?,?,?,'A platform that helps old-school journalists adapt to the web, by giving them help with advertising, SEO, and other issues they may not have had dealt with',Dead
+Infoharmoni,http://www.infoharmoni.com,Jan-10,?,?,?,'Infoharmoni is a data visualization startup founded by Kovas Boguta.',Dead
+Answerly.com,http://www.InboxQ.com,Jan-10,?,?,?,'InboxQ is a browser extension that delivers a persistent stream of questions from Twitter directly to you.',Dead
+Hipmunk,http://www.hipmunk.com,Jun-10,'$58,000,000',?,'$54,983,999 ','Hipmunk is a travel search site that aims to take the agony out of travel planning',Exited
+Docker,http://www.dotcloud.com,Jun-10,?,?,'$28,679,147 ','A software containerization platform. Formerly dotCloud',Exited
+FutureAdvisor,http://www.futureadvisor.com,Jun-10,'$150,000,000',?,'$21,500,000','You already have investment accounts, we help make them smarter',Exited
+AeroFS,http://www.aerofs.com,Jun-10,?,?,'$15,500,000','AeroFS is a program where users are able to manage and store their files and data in a cloud-like platform',Exited
+ReadyForZero,https://www.readyforzero.com,Jun-10,?,?,'$4,777,000','ReadyForZero creates online financial software that helps people control and reduce debt',Exited
+1000Memories,http://1000memories.com,Jun-10,'$15,000,000',L,'$2,535,000','Acquired by Ancestry in 2012.1000memories is the new shoebox for your old photos',Exited
+Rapportive,http://rapportive.com,Jun-10,'$15,000,000',H,'$1,000,000','Acquired by LinkedIn.Rapportive shows you everything about your contacts right inside your inbox',Exited
+Leftronic,http://www.leftronic.com,Jun-10,?,?,'$500,000','Leftronic develops a web-based real-time dashboard application for monitoring a companys most important data',Exited
+AdGrok,http://adgrok.com,Jun-10,'$10,000,000',H,'$470,000','Acquired by Twitter in 2011.AdGrok allows business owners to automate the process of choosing and bidding on keywords on Google AdWords',Exited
+Fridge,http://www.frid.ge,Jun-10,'$3,000,000',L,'$80,000','Acquired by Google.The Fridge is a platform for lightweight single serving social networks for the functionality of Facebook',Exited
+FanVibe,http://fanvibe.com,Jun-10,'$2,000,000',L,?,'Acquired by beRecruited in 2011.A social platform for watching sports and communicating with others who are watching the same game',Exited
+Whereoscope,http://Whereoscope.com,Jun-10,?,?,?,'Whereoscope is a service designed to help parents keep know where their kids are',Exited
+Gantto,http://gantto.com,Jun-10,?,?,?,'Gantto was conceived to fill one obvious gap in our weekly management routine',Exited
+PadMapper,http://www.padmapper.com,Jun-10,?,?,?,?,Exited
+GazeHawk,http://www.gazehawk.com,Jun-10,'$2,000,000',L,?,?,Exited
+PagerDuty,http://www.pagerduty.com,Jun-10,?,?,'$83,600,000','PagerDuty is an alarm dispatching service for system administrators and support teams',Operating
+'E la Carte',http://elacarte.com,Jun-10,?,?,'$67,500,000','E la Carte develops tablets for restaurant tables so guests can order, pay and play games from their seats',Operating
+Indinero,http://indinero.com,Jun-10,?,?,'$12,041,526 ','Accounting, taxes & payroll. One solution. inDinero is your companys accounting department',Operating
+Chart.io,http://chartio.com,Jun-10,?,?,'$6,770,000','Analytics for everyone. A platform for everyone to explore and visualize data',Operating
+GinzaMetrics,http://ginzametrics.com,Jun-10,?,?,'$1,714,000','Ginzametrics makes enterprise SEO simple and easy to manage',Operating
+Chirply,http://www.chirply.com,Jun-10,?,?,'$1,100,000','Chirply is a platform for crowd-sourcing & crowd-curating design.',Operating
+'Habit Labs',http://habitlabs.com,Jun-10,?,?,'$745,000','Habit Labs aims to turn leading a healthier life into a game.',Operating
+MessageParty,http://messageparty.com,Jun-10,?,?,'$275,000','MessageParty is a new kind of mobile blogging service',Operating
+HireHive,http://hirehive.com,Jun-10,?,?,?,?,Operating
+'I Move You',http://www.i-move-you.com,Jun-10,?,?,?,?,Operating
+Simperium,http://simplenoteapp.com,Jun-10,?,?,?,?,Operating
+AnyList,http://www.anylistapp.com,Jun-10,?,?,?,'The best way to create and share a grocery shopping list and organize your recipes',Operating
+Workflowy,http://workflowy.com,Jun-10,?,?,?,'WorkFlowy is a tool for organizing your brain',Operating
+Teevox,http://teevox.com,Jun-10,?,?,?,?,Operating
+Crowdbooster,http://crowdbooster.com,Jun-10,?,?,?,?,Operating
+Brushes,http://brushesapp.com,Jun-10,?,?,?,?,Operating
+'YC S10 Stealth - #36',http://,Jun-10,?,?,?,?,Operating
+HomeJoy,http://www.Homejoy.com,Jun-10,?,?,'$64,190,945 ','Book a trusted cleaner today for $25 per hour',Dead
+Opzi,http://opzi.com,Jun-10,?,?,'$1,015,000','Opzi is creating software to make corporate knowledge accessible',Dead
+Koduco,http://www.Koduco.com,Jun-10,?,?,?,'Koduco makes iPad games that focus on multiplayer collaboration on the same device',Dead
+Tapzilla,http://tapzilla.com,Jun-10,?,?,?,'Taking the daily deal model and applying it to discounts on paid mobile apps',Dead
+'Pebble Technology',https://www.pebble.com/,Jan-11,'$23,000,000',?,'$58,813,829 ','Pebble is an infinitely customizable e-paper watch.',Exited
+OrderAhead,http://orderaheadapp.com,Jan-11,?,?,'$10,500,000','OrderAhead is the easiest way to order from local merchants on your phone.',Exited
+'Humble Bundle',https://www.humblebundle.com,Jan-11,?,?,'$4,480,000','Humble Bundles are collections of digital creations that are sold online at a price determined by the purchaser.',Exited
+Upverter,http://upverter.com,Jan-11,?,?,'$4,378,571 ','Upverter is building browser-based electronic design tools focused on collaboration and usability.',Exited
+Tutorspree,http://www.tutorspree.com,Jan-11,?,?,'$1,800,000','Tutorspree is an online portal that helps tutors and clients find each other.',Exited
+Lanyrd,http://lanyrd.com,Jan-11,?,?,'$1,400,000','Lanyrd is a directory of conferences, events and speakers.',Exited
+Earbits,http://www.earbits.com,Jan-11,?,?,'$630,000','Earbits is a marketing platform for music related products built around interactive radio experiences.',Exited
+Sendoid,http://sendoid.com,Jan-11,'$2,000,000',L,?,'Acquired by Facebook in 2012.Sendoid is an on-demand peer to peer transfer system.',Exited
+TalkBin,http://www.talkbin.com,Jan-11,'$15,000,000',L,?,'Acquired by Google.TalkBin is a feedback platform for local businesses.',Exited
+MemSQL,http://www.memsql.com,Jan-11,?,?,'$78,100,000','MemSQL is a Y Combinator grad making a scalable, memory-optimized database built for high-throughput workloads.',Operating
+MailGun,http://www.mailgun.com,Jan-11,'$30,000,000',L,'$51,100,000','Acquired by Rackspace in 2012.Mailgun provides a web service for integrating email inboxes into apps.',Operating
+'Comprehend Systems',http://www.comprehend.com,Jan-11,?,?,'$45,696,000','A reporting and visualization tool which runs against multiple databases in real time, while leaving the data in place',Operating
+'Five Stars',http://fivestarscard.com,Jan-11,?,?,'$42,650,000','We created a universal customer loyalty card that embraces the power of network effects, social media integration & improves the customer experience.',Operating
+'Dr Chrono',https://www.drchrono.com,Jan-11,?,?,'$18,725,000','drchrono is a medical platform for doctors and patients.',Operating
+GOAT,https://dosuperb.com,Jan-11,?,?,'$9,360,573 ',?,Operating
+Custora,https://www.custora.com/,Jan-11,?,?,'$6,500,000','Custora offers a SaaS that tells online retailers and web apps which of their customers are most valuable, and suggests ',Operating
+ZeroCater,https://zerocater.com,Jan-11,?,?,'$5,599,999 ','ZeroCater makes it easy for companies to enjoy meals delivered from the best local restaurants, caterers and private chefs',Operating
+MinoMonsters,http://www.mino-games.com/,Jan-11,?,?,'$4,868,000','MinoMonsters is a social game where players collect and battle pet monsters.',Operating
+Talkable,https://www.talkable.com,Jan-11,?,?,'$4,200,000',?,Operating
+Bridge,http://flotype.com/,Jan-11,?,?,'$1,400,000','RPC Framework for Building Modular Services and Cross-Language Applications.',Operating
+NowJS,http://flotype.com/,Jan-11,?,?,'$1,400,000','Flotype Inc. is a venture-backed company building a suite of enterprise technology for real-time messaging.',Operating
+Hyperink,http://www.hyperink.com,Jan-11,?,?,'$1,200,000','Hyperink, the San Francisco based self-publishing platform, wants to unlock and sell that untapped information by giving every citizen the ability to publish a book.',Operating
+Siasto,http://siasto.com,Jan-11,?,?,'$750,000','Siasto is a collaboration and project management tool that integrates into Google Apps, Gmail, Google Drive, GCal, box, and Dropbox.',Operating
+StoryWorth,https://www.storyworth.com,Jan-11,?,?,'$167,000',?,Operating
+YouGotListings,http://www.yougotlistings.com,Jan-11,?,?,'$150,000','The online rental technology platform that provides real estate offices and landlords with easy-to-learn tools',Operating
+HelloSign,http://www.hellofax.com,Jan-11,?,?,?,?,Operating
+Tumult,http://tumult.com/hype,Jan-11,?,?,?,'Tumult Inc. makes the next generation of designer tools to produce beautiful web content.',Operating
+Giftrocket,http://www.giftrocket.com,Jan-11,?,?,?,'GiftRocket sells a new type of gift card that works at any location.',Operating
+AppHarbor,http://appharbor.com,Jan-11,?,?,?,'AppHarbor is a .NET Platform-as-a-Service.',Operating
+Acunote,http://www.acunote.com,Jan-11,?,?,?,'Acunote is a project management tool and Scrum software.',Operating
+TellFi,http://tellfi.com,Jan-11,?,?,?,'Fastest, easiest way to setup a phone system for your business.',Operating
+Noteleaf,http://noteleaf.com,Jan-11,?,?,?,'Always Know Who Youre Meeting. You schedule meetings in Google Calendar, Noteleaf gives you information about who youre meeting on your phone.',Operating
+Kaleidoscope,http://kaleidoscope.co.uk,Jan-11,?,?,?,'Use Kaleidoscope to spot the differences in text and image files. Review changes in seconds with the worlds most advanced file comparison application.',Operating
+'YC W11 Stealth - #44',http://,Jan-11,?,?,?,?,Operating
+Convore,http://convore.com,Jan-11,?,?,?,?,Operating
+Instapainting,http://like.fm,Jan-11,?,?,?,'Formerly Like.fm. Hand-painted oil paintings on canvas and other artwork shipped from artists just by uploading a photo.',Operating
+'YC W11 Stealth - #45',http://,Jan-11,?,?,?,?,Operating
+Beetailer,http://www.beetailer.com,Jan-11,?,?,?,'Bring your store to Facebook, and grow your business',Operating
+'YC W11 Stealth - #44',http://,Jan-11,?,?,?,?,Operating
+'YC W11 Stealth - #45',http://,Jan-11,?,?,?,?,Operating
+Balanced,http://www.balancedpayments.com,Jan-11,?,?,'$3,550,000','Payments for marketplaces. Pay sellers, campaign organizers and service providers.',Dead
+TrustEgg,http://www.trustegg.com,Jan-11,?,?,'$1,150,000','The simplest way to save for a childs future.',Dead
+Close.io,http://swipegood.com,Jan-11,?,?,'$500,000',?,Dead
+FitFu,http://www.fitfu.com,Jan-11,?,?,'$400,000','Think of FitFu as a personal trainer in your pocket that keeps you active with little bits of exercise throughout the day.',Dead
+Moki.TV,http://moki.tv,Jan-11,?,?,?,'Moki.TV is a directory of all paid and free content included on Amazons streaming service, Netlfix, Hulu, iTunes, and others.',Dead
+Automatic,http://automatic.com,Jun-11,'$115,000,000',?,'$24,000,000',?,Exited
+Caviar,http://www.trycaviar.com,Jun-11,'$90,000,000',?,'$15,000,000',?,Exited
+Parse,http://parse.com,Jun-11,'$90,000,000',H,'$7,000,000','Cloud services for mobile developers. Parse lets you focus on creating unique & engaging apps. We take care of the rest',Exited
+Firebase,http://www.firebase.com,Jun-11,?,?,'$7,000,000','A scalable real-time backend for your web app. Build apps really fast without the hassle of managing servers.',Exited
+Compose,http://compose.io,Jun-11,?,?,'$6,417,000','Acquired by IBM in July 2015.Database-as-a-Service for hosting and managing MongoDB instances',Exited
+Kicksend,http://kicksend.com,Jun-11,?,?,'$2,800,000','Kicksend allows friends and family to easily share files in real-time on the web, mobile, and desktop.',Exited
+FreshPlum,http://www.freshplum.com,Jun-11,?,?,'$2,484,999 ','Freshplums goal is to bring the decision-making power of data science to companies who sell goods and services electronically.',Exited
+'Perfect Audience',http://perfectaudience.com,Jun-11,'$22,800,000',H,'$2,460,000','Fast & Easy Facebook Retargeting. Retarget lost customers on Facebook and get more sales.',Exited
+'Launchpad Toys',http://launchpadtoys.com,Jun-11,?,?,'$1,117,000','Were creating digital toys and tools that empower kids to create, learn & share their ideas through play.',Exited
+Embark,http://letsembark.com,Jun-11,?,?,'$1,000,000','Embark makes it easy to get around without a car. We make free, fast, and simple mobile apps for mass transit riders worldwide.',Exited
+Cryptoseal,http://www.cryptoseal.com,Jun-11,?,?,'$280,000',?,Exited
+Glassmap,http://www.glassmap.com,Jun-11,'$2,000,000',L,?,'Glassmap is a simple, beautiful way to show your friends where you are and what you are doing.',Exited
+Snapjoy,http://snapjoy.com,Jun-11,'$5,000,000',L,?,'Snapjoy is an online photo library that imports your photos from anywhere and organizes them into meaningful memories of who, what, when, & where.',Exited
+Fobo,http://www.getyardsale.com,Jun-11,?,?,?,?,Exited
+PageLever,http://www.primamici.si,Jun-11,?,?,?,'PageLever is the leading analytics platform for measuring your brands presence on Facebook.',Exited
+Rentobo,http://www.rentobo.com,Jun-11,?,?,?,'Rentobo is a new tool built for landlords, managers, and agents of all sizes to simplify the process of finding and signing a new tenant for your rental property.',Exited
+Leaky,http://leaky.com,Jun-11,?,?,?,'Leaky helps consumers make better decisions about insurance.',Exited
+Clutch.io,None,Jun-11,'$2,000,000',L,?,?,Exited
+Stypi,http://www.stypi.com,Jun-11,'$2,000,000',L,?,'Stypi is a collaborative real-time text editor similar to Etherpad.',Exited
+TapEngage,http://www.tapengage.com,Jun-11,'$2,000,000',L,?,'You need a tablet strategy. We can help.',Exited
+Segment.io,http://segment.com,Jun-11,?,?,'$108,720,000','The Segment API controls other analytics tools, allowing developers to integrate one single API in place of many.',Operating
+Genius,http://www.genius.com,Jun-11,?,?,'$71,900,000',?,Operating
+Vidyard,http://vidyard.com,Jun-11,?,?,'$60,650,000','An online video platform for businesses. Vidyard hosts your videos, analyzes their effectiveness, and transforms them into powerful marketing tools',Operating
+'Science Exchange',http://scienceexchange.com,Jun-11,?,?,'$58,500,000','An online marketplace for scientific experiments. The easiest way to get experiments conducted by researchers in top core facilities and institutions',Operating
+HackerRank,http://hackerrank.com,Jun-11,?,?,'$58,200,000',?,Operating
+'Sift Science',http://siftscience.com,Jun-11,?,?,'$53,600,000','The worlds most advanced fraud prevention platform',Operating
+Codecademy,http://www.codecademy.com,Jun-11,?,?,'$47,500,000',?,Operating
+GoCardless,http://gocardless.com,Jun-11,?,?,'$47,300,000','GoCardless is a UK-based service that allows smaller merchants to easily set up interbank transfers for customers.',Operating
+Meteor,http://meteor.com,Jun-11,?,?,'$31,200,000','Meteor is an open-source platform for building top-quality web apps in a fraction of the time, whether youre an expert developer or just getting started.',Operating
+Realm,http://realm.io/,Jun-11,?,?,'$29,000,000',?,Operating
+Quartzy,http://www.quartzy.com,Jun-11,?,?,'$22,200,000','Quartzy is an online suite of lab management tools for the academic life science community.',Operating
+LeadGenius,https://leadgenius.com,Jun-11,?,?,'$20,000,000',?,Operating
+'Citus Data',https://www.citusdata.com,Jun-11,?,?,'$13,150,000','CitusDB is a distributed database that lets you run SQL queries over very large data sets. Designed for analytical queries, CitusDB enables real-time responsiveness.',Operating
+Imgix,https://www.imgix.com,Jun-11,?,?,'$11,163,994 ',?,Operating
+OneSignal,https://onesignal.com/,Jun-11,?,?,'$9,000,000',?,Operating
+Aisle50,http://www.aisle50.com,Jun-11,?,?,'$5,200,000','Aisle50 is the first group-buying outlet for groceries, a $2 trillion business. The best way to save on your groceries.',Operating
+EveryMe,https://everyme.com/,Jun-11,?,?,'$5,163,408 ','We believe most stories are meant to be shared with your family and best friends, not 500 strangers. Everyme lets you choose who to share with and how.',Operating
+Verbling,https://www.verbling.com,Jun-11,?,?,'$3,720,000','Verbling provides users with an innovative way to learn new languages by utilizing video chat technology.',Operating
+MixRank,https://mixrank.com,Jun-11,?,?,'$2,000,000','MixRank is a spy tool for contextual and display ads.',Operating
+AgileMD,http://www.agilemd.com,Jun-11,?,?,'$2,000,000',?,Operating
+Tagstand,http://www.tagstand.com/,Jun-11,?,?,'$1,850,000','Tagstand ships NFC stickers and a platform to manage them.',Operating
+Dubjoy,http://www.doublerecall.com,Jun-11,?,?,'$1,600,000',?,Operating
+PayDragon,http://www.paperlinks.com,Jun-11,?,?,?,?,Operating
+'Graffiti Labs',http://playbuildy.com,Jun-11,?,?,?,?,Operating
+Zigfu,http://zigfu.com,Jun-11,?,?,?,'Zigfu is the easiest way to make and play Kinect apps. Download the plugin, hook up your sensor, and enjoy the future now!',Operating
+Userfox,http://userfox.com,Jun-11,?,?,?,?,Operating
+Videopixie,http://www.sellstage.com,Jun-11,?,?,?,?,Operating
+'Hungry Labs',http://hungrylabs.com,Jun-11,?,?,?,?,Operating
+Clerky,http://www.clerky.com,Jun-11,?,?,?,?,Operating
+B2Brev,None,Jun-11,?,?,?,'Well help you make smart and easy decisions on products and services based on honest reviews, from one business to another',Operating
+Quad,http://thequad.com,Jun-11,?,?,?,?,Operating
+MarketBrief,http://marketbrief.com,Jun-11,?,?,?,'The latest SEC Filings, Press Releases, Patents, and Trademarks for 700000+ companies and entities.',Operating
+Opez,http://www.opez.com,Jun-11,?,?,?,'The best people around. Who are the best trainers, stylists, etc. around me?',Operating
+PicPlum,http://picplum.com,Jun-11,?,?,?,'Share Your Best Moments. Send photo prints to loved ones in seconds.',Operating
+Pingm,http://,Jun-11,?,?,?,?,Operating
+BridgeUs,http://,Jun-11,'$2,000,000',L,?,?,Operating
+Draft,http://draftin.com,Jun-11,?,?,?,?,Operating
+PayStack,http://,Jun-11,?,?,?,'Modern payments infrastructure for Africa',Operating
+Interstate,http://interstateapp.com,Jun-11,?,?,?,'The future of open project management. Keep users away from competitors by keeping them in the loop with your products development.',Operating
+Streak.com,http://greekstreak.com,Jun-11,?,?,?,'Greek Streak is a company that designs and creates unique sorority and fraternity apparel.',Operating
+Proxino,http://www.proxino.com,Jun-11,?,?,?,'Proxino is a cloud platform for monitoring and debugging client-side JavaScript.',Operating
+Ridejoy,http://,Jun-11,?,?,?,?,Operating
+Zenbox,http://gobushido.com,Jun-11,?,?,?,'Zenbox is a browser extension that connects all of your SaaS services.',Dead
+DebtEye,http://www.debteye.com,Jun-11,?,?,?,'We are an automated credit counseling solution to help customers get out of debt, a little like a turbo tax for those who need debt relief.',Dead
+Tilt,http://www.tilt.com,Jan-12,?,?,'$67,100,000',?,Exited
+Swiftype,https://swiftype.com,Jan-12,?,?,'$22,200,000','Swiftype is building search software for the next generation of websites and applications.',Exited
+Shopular,http://shopular.com,Jan-12,?,?,'$13,597,710',?,Exited
+SendHub,http://sendhub.com,Jan-12,?,?,'$10,000,000','SendHub is a fast and simple way for professionals to communicate.',Exited
+Couple,http://couple.me,Jan-12,?,?,'$4,225,887 ',?,Exited
+Exec,http://iamexec.com,Jan-12,?,?,'$3,300,000','Exec lets you outsource the things you dont want to do in life. Let our background checked Execs help you get things done today.',Exited
+Authy,http://www.authy.com,Jan-12,?,?,'$3,067,000','Authy makes it easy to add optional two-factor authentication to your application',Exited
+Amiato,http://www.amiato.com,Jan-12,?,?,'$2,000,000',?,Exited
+Flutter,http://flutterapp.com,Jan-12,'$40,000,000',H,'$1,400,000','Play and pause your music and movies with a gesture!',Exited
+Loom,http://www.loom.com,Jan-12,?,?,'$1,400,000',?,Exited
+FamilyLeaf,http://familyleaf.com,Jan-12,?,?,'$984,000','FamilyLeaf is a private place to share your life with your family.',Exited
+HackPad,http://hackpad.com,Jan-12,?,?,?,'Smart collaborative documents. Company wiki. Personal notes. Event planning. Classroom collaboration.',Exited
+SocialCam,http://socialcam.com,Jan-12,'$60,000,000',H,?,'Socialcam is a new mobile video application coming to both iPhone and Android.',Exited
+Pixelapse,http://www.pixelapse.com,Jan-12,?,?,?,?,Exited
+Midnox,http://luma.io,Jan-12,?,?,?,'Create stunning HD videos and share them with your friends.',Exited
+Carsabi,http://carsabi.com,Jan-12,?,?,?,?,Exited
+LendUp,http://www.lendup.com,Jan-12,?,?,'$361,500,000','Our mission is to expand access to credit and lower the cost of borrowing',Operating
+Gusto,https://gusto.com/,Jan-12,?,?,'$253,100,000',?,Operating
+MatterPort,http://www.matterport.com,Jan-12,?,?,'$66,000,000','Matterport is a revolutionary 3D scanner that allows anyone to create digital models of interior spaces quickly, easily, and automatically.',Operating
+PlanGrid,http://www.plangrid.com,Jan-12,?,?,'$65,975,002 ','PlanGrid was created to save contractors time.',Operating
+FarmLogs,http://farmlogs.com,Jan-12,?,?,'$37,000,000','FarmLogs makes it incredibly simple to always know whats happening on your farm. Start saving time and money. Ditch the spreadsheets and paper records!',Operating
+'Your Mechanic',http://www.yourmechanic.com,Jan-12,?,?,'$28,000,000','Hire mechanics that will come to your home or work to fix your car. Save 20\% or more on car repairs. Convenient, affordable and transparent.',Operating
+Anyperk,http://fond.co,Jan-12,?,?,'$25,850,000','AnyPerk offers discounts on web-services as employee perks.',Operating
+RideCell,http://www.ridecell.com,Jan-12,?,?,'$23,400,000',?,Operating
+Rescale,http://www.rescale.com,Jan-12,?,?,'$20,400,000',?,Operating
+42floors,http://42floors.com,Jan-12,?,?,'$17,400,000','42Floors makes office space rentals and commercial real estate listings easier to search',Operating
+Chute,http://getchute.com,Jan-12,?,?,'$16,819,997 ','Chute is a cloud platform that helps apps and sites capture, manage, and display media files',Operating
+MyVR,https://myvr.com,Jan-12,?,?,'$7,500,000','MyVR is online marketing software that allows vacation rental owners and operators to manage all of their vacation rental marketing in one place.',Operating
+'The Muse',http://www.themuse.com/,Jan-12,?,?,'$7,316,522 ','The Daily Muse is visually engaging job search and related career resources.',Operating
+HireArt,http://www.hireart.com,Jan-12,?,?,'$6,714,674 ','Brilliant job seekers, delivered. Screen and source job candidates through work samples and video interviews.',Operating
+Circuithub,http://circuithub.com,Jan-12,?,?,'$4,478,231 ',?,Operating
+Ark,http://www.ark.com,Jan-12,?,?,'$4,450,000',?,Operating
+Shoptiques,http://shoptiques.com,Jan-12,?,?,'$2,000,000','Shoptiques.com brings boutique shopping online.',Operating
+Priceonomics,http://priceonomics.com,Jan-12,?,?,'$1,670,000','Priceonomics is the price guide for everything.',Operating
+Zillabyte,http://www.zillabyte.com,Jan-12,?,?,'$1,500,000','Zillabyte is an online big-data analysis platform currently in stealth mode.',Operating
+Documents.me,http://Documents.me,Jan-12,?,?,'$250,000',?,Operating
+Medmonk,http://medmonk.com,Jan-12,?,?,'$150,177 ',?,Operating
+Dealupa,http://dealupa.com,Jan-12,?,?,?,'A fresh, new way to shop daily deals.',Operating
+Brace,http://www.backlift.com,Jan-12,?,?,?,?,Operating
+Coderwall,http://coderwall.com,Jan-12,?,?,?,'Coderwall is a site for developers to profile what projects they are up to and learn from others.',Operating
+iCracked,http://www.icracked.com,Jan-12,?,?,?,'iCracked provides local iPhone, iPad, iPod, and Samsung repair and trade-in in the United States and eight other countries around the world.',Operating
+Marft,http://marft.com,Jan-12,?,?,?,?,Operating
+Glider,http://,Jan-12,?,?,?,?,Operating
+Talkray,http://www.tikle.com,Jan-12,?,?,?,?,Operating
+BarSense,http://www.kytephone.com,Jan-12,?,?,?,?,Operating
+SolidStage,http://,Jan-12,?,?,?,?,Operating
+MakeSchool,http://www.makeschool.com,Jan-12,?,?,?,?,Operating
+Amplitude,http://sonalight.com,Jan-12,?,?,?,?,Operating
+'Jellyfish Art',http://www.jellyfishart.com,Jan-12,?,?,?,'We sell pet jellyfish in specialized aquariums',Operating
+WireOver,http://www.wireover.com,Jan-12,?,?,?,?,Operating
+'Tap To Learn',http://www.taptolearn.com,Jan-12,?,?,?,?,Operating
+Medigram,https://medigram.com/,Jan-12,?,?,?,'Healthcare communication made simple. Medigram provides a HIPAA-compliant communication platform to make any medical conversation convenient and secure.',Operating
+'Per Vices',http://pervices.com,Jan-12,?,?,?,'Hardware that allows software developers to write applications to interact with all types of wireless signals and wireless devices',Operating
+ScreenLeap,http://www.screenleap.com,Jan-12,?,?,?,'Share your screen instantly to any device with a browser.',Operating
+'Clever Deck',http://cleverdeck.com,Jan-12,?,?,?,?,Operating
+Grouper,http://joingrouper.com,Jan-12,?,?,?,?,Operating
+'YC W12 Stealth - #65',http://,Jan-12,?,?,?,?,Operating
+SlidePay,http://www.slidepay.com,Jan-12,?,?,'$2,100,000',?,Dead
+'Install Monetizer',http://www.InstallMonetizer.com,Jan-12,?,?,'$500,000',?,Dead
+99dresses,http://99dresses.com,Jan-12,?,?,'$105,651 ','99dresses allows users to trade the fashion items with other users.',Dead
+LVL6,http://www.lvl6.com,Jan-12,?,?,?,'LVL6 creates social mobile games on Android and iOS.',Dead
+EveryArt,http://everyart.com,Jan-12,?,?,?,'everyArt allows you to commission an art piece from a diverse portfolio of artists on the web, all excited to collaborate with you on your masterpiece.',Dead
+MineFold,http://minefold.com,Jan-12,?,?,?,'Simple Minecraft servers. Available instantly, free to play for 10 hours a month.',Dead
+HipMob,http://flypadapp.com,Jan-12,?,?,?,?,Dead
+EngageInbox,http://givespark.com,Jan-12,?,?,?,?,Dead
+Kamcord,http://www.kamcord.com,Jun-12,?,?,'$35,270,000',?,Exited
+Virool,http://www.virool.com,Jun-12,?,?,'$18,620,000',?,Exited
+Mattermark,https://mattermark.com,Jun-12,'$1,000,000',?,'$17,200,000',?,Exited
+Pixate,http://www.pixate.com,Jun-12,?,?,'$3,800,000',?,Exited
+GetGoing,http://www.getgoing.com,Jun-12,?,?,'$2,500,000',?,Exited
+Celery,http://www.trycelery.com,Jun-12,?,?,'$2,300,000',?,Exited
+Filestack,http://filestack.com,Jun-12,?,?,'$1,800,000',?,Exited
+BufferBox,http://www.bufferbox.com,Jun-12,'$3,000,000',L,'$1,026,259 ',?,Exited
+Streem,https://www.streem.com,Jun-12,?,?,'$875,000',?,Exited
+Kippt,http://kippt.com,Jun-12,?,?,?,?,Exited
+Statwing,http://www.statwing.com,Jun-12,?,?,?,?,Exited
+Easel,http://easel.io,Jun-12,?,?,?,?,Exited
+Knowmia,http://www.knowmia.com,Jun-12,?,?,?,?,Exited
+VoiceGem,http://www.voicegem.com,Jun-12,'$500,000',L,?,?,Exited
+Crohnology,http://crohnology.com,Jun-12,?,?,?,?,Exited
+Ink,http://,Jun-12,?,?,?,?,Exited
+Instacart,https://www.instacart.com,Jun-12,?,?,'$874,800,000',?,Operating
+Coinbase,http://www.coinbase.com,Jun-12,?,?,'$225,309,825 ',?,Operating
+Lever,https://www.lever.co/,Jun-12,?,?,'$72,800,000',?,Operating
+Clever,https://clever.com,Jun-12,?,?,'$46,320,000',?,Operating
+'Rainforest QA',https://www.rainforestqa.com/,Jun-12,?,?,'$41,170,000',?,Operating
+Eligible,https://www.eligible.com,Jun-12,?,?,'$25,200,000',?,Operating
+SmartAsset,https://smartasset.com/,Jun-12,?,?,'$23,431,095 ',?,Operating
+Thread,https://www.thread.com/,Jun-12,?,?,'$16,322,190',?,Operating
+Benchling,http://benchling.com,Jun-12,?,?,'$12,900,000',?,Operating
+'Health Sherpa',https://www.healthsherpa.com/,Jun-12,?,?,'$10,000,000',?,Operating
+Survata,https://www.survata.com,Jun-12,?,?,'$7,717,000',?,Operating
+Submittable,http://www.submittable.com,Jun-12,?,?,'$7,250,000',?,Operating
+FundersClub,http://fundersclub.com,Jun-12,?,?,'$6,500,000',?,Operating
+Amicus,http://amicushq.com,Jun-12,?,?,'$3,780,000',?,Operating
+Natero,https://www.natero.com,Jun-12,?,?,'$3,334,176 ',?,Operating
+Tastemaker,http://www.tastemaker.com,Jun-12,?,?,'$3,220,985 ',?,Operating
+9GAG,http://9gag.com,Jun-12,?,?,'$2,800,000',?,Operating
+Zapier,https://zapier.com,Jun-12,?,?,'$2,562,000',?,Operating
+'Keychain Logistics',https://www.keychainlogistics.com,Jun-12,?,?,'$2,520,000',?,Operating
+Vayable,http://www.vayable.com,Jun-12,?,?,'$2,100,000',?,Operating
+'Canopy Labs',http://canopylabs.com,Jun-12,?,?,'$2,064,000',?,Operating
+'Double Robotics',http://www.doublerobotics.com,Jun-12,?,?,'$1,900,000',?,Operating
+Plivo,http://www.plivo.com,Jun-12,?,?,'$1,750,000',?,Operating
+Vastrm,http://www.vastrm.com,Jun-12,?,?,'$1,650,000',?,Operating
+Partnered,http://www.partnered.com,Jun-12,?,?,'$1,098,400',?,Operating
+ReelSurfer,http://www.reelsurfer.com,Jun-12,?,?,'$880,000',?,Operating
+FlightFox,http://flightfox.com,Jun-12,?,?,'$850,980',?,Operating
+LeanMarket,https://www.leanstartupmachine.com/,Jun-12,?,?,'$100,000',?,Operating
+'Parallel Universe',http://paralleluniverse.co,Jun-12,?,?,?,?,Operating
+LightTable,http://www.lighttable.com,Jun-12,?,?,?,?,Operating
+Diaspora,http://diasporaproject.org,Jun-12,?,?,?,?,Operating
+Everyday.me,http://everyday.me,Jun-12,?,?,?,?,Operating
+QuicklyChat,http://www.quicklychat.com,Jun-12,?,?,?,?,Operating
+Newsblur,http://newsblur.com,Jun-12,?,?,?,?,Operating
+MicroEval,http://microeval.com,Jun-12,?,?,?,?,Operating
+SpinPunch,http://www.spinpunch.com,Jun-12,?,?,?,?,Operating
+Tracks.by,http://tracksby.com,Jun-12,?,?,?,?,Operating
+Grid,http://grid.binarythumb.com/,Jun-12,?,?,?,?,Operating
+Scoutzie,http://www.scoutzie.com,Jun-12,?,?,?,?,Operating
+DataNitro,http://www.datanitro.com,Jun-12,?,?,?,?,Operating
+imgfave,http://imgfave.com,Jun-12,?,?,?,?,Operating
+Testmunk,http://www.himom.me,Jun-12,?,?,?,?,Operating
+'Coco Controller',http://cococontroller.com,Jun-12,?,?,?,?,Operating
+Profig,http://profig.com,Jun-12,?,?,?,?,Operating
+Markupwand,http://www.goyaka.com,Jun-12,?,?,?,?,Operating
+Zentail,http://www.hdtradeservices.com,Jun-12,?,?,?,?,Operating
+'Mth Sense',http://mthsense.com,Jun-12,?,?,?,?,Operating
+Airbrite,http://airbritelabs.com,Jun-12,?,?,?,?,Operating
+Rent.io,http://www.rent.io,Jun-12,?,?,?,?,Operating
+Dreamforge,http://dreamforge.me,Jun-12,?,?,?,?,Operating
+OctaveWealth,http://bigcalc.com,Jun-12,?,?,?,?,Operating
+StudyEdge,http://www.studyedge.com,Jun-12,?,?,?,?,Operating
+BoostedBoards,http://www.boostedboards.com,Jun-12,?,?,?,?,Operating
+AdsOptimal,http://adsoptimal.com,Jun-12,?,?,?,?,Operating
+'Fullstack Academy',http://fullstackacademy.com,Jun-12,?,?,?,?,Operating
+Mattermost,http://mattermost.com,Jun-12,?,?,?,?,Operating
+Framebase,http://,Jun-12,?,?,?,?,Operating
+Hipset,http://,Jun-12,?,?,?,?,Operating
+Soylent,http://www.soylent.me,Jun-12,?,?,?,?,Operating
+Arc,http://,Jun-12,?,?,?,?,Operating
+BackerKit,https://backerkit.com,Jun-12,?,?,?,?,Operating
+Svbtle,http://svbtle.com,Jun-12,?,?,?,?,Operating
+ZeroMailer,http://zeromailer.com,Jun-12,?,?,?,?,Operating
+ViaCycle,http://www.viacycle.com,Jun-12,?,?,?,?,Dead
+TapIn,http://www.tapin.tv,Jun-12,?,?,?,?,Dead
+HipType,http://www.hiptype.com,Jun-12,?,?,?,?,Dead
+RegistryLove,http://registrylove.com,Jun-12,?,?,?,?,Dead
+Collections,http://www.collections.me,Jun-12,?,?,?,?,Dead
+Hubchilla,http://www.hubchilla.com,Jun-12,?,?,?,?,Dead
+TomoGuides,http://tomoguides.com,Jun-12,?,?,?,?,Dead
+Circular,http://www.circularapp.com,Jun-12,?,?,?,?,Dead
+FlightCar,http://flightcar.com,Jan-13,?,?,'$40,428,608 ',?,Exited
+Coin,https://onlycoin.com,Jan-13,?,?,'$15,500,000',?,Exited
+Screenhero,http://screenhero.com,Jan-13,?,?,'$1,800,000',?,Exited
+Meldium,http://www.meldium.com,Jan-13,'$15,000,000',H,'$1,000,000',?,Exited
+Posmetrics,http://posmetrics.com,Jan-13,?,?,?,?,Exited
+MedXT,https://www.medxt.com,Jan-13,?,?,?,?,Exited
+Zenefits,http://www.zenefits.com,Jan-13,?,?,'$583,600,000',?,Operating
+'Thalmic Labs (Myo)',http://thalmic.com,Jan-13,?,?,'$135,632,011 ',?,Operating
+Airware,https://www.airware.com,Jan-13,?,?,'$109,550,000',?,Operating
+Teespring,http://teespring.com,Jan-13,?,?,'$61,875,000',?,Operating
+InfluxData,http://influxdata.com/,Jan-13,?,?,'$59,892,000',?,Operating
+Interana,http://www.interana.com,Jan-13,?,?,'$46,199,999 ',?,Operating
+'Heap Analytics',http://heapanalytics.com,Jan-13,?,?,'$40,000,000',?,Operating
+6sense,http://www.6sense.com,Jan-13,?,?,'$36,000,000',?,Operating
+BuildZoom,https://www.buildzoom.com,Jan-13,?,?,'$14,563,000',?,Operating
+Goldbely,https://www.goldbely.com,Jan-13,?,?,'$13,000,000',?,Operating
+Sourcery,https://getsourcery.com/,Jan-13,?,?,'$10,952,000',?,Operating
+Medisas,http://www.medisas.com,Jan-13,?,?,'$10,589,641 ',?,Operating
+Errplane,http://errplane.com,Jan-13,?,?,'$9,112,000',?,Operating
+SimplyInsured,http://www.simplyinsured.com,Jan-13,?,?,'$8,400,000',?,Operating
+Kalibrr,http://www.kalibrr.com,Jan-13,?,?,'$8,277,171 ',?,Operating
+Wevorce,http://wevorce.com,Jan-13,?,?,'$6,545,962 ',?,Operating
+Skip,https://goradar.com,Jan-13,?,?,'$5,830,000',?,Operating
+Watsi,http://watsi.org,Jan-13,?,?,'$4,700,000',?,Operating
+VayCayHero,http://www.vaycayhero.com/,Jan-13,?,?,'$4,186,500',?,Operating
+CrowdMed,http://www.crowdmed.com,Jan-13,?,?,'$3,145,000',?,Operating
+SwapBox,http://swapbox.com,Jan-13,?,?,'$3,000,000',?,Operating
+Prizeo,http://www.prizeo.com,Jan-13,?,?,'$2,500,000',?,Operating
+WeFunder,http://www.wefunder.com,Jan-13,?,?,'$2,330,000',?,Operating
+Padlet,http://padlet.com,Jan-13,?,?,'$2,320,000',?,Operating
+Semantics3,http://www.semantics3.com,Jan-13,?,?,'$2,150,000',?,Operating
+Etleap,https://etleap.com/,Jan-13,?,?,'$1,623,599 ',?,Operating
+Experiment,http://www.experiment.com,Jan-13,?,?,'$1,230,000',?,Operating
+Lawdingo,http://www.lawdingo.com,Jan-13,?,?,'$790,000',?,Operating
+PayTango,http://paytango.com,Jan-13,?,?,'$700,000',?,Operating
+Terascore,http://www.terascore.com,Jan-13,?,?,'$100,000',?,Operating
+Swish,http://www.swish.com,Jan-13,?,?,?,?,Operating
+Strikingly,http://www.strike.com.au,Jan-13,?,?,?,?,Operating
+StyleUp,http://thestyleup.com,Jan-13,?,?,?,?,Operating
+Fivetran,https://fivetran.com,Jan-13,?,?,?,?,Operating
+Lollipuff,http://www.lollipuff.com,Jan-13,?,?,?,?,Operating
+Pantelligent,http://www.circuitlab.com,Jan-13,?,?,?,?,Operating
+BitNami,https://bitnami.com,Jan-13,?,?,?,?,Operating
+'Prophecy Services',http://,Jan-13,?,?,?,?,Operating
+Appcubator,http://,Jan-13,?,?,?,?,Operating
+BeatDeck,http://,Jan-13,?,?,?,?,Operating
+RoverRide,http://,Jan-13,?,?,?,?,Operating
+Trainzen,http://,Jan-13,?,?,?,?,Operating
+CoreOS,http://coreos.com,Jun-13,'$250,000,000',?,'$50,000,000',?,Exited
+URX,http://urx.com,Jun-13,?,?,'$15,100,000',?,Exited
+SpoonRocket,http://www.spoonrocket.com,Jun-13,?,?,'$13,500,000',?,Exited
+Bloomthat,http://www.bloomthat.com,Jun-13,?,?,'$7,600,000',?,Exited
+'Standard Treasury',http://standardtreasury.com,Jun-13,?,?,'$2,700,000',?,Exited
+Bop.fm,http://www.bop.fm,Jun-13,?,?,'$2,000,000',?,Exited
+DataRank,http://www.datarank.com,Jun-13,?,?,'$1,588,000',?,Exited
+StatusPage,http://www.statuspage.io,Jun-13,?,?,'$100,000',?,Exited
+Hackermeter,http://www.hackermeter.com,Jun-13,'$350,000',L,?,?,Exited
+Weilos,http://weilos.com,Jun-13,?,?,?,?,Exited
+Teleborder,http://www.teleborder.com,Jun-13,?,?,?,?,Exited
+'Layer by Layer',http://www.layerbylayer.com/,Jun-13,?,?,?,?,Exited
+DoorDash,http://www.doordash.com,Jun-13,?,?,'$721,700,000',?,Operating
+'Meta Space Glasses',http://www.metavision.com,Jun-13,?,?,'$73,000,000',?,Operating
+'Le Tote',http://www.letote.com,Jun-13,?,?,'$66,600,000',?,Operating
+'Panorama Education',http://panoramaed.com,Jun-13,?,?,'$32,000,000',?,Operating
+Lob,https://lob.com,Jun-13,?,?,'$29,400,000',?,Operating
+Casetext,http://www.casetext.com,Jun-13,?,?,'$20,800,000',?,Operating
+Apptimize,http://apptimize.com,Jun-13,?,?,'$18,500,000',?,Operating
+'True Link Financial',https://www.truelinkfinancial.com,Jun-13,?,?,'$15,000,000',?,Operating
+Regalii,http://regalii.com,Jun-13,?,?,'$13,900,000',?,Operating
+Estimote,http://www.estimote.com,Jun-13,?,?,'$13,800,000',?,Operating
+FanHero,http://www.fanhero.com,Jun-13,?,?,'$10,000,000',?,Operating
+SimpleLegal,http://www.simplelegal.com,Jun-13,?,?,'$10,000,000',?,Operating
+Senic,http://www.senic.com,Jun-13,?,?,'$6,300,000',?,Operating
+CrateJoy,http://www.cratejoy.com,Jun-13,?,?,'$4,000,000',?,Operating
+EasyPost,http://www.easypost.com,Jun-13,?,?,'$3,450,000',?,Operating
+Webflow,http://www.webflow.com,Jun-13,?,?,'$2,900,000',?,Operating
+'One Month Rails',http://onemonth.com,Jun-13,?,?,'$2,684,000',?,Operating
+SoundFocus,http://www.soundfocus.com,Jun-13,?,?,'$1,700,000',?,Operating
+RealCrowd,http://www.realcrowd.com,Jun-13,?,?,'$1,600,000',?,Operating
+Asseta,http://www.asseta.com,Jun-13,?,?,'$1,535,000',?,Operating
+Watchsend,http://watchsend.com,Jun-13,?,?,'$650,000',?,Operating
+Amulyte,http://www.amulyte.com,Jun-13,?,?,'$255,000',?,Operating
+LocalOn,http://www.localon.com,Jun-13,?,?,'$175,000',?,Operating
+'Butter Systems',http://buttersystems.com,Jun-13,?,?,'$100,000',?,Operating
+Kivo,http://www.kivo.com,Jun-13,?,?,'$97,000',?,Operating
+Reebee,http://reebee.com,Jun-13,?,?,'$26,259 ',?,Operating
+Jerpix,http://jerpix.com,Jun-13,?,?,?,?,Operating
+Floobits,http://floobits.com,Jun-13,?,?,?,?,Operating
+'7 Cups of Tea',http://www.7cupsoftea.com,Jun-13,?,?,?,?,Operating
+Glio,https://glio.com,Jun-13,?,?,?,?,Operating
+GoComm,http://gocomm.com,Jun-13,?,?,?,?,Operating
+ixi-play,http://ixiplay.com,Jun-13,?,?,?,?,Operating
+Toutpost,http://www.toutpost.com,Jun-13,?,?,?,?,Operating
+'Graft Concepts',http://www.graftconcepts.com,Jun-13,?,?,?,?,Operating
+Crowdery,http://www.crowdery.com/,Jun-13,?,?,?,?,Operating
+Hum,None,Jun-13,?,?,?,?,Operating
+imHome,https://imhomeapp.com/,Jun-13,?,?,?,?,Operating
+'Echo Locker',http://echolocker.com/,Jun-13,?,?,?,?,Operating
+'YC S13 Stealth - #53',http://,Jun-13,?,?,?,?,Operating
+'YC S13 Stealth - #52',http://,Jun-13,?,?,?,?,Operating
+Lumoid,http://lumoid.com,Jun-13,?,?,'$5,900,000',?,Dead
+Buttercoin,http://buttercoin.com,Jun-13,?,?,'$1,250,000',?,Dead
+Prim,None,Jun-13,?,?,?,?,Dead
+Cruise,http://www.getcruise.com,Jan-14,'$1,000,000,000',?,'$18,800,000',?,Exited
+Kimono,https://www.kimonolabs.com/,Jan-14,?,?,'$5,000,000',?,Exited
+Wit.ai,https://www.wit.ai/,Jan-14,?,?,'$3,000,000',?,Exited
+'Framed Data',http://www.framed.io,Jan-14,?,?,'$2,000,000',?,Exited
+Threadable,http://threadable.com,Jan-14,?,?,?,?,Exited
+Eventjoy,http://eventjoy.com,Jan-14,?,?,?,?,Exited
+Rickshaw,https://gorickshaw.com,Jan-14,?,?,?,?,Exited
+Memebox,http://us.memebox.com,Jan-14,?,?,'$229,620,000',?,Operating
+Flexport,https://www.flexport.com/,Jan-14,?,?,'$204,000,000',?,Operating
+Algolia,https://www.algolia.com,Jan-14,?,?,'$74,222,067 ',?,Operating
+'Weave Communications',http://www.getweave.com,Jan-14,?,?,'$37,500,000',?,Operating
+Unbabel,http://unbabel.com,Jan-14,?,?,'$31,000,000',?,Operating
+Gobble,http://gobble.com,Jan-14,?,?,'$29,823,000',?,Operating
+'Move Loot',http://moveloot.com,Jan-14,?,?,'$21,800,000',?,Operating
+TradeBlock,http://tradeblock.com,Jan-14,?,?,'$20,345,822 ',?,Operating
+CareMessage,http://caremessage.org,Jan-14,?,?,'$19,000,000',?,Operating
+Snapdocs,http://www.snapdocs.com,Jan-14,?,?,'$18,000,000',?,Operating
+Rocketrip,http://www.rocketrip.com,Jan-14,?,?,'$17,175,000',?,Operating
+AirHelp,http://www.airhelp.com,Jan-14,?,?,'$16,700,000',?,Operating
+TerrAvion,http://www.terravion.com,Jan-14,?,?,'$10,000,000',?,Operating
+Zesty,http://www.zesty.co.uk,Jan-14,?,?,'$9,200,000',?,Operating
+Liftignighter,http://www.liftigniter.com/,Jan-14,?,?,'$8,250,000',?,Operating
+Boostable,http://www.boostable.com,Jan-14,?,?,'$8,222,000',?,Operating
+Sendwithus,https://www.sendwithus.com,Jan-14,?,?,'$7,300,000',?,Operating
+'Next Caller',http://nextcaller.com,Jan-14,?,?,'$5,000,000',?,Operating
+Taplytics,http://taplytics.com,Jan-14,?,?,'$4,800,000',?,Operating
+Bellabeat,http://www.bellabeat.com,Jan-14,?,?,'$4,519,913 ',?,Operating
+Guesty,http://guesty.com,Jan-14,?,?,'$4,500,000',?,Operating
+Abacus,http://abacus.com/,Jan-14,?,?,'$3,500,000',?,Operating
+Edyn,http://www.edyn.com/,Jan-14,?,?,'$2,970,000',?,Operating
+'Two Tap',http://twotap.com,Jan-14,?,?,'$2,700,000',?,Operating
+AptDeco,http://www.aptdeco.com,Jan-14,?,?,'$2,515,000',?,Operating
+TrueVault,https://www.truevault.com,Jan-14,?,?,'$2,500,000',?,Operating
+Cambly,http://cambly.com,Jan-14,?,?,'$2,204,365 ',?,Operating
+SketchDeck,http://sketchdeck.com,Jan-14,?,?,'$2,200,000',?,Operating
+CodeCombat,http://codecombat.com,Jan-14,?,?,'$2,100,000',?,Operating
+Ambition,http://www.tryambition.com,Jan-14,?,?,'$2,000,000',?,Operating
+'One Degree',http://www.1deg.org,Jan-14,?,?,'$1,700,000',?,Operating
+Pushbullet,http://www.pushbullet.com,Jan-14,?,?,'$1,500,000',?,Operating
+FutureLeague,http://www.futureleague.co,Jan-14,?,?,'$1,489,000',?,Operating
+'Style Lend',http://stylelend.com,Jan-14,?,?,'$1,400,000',?,Operating
+'Immunity Project',http://www.immunityproject.org,Jan-14,?,?,'$1,120,000',?,Operating
+Minuum,http://minuum.com,Jan-14,?,?,'$500,000',?,Operating
+Orankl,http://www.orankl.com,Jan-14,?,?,'$201,267 ',?,Operating
+MixerBox,http://www.mixerbox.com,Jan-14,?,?,'$120,000',?,Operating
+MerryMint,http://www.merrymint.co/,Jan-14,?,?,'$120,000',?,Operating
+'Kuna Systems',http://www.getkuna.com,Jan-14,?,?,'$120,000',?,Operating
+Shoobs,http://shoobs.com,Jan-14,?,?,'$94,000',?,Operating
+Povio,http://pov.io,Jan-14,?,?,'$75,000',?,Operating
+OpenCurriculum,http://opencurriculum.org/,Jan-14,?,?,'$40,000',?,Operating
+Piinpoint,http://www.piinpoint.com,Jan-14,?,?,'$23,961 ',?,Operating
+AirPair,http://www.airpair.com,Jan-14,?,?,?,?,Operating
+Beacon,http://www.beaconreader.com,Jan-14,?,?,?,?,Operating
+Gbatteries,http://www.gbatteries.com,Jan-14,?,?,?,?,Operating
+'YC W14 Stealth - #75',http://,Jan-14,?,?,?,?,Operating
+42,http://42debut.com,Jan-14,?,?,?,?,Operating
+CodeNow,http://codenow.org,Jan-14,?,?,?,?,Operating
+'YC W14 Stealth - #74',http://,Jan-14,?,?,?,?,Operating
+Chargehound,https://www.chargehound.com,Jan-14,?,?,?,?,Operating
+Vidpresso,http://www.vidpresso.com,Jan-14,?,?,?,?,Operating
+'Theorem LP',http://theoremlp.com,Jan-14,?,?,?,?,Operating
+'YC W14 Stealth - #73',http://,Jan-14,?,?,?,?,Operating
+Yumbin,http://,Jan-14,?,?,?,?,Operating
+StackLead,https://stacklead.com,Jan-14,?,?,?,?,Operating
+Zidisha,http://www.zidisha.org,Jan-14,?,?,?,?,Operating
+'YC W14 Stealth - #72',http://,Jan-14,?,?,?,?,Operating
+'Noora Health',http://www.noorahealth.org,Jan-14,?,?,?,?,Operating
+'Drive Pulse',http://,Jan-14,?,?,?,?,Operating
+'Dating Ring',http://www.datingring.com,Jan-14,?,?,?,?,Operating
+MadeSolid,https://madesolid.com,Jan-14,?,?,?,?,Operating
+PipelineDB,https://www.pipelinedb.com,Jan-14,?,?,?,?,Operating
+ZowPow,http://zowpow.com,Jan-14,?,?,?,?,Operating
+Motionlead,http://motionlead.com,Jan-14,?,?,?,?,Operating
+Zinc,http://zincsave.com,Jan-14,?,?,?,?,Dead
+HoverChat,http://hoverchat.com,Jan-14,?,?,?,?,Dead
+ProductHunt,http://www.producthunt.com,Jun-14,'$20,000,000',?,'$7,540,000',?,Exited
+Fixed,https://www.fixedlaw.com,Jun-14,?,?,'$3,750,000',?,Exited
+Payable,http://www.payable.com/,Jun-14,?,?,'$2,100,000',?,Exited
+Payable,http://www.payable.com/,Jun-14,?,?,'$2,100,000',?,Exited
+Carlypso,http://www.carlypso.com,Jun-14,?,?,'$1,320,000',?,Exited
+'Unwind Me',https://unwind.me,Jun-14,?,?,?,?,Exited
+'Ginko Bioworks',http://ginkgobioworks.com/,Jun-14,?,?,'$429,120,000',?,Operating
+'Protocol Labs',http://ipn.io/,Jun-14,?,?,'$255,000,000',?,Operating
+Front,http://frontapp.com,Jun-14,?,?,'$79,250,000',?,Operating
+'Rigetti Computing',http://www.rigetti.com/,Jun-14,?,?,'$69,450,000',?,Operating
+'BlockStack Labs',https://blockstack.org/,Jun-14,?,?,'$58,250,000',?,Operating
+Checkr,https://checkr.com/,Jun-14,?,?,'$49,120,000',?,Operating
+uBiome,http://ubiome.com,Jun-14,?,?,'$26,971,193 ',?,Operating
+'Clara Labs',http://www.claralabs.com/,Jun-14,?,?,'$23,634,199 ',?,Operating
+ShipBob,http://www.shipbob.com/,Jun-14,?,?,'$22,520,000',?,Operating
+ClearTax,http://cleartax.in/,Jun-14,?,?,'$15,420,000',?,Operating
+'Helion Energy',http://www.helionenergy.com/,Jun-14,?,?,'$12,114,202 ',?,Operating
+BitAccess,http://www.bitaccess.co,Jun-14,?,?,'$11,000,000',?,Operating
+Replenish,http://getreplenish.com/,Jun-14,?,?,'$6,874,744 ',?,Operating
+Beep,http://www.beepnetworks.com,Jun-14,?,?,'$4,000,000',?,Operating
+BlockSpring,https://www.blockspring.com/,Jun-14,?,?,'$3,520,000',?,Operating
+Tenjin,http://tenjin.io/,Jun-14,?,?,'$2,620,000',?,Operating
+Walksource,http://www.roomstorm.com,Jun-14,?,?,'$2,600,000',?,Operating
+Roomstorm,http://www.roomstorm.com,Jun-14,?,?,'$2,600,000',?,Operating
+'Shift Payments',https://shiftpayments.com/,Jun-14,?,?,'$2,200,000',?,Operating
+MTailor,http://mtailor.com,Jun-14,?,?,'$2,120,000',?,Operating
+PicnicHealth,https://picnichealth.com/,Jun-14,?,?,'$2,120,000',?,Operating
+BlockScore,http://blockscore.com,Jun-14,?,?,'$2,025,000',?,Operating
+'Sliced Investing',http://www.slicedinvesting.com/,Jun-14,?,?,'$2,000,000',?,Operating
+Kash,http://withkash.com/,Jun-14,?,?,'$2,000,000',?,Operating
+'Spot Angels',http://www.spotangels.com,Jun-14,?,?,'$2,000,000',?,Operating
+'Lawn Love',http://lawnlove.com/,Jun-14,?,?,'$1,900,000',?,Operating
+PersistIQ,http://persistiq.com/,Jun-14,?,?,'$1,820,000',?,Operating
+Women.com,https://www.women.com,Jun-14,?,?,'$1,750,000',?,Operating
+Impraise,http://www.impraise.com,Jun-14,?,?,'$1,704,666 ',?,Operating
+Bikanta,http://bikanta.com/,Jun-14,?,?,'$1,700,000',?,Operating
+Doblet,http://doblet.com,Jun-14,?,?,'$1,420,000',?,Operating
+Naytev,https://www.naytev.com,Jun-14,?,?,'$1,420,000',?,Operating
+Permutive,http://www.permutive.com/,Jun-14,?,?,'$1,409,067 ',?,Operating
+Flynn,https://flynn.io/,Jun-14,?,?,'$1,405,000',?,Operating
+Parenthoods,http://parenthoods.com/,Jun-14,?,?,'$1,320,000',?,Operating
+Greentoe,http://www.greentoe.com,Jun-14,?,?,'$1,195,000',?,Operating
+Neptune.io,http://www.neptune.io,Jun-14,?,?,'$1,120,000',?,Operating
+'TAXA Biotechnologies',http://www.taxa.com,Jun-14,?,?,'$909,000',?,Operating
+Nightingale,http://www.nightingaleapp.com,Jun-14,?,?,'$780,000',?,Operating
+Roost,http://roost.me/,Jun-14,?,?,'$710,000',?,Operating
+Flaviar,http://flaviar.com,Jun-14,?,?,'$519,640',?,Operating
+ListRunner,https://listrunnerapp.com/,Jun-14,?,?,'$500,000',?,Operating
+Whirl,http://getwhirl.com,Jun-14,?,?,'$375,000',?,Operating
+'Craft Coffee',https://www.craftcoffee.com/,Jun-14,?,?,'$320,000',?,Operating
+UPower,http://www.upowertech.com,Jun-14,?,?,'$170,000',?,Operating
+MetricWire,http://metricwire.com,Jun-14,?,?,'$143,961 ',?,Operating
+HyperPad,https://www.hyperpad.com,Jun-14,?,?,'$140,000',?,Operating
+Aptible,https://www.aptible.com,Jun-14,?,?,'$120,000',?,Operating
+'Think Gaming',http://thinkgaming.com,Jun-14,?,?,'$120,000',?,Operating
+'One Codex',https://onecodex.com/,Jun-14,?,?,'$120,000',?,Operating
+'In Your Corner',http://www.inyourcorneronline.com,Jun-14,?,?,'$120,000',?,Operating
+Ravti,https://www.ravti.com/,Jun-14,?,?,'$120,000',?,Operating
+Zenamins,http://zenamins.com/,Jun-14,?,?,'$120,000',?,Operating
+Backpack,https://backpackbang.com,Jun-14,?,?,'$120,000',?,Operating
+HauteDay,http://hauteday.com/,Jun-14,?,?,'$120,000',?,Operating
+'Vizera Labs',http://www.vizeralabs.com/,Jun-14,?,?,'$120,000',?,Operating
+Shout,http://UseShout.com,Jun-14,?,?,'$120,000',?,Operating
+'San Francisco Open Exchange',https://www.sfox.com/,Jun-14,?,?,'$120,000',?,Operating
+Paid,https://www.shoptheorem.com/,Jun-14,?,?,'$120,000',?,Operating
+Hive,https://www.hive.co,Jun-14,?,?,'$120,000',?,Operating
+'Bayes Impact',http://www.bayesimpact.org,Jun-14,?,?,'$120,000',?,Operating
+Bannerman,http://bannerman.com,Jun-14,?,?,'$120,000',?,Operating
+Hublo,http://www.hublo.com,Jun-14,?,?,?,?,Operating
+'Zip Phone',http://www.zipphone.com,Jun-14,?,?,?,?,Operating
+'Color Dating',http://www.colordatingapp.com,Jun-14,?,?,?,?,Operating
+Oklo,http://oklo.com,Jun-14,?,?,?,?,Operating
+UserGems,https://www.usergems.com,Jun-14,?,?,?,?,Operating
+'YC S14 Stealth - #84',None,Jun-14,?,?,?,?,Operating
+Tule,https://www.tuletechnologies.com/,Jun-14,?,?,?,?,Operating
+LeadFinch,https://leadfinch.com,Jun-14,?,?,?,?,Operating
+Alchemy,http://www.alchemynano.com,Jun-14,?,?,?,?,Operating
+Cheddar,http://cheddar.io,Jun-14,?,?,?,?,Operating
+BillForward,None,Jun-14,?,?,?,?,Operating
+'Owners Circle',http://,Jun-14,?,?,?,?,Operating
+Zoomer,http://www.zoomerdelivery.com,Jun-14,?,?,?,?,Operating
+'YC S14 Stealth - #85',None,Jun-14,?,?,?,?,Operating
+Weave,http://www.weave.in,Jun-14,?,?,'$5,000,000',?,Dead
+Zen99,https://www.tryzen99.com/,Jun-14,?,?,'$2,620,000',?,Dead
+Flytenow,http://www.flytenow.com,Jun-14,?,?,'$145,000',?,Dead
+Vatler,http://www.vatler.com/,Jun-14,?,?,'$120,000',?,Dead
+'Raven Tech',http://www.raventech.com/,Jan-15,?,?,'$18,120,000',?,Exited
+Final,http://www.getfinal.com,Jan-15,?,?,'$9,100,000',?,Exited
+Chariot,https://www.chariot.com,Jan-15,?,?,'$3,000,000',?,Exited
+'Valor Water Analytics',https://valorwater.com/,Jan-15,?,?,'$2,840,000',?,Exited
+WorkLife,https://www.worklife.com,Jan-15,?,?,'$2,720,000',?,Exited
+Yhat,http://yhathq.com,Jan-15,?,?,'$2,620,000',?,Exited
+Outbound,https://outbound.io,Jan-15,?,?,'$2,070,000',?,Exited
+Vanhawks,http://www.vanhawks.com/,Jan-15,?,?,'$1,600,000',?,Exited
+Vest,https://www.cboevest.com/,Jan-15,?,?,'$1,470,000',?,Exited
+VetPronto,http://vetpronto.com/,Jan-15,?,?,'$1,340,000',?,Exited
+'Automate Ads',http://automateads.com,Jan-15,?,?,'$1,000,000',?,Exited
+'Rescue Forensics',http://www.rescueforensics.com/,Jan-15,?,?,'$245,000',?,Exited
+Pomello,https://www.pomello.com/,Jan-15,?,?,'$156,000',?,Exited
+'Spark Gift',http://sparkgift.com,Jan-15,?,?,'$120,000',?,Exited
+Zenflow,http://zenflow.com,Jan-15,?,?,'$68,094,746 ',?,Operating
+Atomwise,http://www.atomwise.com/,Jan-15,?,?,'$51,570,000',?,Operating
+GitLab,http://about.gitlab.com,Jan-15,?,?,'$45,620,000',?,Operating
+EquipmentShare,https://equipmentshare.com/,Jan-15,?,?,'$33,720,000',?,Operating
+GrubMarket,https://www.grubmarket.com,Jan-15,?,?,'$32,100,000',?,Operating
+Razorpay,https://razorpay.com/,Jan-15,?,?,'$31,600,000',?,Operating
+BlueSmart,http://bluesmart.com,Jan-15,?,?,'$29,500,000',?,Operating
+Transcriptic,http://www.transcriptic.com,Jan-15,?,?,'$27,770,000',?,Operating
+WayUp,https://www.wayup.com,Jan-15,?,?,'$27,468,000',?,Operating
+'Notable Labs',http://www.notablelabs.com,Jan-15,?,?,'$20,890,492 ',?,Operating
+DroneBase,http://dronebase.com,Jan-15,?,?,'$18,957,370',?,Operating
+analyticsMD,http://www.qventus.com,Jan-15,?,?,'$15,120,000',?,Operating
+'Open Listings',https://www.openlistings.com,Jan-15,?,?,'$12,500,000',?,Operating
+Magic,https://www.getmagic.com/,Jan-15,?,?,'$12,120,000',?,Operating
+Remix,https://www.remix.com/,Jan-15,?,?,'$12,000,000',?,Operating
+Paperspace,https://www.paperspace.com,Jan-15,?,?,'$11,428,000',?,Operating
+Luka,https://replika.ai/,Jan-15,?,?,'$11,040,000',?,Operating
+Bonfire,http://gobonfire.com/,Jan-15,?,?,'$11,000,000',?,Operating
+Labdoor,https://Labdoor.com,Jan-15,?,?,'$10,790,587 ',?,Operating
+Moltin,https://moltin.com,Jan-15,?,?,'$10,322,186 ',?,Operating
+Spire,http://spire.io,Jan-15,?,?,'$10,220,000',?,Operating
+Lumi,https://www.lumi.com/,Jan-15,?,?,'$9,388,000',?,Operating
+'Direct Match',http://www.directmatch.com,Jan-15,?,?,'$9,000,000',?,Operating
+SigOpt,https://sigopt.com/,Jan-15,?,?,'$8,720,000',?,Operating
+LogDNA,https://logdna.com/,Jan-15,?,?,'$8,300,000',?,Operating
+Cleanly,https://cleanly.com,Jan-15,?,?,'$7,300,000',?,Operating
+CloudMedX,http://www.cloudmedxhealth.com,Jan-15,?,?,'$6,600,000',?,Operating
+'Popular Pays',http://www.popularpays.com,Jan-15,?,?,'$5,520,000',?,Operating
+Seed,https://seed.co/,Jan-15,?,?,'$5,120,000',?,Operating
+Pigeonly,http://www.pigeon.ly,Jan-15,?,?,'$5,089,999 ',?,Operating
+Kickback,http://kickback.com/,Jan-15,?,?,'$4,120,000',?,Operating
+Gradberry,https://tara.ai/,Jan-15,?,?,'$3,020,000',?,Operating
+TARA,https://tara.ai/,Jan-15,?,?,'$3,020,000',?,Operating
+Smarking,http://smarking.net,Jan-15,?,?,'$3,000,000',?,Operating
+CribSpot,https://www.cribspot.com/,Jan-15,?,?,'$2,927,034 ',?,Operating
+Platzi,https://courses.platzi.com/,Jan-15,?,?,'$2,270,000',?,Operating
+Booktrope,http://booktrope.com,Jan-15,?,?,'$2,270,000',?,Operating
+20n,http://20n.com/,Jan-15,?,?,'$2,220,000',?,Operating
+Meadow,https://getmeadow.com/,Jan-15,?,?,'$2,220,000',?,Operating
+Pachyderm,https://www.pachyderm.io/,Jan-15,?,?,'$2,120,000',?,Operating
+Lully,http://www.lullysleep.com/,Jan-15,?,?,'$2,100,000',?,Operating
+HigherMe,http://www.higherme.com/,Jan-15,?,?,'$1,740,000',?,Operating
+'Shift Messenger',http://www.shiftmessenger.com/,Jan-15,?,?,'$1,620,000',?,Operating
+InsiteVR,https://www.insitevr.com/,Jan-15,?,?,'$1,500,000',?,Operating
+ShiftLabs,http://shiftlabs.com,Jan-15,?,?,'$1,219,500',?,Operating
+ReadMe,http://www.readme.io,Jan-15,?,?,'$1,120,000',?,Operating
+Dealyze,http://dealyze.com/,Jan-15,?,?,'$1,083,000',?,Operating
+'Underground Cellar',http://www.undergroundcellar.com,Jan-15,?,?,'$1,000,000',?,Operating
+GroupAhead,http://groupahead.com/,Jan-15,?,?,'$875,000',?,Operating
+Treeline,https://sailsjs.com/about,Jan-15,?,?,'$785,000',?,Operating
+'Bagaveev Corporation',http://bagaveev.com,Jan-15,?,?,'$655,000',?,Operating
+MashGin,http://www.mashgin.com,Jan-15,?,?,'$620,000',?,Operating
+Cinder,http://www.cindercooks.com,Jan-15,?,?,'$496,000',?,Operating
+Filp,http://www.justflip.com/,Jan-15,?,?,'$420,000',?,Operating
+Pakible,https://pakible.com,Jan-15,?,?,'$240,000',?,Operating
+'Democracy Earth',http://democracy.earth/,Jan-15,?,?,'$220,000',?,Operating
+TeamNote,http://www.teamnoteapp.com/,Jan-15,?,?,'$161,250',?,Operating
+Nomiku,http://www.nomiku.com,Jan-15,?,?,'$145,000',?,Operating
+Vertical,http://perceptivlabs.com/,Jan-15,?,?,'$142,261 ',?,Operating
+Slidemail,http://www.slidemailapp.com,Jan-15,?,?,'$120,000',?,Operating
+Bright,http://www.brightnetwork.co.uk,Jan-15,?,?,'$120,000',?,Operating
+'Industrial Microbes',http://imicrobes.com,Jan-15,?,?,'$120,000',?,Operating
+TaskPipes,https://taskpipes.com,Jan-15,?,?,'$120,000',?,Operating
+'Akido Labs',https://www.akidolabs.com,Jan-15,?,?,'$120,000',?,Operating
+Spoil,http://spoil.co/app,Jan-15,?,?,'$120,000',?,Operating
+Instavest,https://goinstavest.com/,Jan-15,?,?,'$120,000',?,Operating
+TheMidGame,https://www.themidgame.com,Jan-15,?,?,'$120,000',?,Operating
+Trackin,http://trackin.co/,Jan-15,?,?,'$120,000',?,Operating
+Bankjoy,https://bankjoy.com/,Jan-15,?,?,'$120,000',?,Operating
+Diassess,http://www.diassess.com,Jan-15,?,?,'$120,000',?,Operating
+GiveMeTap,http://www.givemetap.com,Jan-15,?,?,'$120,000',?,Operating
+SIRUM,https://sirum.org/,Jan-15,?,?,'$120,000',?,Operating
+BuildScience,http://buildscience.com/,Jan-15,?,?,'$120,000',?,Operating
+SmartHires,http://www.smarthires.io,Jan-15,?,?,'$120,000',?,Operating
+NexTravel,https://www.nextravel.com,Jan-15,?,?,'$120,000',?,Operating
+Level,https://www.levelframes.com/,Jan-15,?,?,'$120,000',?,Operating
+Priime,http://priime.com,Jan-15,?,?,'$120,000',?,Operating
+'Standard Cyborg',http://standardcyborg.com,Jan-15,?,?,'$120,000',?,Operating
+KickPay,http://kickpay.com,Jan-15,?,?,'$120,000',?,Operating
+Giveffect,https://www.giveffect.com/,Jan-15,?,?,'$120,000',?,Operating
+'Pretty Instant',http://prettyinstant.com,Jan-15,?,?,'$120,000',?,Operating
+'The Human Utility',https://www.detroitwaterproject.org/,Jan-15,?,?,'$100,000',?,Operating
+Smartspot,None,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #105',?,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #112',None,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #109',None,Jan-15,?,?,?,?,Operating
+eBrandValue,http://www.ebrandvalue.com,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #106',?,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #108',?,Jan-15,?,?,?,?,Operating
+'Tech in Asia',http://www.techlist.asia/,Jan-15,?,?,?,?,Operating
+Pushmarket,None,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #114',None,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #113',None,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #107',?,Jan-15,?,?,?,?,Operating
+ThinAir,http://thinair.com,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #110',None,Jan-15,?,?,?,?,Operating
+'YC W15 Stealth - #111',None,Jan-15,?,?,?,?,Operating
+ReSchedule,http://reschedulemed.com,Jan-15,?,?,'$120,000',?,Dead
+Omniref,http://www.omniref.com,Jan-15,?,?,'$120,000',?,Dead
+Paribus,https://paribus.co,Jun-15,?,?,'$2,220,000',?,Exited
+'Auro Robotics',http://www.auro.ai,Jun-15,?,?,'$2,100,000',?,Exited
+Interviewed,https://www.interviewed.com/,Jun-15,?,?,'$2,000,000',?,Exited
+Vest,https://www.cboevest.com/,Jun-15,?,?,'$1,470,000',?,Exited
+'Sphere Secure Workplace',http://www.sphere.works,Jun-15,?,?,'$142,266 ',?,Exited
+Bizzy.io,http://bizzy.io,Jun-15,?,?,'$120,000',?,Exited
+Gigster,https://gigster.com/,Jun-15,?,?,'$32,500,000',?,Operating
+'Cofactor Genomics',http://cofactorgenomics.com,Jun-15,?,?,'$31,513,766 ',?,Operating
+Eight,http://eightsleep.com,Jun-15,?,?,'$30,066,621 ',?,Operating
+Eight,http://eightsleep.com,Jun-15,?,?,'$30,066,621 ',?,Operating
+Flirtey,http://www.flirtey.com,Jun-15,?,?,'$16,043,625 ',?,Operating
+'Captain 401',https://humaninterest.com/,Jun-15,?,?,'$14,500,000',?,Operating
+'ROSS Intelligence',http://www.rossintelligence.com,Jun-15,?,?,'$13,120,000',?,Operating
+Triplebyte,http://triplebyte.com,Jun-15,?,?,'$13,000,000',?,Operating
+OnboardIQ,https://www.fountain.com/,Jun-15,?,?,'$12,400,000',?,Operating
+Jopwell,http://www.jopwell.com,Jun-15,?,?,'$11,750,000',?,Operating
+Ironclad,https://www.ironcladapp.com/,Jun-15,?,?,'$11,000,000',?,Operating
+Cymmetria,http://www.cymmetria.com/,Jun-15,?,?,'$10,600,000',?,Operating
+Bitmovin,https://www.bitmovin.com,Jun-15,?,?,'$10,300,001 ',?,Operating
+TetraScience,http://www.tetrascience.com,Jun-15,?,?,'$10,025,000',?,Operating
+Willing,http://willing.com/,Jun-15,?,?,'$7,120,000',?,Operating
+'Click & Grow',http://www.clickandgrow.com,Jun-15,?,?,'$6,922,029 ',?,Operating
+Smyte,https://www.smyte.com/,Jun-15,?,?,'$6,250,000',?,Operating
+'Second Measure',https://secondmeasure.com/,Jun-15,?,?,'$5,400,000',?,Operating
+PlateIQ,http://plateiq.com/,Jun-15,?,?,'$4,500,000',?,Operating
+'Verge Genomics',http://www.vergegenomics.com,Jun-15,?,?,'$4,000,000',?,Operating
+Scentbird,http://scentbird.com,Jun-15,?,?,'$3,840,000',?,Operating
+GO1,http://www.go1.com,Jun-15,?,?,'$3,713,944 ',?,Operating
+'Wheelys Cafe',http://www.wheelyscafe.com/,Jun-15,?,?,'$3,443,586 ',?,Operating
+'Open Invest',https://www.openinvest.co/,Jun-15,?,?,'$3,250,000',?,Operating
+Hickory,http://hickorytraining.com,Jun-15,?,?,'$3,226,815 ',?,Operating
+BlueCrew,https://www.bluecrewjobs.com/,Jun-15,?,?,'$3,220,000',?,Operating
+Oolu,https://oolusolar.com,Jun-15,?,?,'$3,200,000',?,Operating
+Nebia,http://nebia.com,Jun-15,?,?,'$3,100,000',?,Operating
+'Confident Cannibas',http://www.confidentcannabis.com/,Jun-15,?,?,'$3,000,000',?,Operating
+'Circle Medical',http://circlemedical.com/,Jun-15,?,?,'$2,900,000',?,Operating
+RedCarpetUp,https://www.redcarpetup.com/,Jun-15,?,?,'$2,670,000',?,Operating
+Xfers,http://www.xfers.io,Jun-15,?,?,'$2,500,000',?,Operating
+Bodyport,http://www.bodyport.com,Jun-15,?,?,'$2,500,000',?,Operating
+Klarismo,http://www.klarismo.com/,Jun-15,?,?,'$2,487,070',?,Operating
+VOIQ,http://www.voiq.com,Jun-15,?,?,'$2,345,000',?,Operating
+VIVE,http://www.vive.co,Jun-15,?,?,'$2,300,000',?,Operating
+'Instant eSports',http://blitzesports.com/,Jun-15,?,?,'$2,130,000',?,Operating
+ScopeAR,http://ScopeAR.com/,Jun-15,?,?,'$2,120,000',?,Operating
+Her,https://weareher.com/,Jun-15,?,?,'$1,994,645 ',?,Operating
+'Plate Joy',http://platejoy.com,Jun-15,?,?,'$1,700,000',?,Operating
+Mimir,https://mimirhq.com/,Jun-15,?,?,'$1,500,000',?,Operating
+Zeplin,http://zeplin.io,Jun-15,?,?,'$1,340,560',?,Operating
+Convox,http://convox.com/,Jun-15,?,?,'$1,300,000',?,Operating
+'Transcend Lighting',http://www.thriveagritech.com/,Jun-15,?,?,'$1,100,000',?,Operating
+'The Ticket Fairy',https://www.theticketfairy.com/,Jun-15,?,?,'$605,000',?,Operating
+TenantTurner,http://tenantturner.com/,Jun-15,?,?,'$500,000',?,Operating
+teaBOT,http://mytbot.com/,Jun-15,?,?,'$250,000',?,Operating
+Markhor,https://themarkhor.com,Jun-15,?,?,'$227,000',?,Operating
+'New Story Charity',http://newstorycharity.org,Jun-15,?,?,'$200,000',?,Operating
+GovPredict,https://govpredict.com,Jun-15,?,?,'$120,000',?,Operating
+Gemnote,https://www.gemnote.com,Jun-15,?,?,'$120,000',?,Operating
+Shotput,http://www.shotput.com/,Jun-15,?,?,'$120,000',?,Operating
+Greenshoe,http://getsaida.com/,Jun-15,?,?,'$120,000',?,Operating
+Supply,http://www.madebysupply.com/,Jun-15,?,?,'$120,000',?,Operating
+AppCanary,https://appcanary.com/,Jun-15,?,?,'$120,000',?,Operating
+'Heroic Labs',https://heroiclabs.com,Jun-15,?,?,'$120,000',?,Operating
+jEugene,https://jeugene.com/,Jun-15,?,?,'$120,000',?,Operating
+'Vernox Labs',https://www.vernox.io,Jun-15,?,?,'$120,000',?,Operating
+'Traversal Networks',http://traversalnetworks.com/,Jun-15,?,?,'$120,000',?,Operating
+'Drip Capital',https://www.dripcapital.com/,Jun-15,?,?,'$120,000',?,Operating
+Gravitational,http://gravitational.com/,Jun-15,?,?,'$120,000',?,Operating
+Leada,https://www.teamleada.com,Jun-15,?,?,'$120,000',?,Operating
+Foxpass,https://www.foxpass.com,Jun-15,?,?,'$120,000',?,Operating
+Chaldal,http://www.chaldal.com,Jun-15,?,?,'$120,000',?,Operating
+'Wink Health',https://winkhealth.com,Jun-15,?,?,'$120,000',?,Operating
+Xendit,http://www.xendit.co,Jun-15,?,?,'$120,000',?,Operating
+MicroHealth,https://microhealth.com/,Jun-15,?,?,'$120,000',?,Operating
+'Give Campus',https://www.givecampus.com/,Jun-15,?,?,'$120,000',?,Operating
+zPredicta,http://zpredicta.com,Jun-15,?,?,'$120,000',?,Operating
+GrowSumo,https://www.GrowSumo.com,Jun-15,?,?,'$120,000',?,Operating
+'Seva Coffee',http://www.sevacoffee.com/,Jun-15,?,?,'$28,000',?,Operating
+Maderight,http://maderight.co,Jun-15,?,?,?,?,Operating
+SourceDNA,http://sourcedna.com,Jun-15,?,?,?,?,Operating
+Instawork,http://www.instawork.co,Jun-15,?,?,?,?,Operating
+Branch8,http://www.branch8.com/,Jun-15,?,?,?,?,Operating
+Tab,http://tabmoney.com,Jun-15,?,?,?,?,Operating
+Serica,https://sericapay.com/,Jun-15,?,?,?,?,Operating
+'Shred Video',http://shredvideo.com/,Jun-15,?,?,?,?,Operating
+Menty,http://www.menty.org,Jun-15,?,?,?,?,Operating
+MetricBoy,http://www.metricboy.com,Jun-15,?,?,?,?,Operating
+Cloudstitch,http://cloudstitch.io,Jun-15,?,?,?,?,Operating
+InnerSpace,http://www.helloinnerspace.org/,Jun-15,?,?,?,?,Operating
+Tesorio,https://www.tesorio.com/,Jun-15,?,?,?,?,Operating
+'Breakout Room',https://breakoutroom.co/,Jun-15,?,?,?,?,Operating
+Assembly,https://assembly.com,Jun-15,?,?,?,?,Operating
+Afrostream,https://afrostream.tv/,Jun-15,?,?,?,?,Operating
+FortAwesome,https://fortawesome.com/,Jun-15,?,?,?,?,Operating
+Livecoding.tv,https://www.livecoding.tv/,Jun-15,?,?,?,?,Operating
+'Get Scale',http://getscale.com,Jun-15,?,?,?,?,Operating
+'L. International',https://thisisl.com,Jun-15,?,?,?,?,Operating
+'80000 Hours',https://80000hours.org/,Jun-15,?,?,?,?,Operating
+Eden,http://edentech.co,Jun-15,?,?,?,?,Operating
+Call9,http://callnine.com,Jun-15,?,?,?,?,Operating
+ShapeScale,http://www.shapescale.com/,Jun-15,?,?,?,?,Operating
+Lugg,http://lu.gg,Jun-15,?,?,?,?,Operating
+PickTrace,http://www.picktrace.com/,Jun-15,?,?,?,?,Operating
+Ohm,http://www.getohm.com/,Jun-15,?,?,'$120,000',?,Dead
+Bistrobot,https://www.bistrobot.com,Jun-15,?,?,'$120,000',?,Dead
+Roomblocker,http://www.roomblocker.com,Jun-15,?,?,'$120,000',?,Dead
+Sywork,https://sywork.tv,Jun-15,?,?,'$120,000',?,Dead
+CareLedger,http://www.careledger.com,Jun-15,?,?,?,?,Dead
+Goodybag,http://goodybag.com,Jan-16,?,?,'$1,420,000',?,Exited
+Redspread,https://redspread.com/,Jan-16,?,?,'$240,000',?,Exited
+Elucify,http://www.getelucify.com,Jan-16,?,?,'$120,000',?,Exited
+Rappi,http://www.rappi.com,Jan-16,?,?,'$139,240,000',?,Operating
+Boom,http://boomsupersonic.com/,Jan-16,?,?,'$47,340,000',?,Operating
+Podium,https://www.podium.com,Jan-16,?,?,'$32,620,000',?,Operating
+SendBird,https://sendbird.com,Jan-16,?,?,'$21,320,000',?,Operating
+PetCube,http://petcube.com,Jan-16,?,?,'$14,061,000',?,Operating
+Lygos,http://www.lygos.com,Jan-16,?,?,'$13,120,000',?,Operating
+'Function of Beauty',https://functionofbeauty.com/,Jan-16,?,?,'$12,151,500',?,Operating
+Mux,https://mux.com,Jan-16,?,?,'$11,920,000',?,Operating
+Tovala,http://www.tovala.com,Jan-16,?,?,'$11,555,603 ',?,Operating
+Perlara,https://www.perlara.com/,Jan-16,?,?,'$11,463,002 ',?,Operating
+'Focal Systems',http://www.focal.systems/,Jan-16,?,?,'$11,220,000',?,Operating
+Cover,http://www.cover.com/,Jan-16,?,?,'$11,120,000',?,Operating
+Lattice,http://www.lattice.com/,Jan-16,?,?,'$9,320,000',?,Operating
+Deako,https://www.deako.com/,Jan-16,?,?,'$8,890,000',?,Operating
+Protonet,http://www.protonet.info/en,Jan-16,?,?,'$7,654,742 ',?,Operating
+Sharethebus,https://www.bus.com/,Jan-16,?,?,'$7,411,399 ',?,Operating
+Msg.ai,http://msg.ai,Jan-16,?,?,'$7,300,000',?,Operating
+Landed,http://www.landed.com/#/home,Jan-16,?,?,'$7,120,000',?,Operating
+'Drive Motors',https://drivemotors.com/,Jan-16,?,?,'$6,700,000',?,Operating
+'Spinal Singularity',http://www.spinalsingularity.com/,Jan-16,?,?,'$6,458,731 ',?,Operating
+AlphaFlow,http://www.alphaflow.com/,Jan-16,?,?,'$6,380,474 ',?,Operating
+Skymind,http://www.skymind.io,Jan-16,?,?,'$6,320,000',?,Operating
+Nurx,http://nurx.co,Jan-16,?,?,'$5,420,000',?,Operating
+flexReceipts,http://www.flexreceipts.com,Jan-16,?,?,'$5,009,415 ',?,Operating
+'Iron Ox',http://www.ironox.com/,Jan-16,?,?,'$5,000,000',?,Operating
+CareSkore,http://www.careskore.com,Jan-16,?,?,'$4,420,000',?,Operating
+MineralSoft,https://mineralsoft.com/,Jan-16,?,?,'$4,120,000',?,Operating
+Birdly,http://www.platohq.com,Jan-16,?,?,'$3,420,000',?,Operating
+MailTime,http://mailtime.com,Jan-16,?,?,'$3,211,250',?,Operating
+SOUNDBOKS,https://soundboks.com/,Jan-16,?,?,'$3,120,000',?,Operating
+Wakie,http://wakie.com,Jan-16,?,?,'$3,000,000',?,Operating
+Zenysis,http://www.zenysis.com/,Jan-16,?,?,'$2,800,000',?,Operating
+Secful,http://www.secful.com/,Jan-16,?,?,'$2,620,000',?,Operating
+Pluot,https://pluot.co/,Jan-16,?,?,'$2,620,000',?,Operating
+Castle.io,https://castle.io,Jan-16,?,?,'$2,360,000',?,Operating
+ZenProspect,https://www.zenprospect.com/,Jan-16,?,?,'$2,320,000',?,Operating
+STILT,http://www.stilt.co,Jan-16,?,?,'$2,292,006 ',?,Operating
+Nova,http://www.nova.ai/,Jan-16,?,?,'$2,200,000',?,Operating
+Instabug,http://www.instabug.com,Jan-16,?,?,'$2,120,000',?,Operating
+GitPrime,https://gitprime.com,Jan-16,?,?,'$2,037,330',?,Operating
+'Reduced Energy Microsystems (REM)',http://www.remicro.com/,Jan-16,?,?,'$2,000,000',?,Operating
+'Magic Instruments',https://magicinstruments.com/,Jan-16,?,?,'$1,970,000',?,Operating
+Streamup,https://streamup.com,Jan-16,?,?,'$1,930,000',?,Operating
+DeepGram,https://www.deepgram.com/,Jan-16,?,?,'$1,920,000',?,Operating
+Truebill,http://www.truebill.com,Jan-16,?,?,'$1,900,000',?,Operating
+Gigwell,http://www.gigwell.com,Jan-16,?,?,'$1,770,000',?,Operating
+GetAccept,https://www.getaccept.com,Jan-16,?,?,'$1,720,000',?,Operating
+HistoWiz,http://histowiz.com/,Jan-16,?,?,'$1,714,514 ',?,Operating
+Konsus,http://www.konsus.com,Jan-16,?,?,'$1,620,000',?,Operating
+Toymail,http://www.toymail.co,Jan-16,?,?,'$1,620,000',?,Operating
+'Acre Designs',https://www.acre.co,Jan-16,?,?,'$1,600,000',?,Operating
+PocketSuite,http://pocketsuite.io,Jan-16,?,?,'$1,595,000',?,Operating
+Outschool,https://outschool.com/,Jan-16,?,?,'$1,520,000',?,Operating
+Locent,http://www.locent.com/,Jan-16,?,?,'$1,380,000',?,Operating
+X-Zell,http://www.x-zell.com/,Jan-16,?,?,'$1,380,000',?,Operating
+Unima,http://www.unima.com.mx,Jan-16,?,?,'$1,300,000',?,Operating
+StyleBee,http://stylebee.com,Jan-16,?,?,'$1,120,000',?,Operating
+NetBeez,http://netbeez.net,Jan-16,?,?,'$1,045,000',?,Operating
+Chillabit,https://justchillabit.com/,Jan-16,?,?,'$1,000,000',?,Operating
+Pulpix,https://www.pulpix.com,Jan-16,?,?,'$970,000',?,Operating
+Airmada,http://www.airmada.com,Jan-16,?,?,'$870,000',?,Operating
+PaveIQ,https://www.paveiq.com/,Jan-16,?,?,'$620,000',?,Operating
+Lynks,https://www.lynks.com/,Jan-16,?,?,'$240,000',?,Operating
+SHRI,http://www.sanrights.org/,Jan-16,?,?,'$220,000',?,Operating
+Luminist,http://luministlabs.com,Jan-16,?,?,'$150,000',?,Operating
+TrendMD,http://www.trendmd.com,Jan-16,?,?,'$149,702 ',?,Operating
+LendEDU,https://lendedu.com,Jan-16,?,?,'$140,000',?,Operating
+Copia,https://www.GoCopia.com/,Jan-16,?,?,'$140,000',?,Operating
+Hingeto,https://www.hingeto.com/,Jan-16,?,?,'$120,000',?,Operating
+GoLorry,http://www.golorry.com/,Jan-16,?,?,'$120,000',?,Operating
+'Stealth Worker',https://stealthworker.com/,Jan-16,?,?,'$120,000',?,Operating
+StartClosing,http://startclosing.com/,Jan-16,?,?,'$120,000',?,Operating
+'Kip Health',http://www.hellokip.com,Jan-16,?,?,'$120,000',?,Operating
+StrongIntro,https://strongintro.com/,Jan-16,?,?,'$120,000',?,Operating
+'Physio Health',https://physioh.com/,Jan-16,?,?,'$120,000',?,Operating
+Bonsai,https://www.hellobonsai.com,Jan-16,?,?,'$120,000',?,Operating
+Compgun,http://www.compgun.com,Jan-16,?,?,'$120,000',?,Operating
+mRelief,https://www.mrelief.com/,Jan-16,?,?,'$120,000',?,Operating
+Trac,https://www.tracchicago.com,Jan-16,?,?,'$120,000',?,Operating
+QueueHop,http://queuehop.com/,Jan-16,?,?,'$120,000',?,Operating
+MeterFeeder,https://www.meterfeeder.com/,Jan-16,?,?,'$120,000',?,Operating
+Message.io,http://www.promptapp.io,Jan-16,?,?,'$120,000',?,Operating
+Thunkable,http://thunkable.com/,Jan-16,?,?,'$120,000',?,Operating
+VINEBOX,http://www.getvinebox.com/,Jan-16,?,?,'$120,000',?,Operating
+Restocks,https://www.restocks.io/,Jan-16,?,?,'$120,000',?,Operating
+DoseDr,https://www.dosedr.com,Jan-16,?,?,'$120,000',?,Operating
+SunFarmer,http://www.sunfarmer.org,Jan-16,?,?,'$120,000',?,Operating
+Poppy,https://www.meetpoppy.com/,Jan-16,?,?,'$120,000',?,Operating
+Chatfuel,http://chatfuel.com/,Jan-16,?,?,'$120,000',?,Operating
+Hykso,http://www.hykso.com,Jan-16,?,?,'$120,000',?,Operating
+InnoVein,http://www.innoveinmedical.com/,Jan-16,?,?,'$120,000',?,Operating
+'Gecko Robotics',http://www.geckorobotics.com/,Jan-16,?,?,'$120,000',?,Operating
+Chitter,http://trychitter.com/,Jan-16,?,?,'$120,000',?,Operating
+Shypmate,http://www.shypmate.com/,Jan-16,?,?,'$120,000',?,Operating
+'Magic Bus',https://www.magicbus.io/,Jan-16,?,?,'$120,000',?,Operating
+SnapEDA,http://www.snapeda.com,Jan-16,?,?,'$120,000',?,Operating
+Stitch,https://stitch.health,Jan-16,?,?,'$120,000',?,Operating
+Monthli,http://www.monthli.com/,Jan-16,?,?,'$120,000',?,Operating
+UpLabs,http://www.uplabs.com/,Jan-16,?,?,'$120,000',?,Operating
+Index,http://www.index.io/,Jan-16,?,?,'$120,000',?,Operating
+Yardbook,http://www.yardbook.com,Jan-16,?,?,'$120,000',?,Operating
+'iSono Health',http://www.isonohealth.com/,Jan-16,?,?,'$120,000',?,Operating
+'Interstate Analytics',https://interstateanalytics.com/,Jan-16,?,?,'$120,000',?,Operating
+'Loop Genomics',http://www.loopgenomics.com/,Jan-16,?,?,'$120,000',?,Operating
+UnnyWorld,http://www.unnyhog.com,Jan-16,?,?,'$120,000',?,Operating
+Enflux,https://www.getenflux.com/,Jan-16,?,?,'$120,000',?,Operating
+Emburse,http://www.emburse.com/,Jan-16,?,?,'$120,000',?,Operating
+Silver,http://www.scansilver.com/,Jan-16,?,?,'$120,000',?,Operating
+'Mason America',http://www.bymason.com,Jan-16,?,?,'$120,000',?,Operating
+'Georgette Packaging',http://www.georgettepackaging.com/,Jan-16,?,?,'$120,000',?,Operating
+WorldCover,http://worldcovr.com,Jan-16,?,?,'$100,000',?,Operating
+OpenTrons,http://www.opentrons.com/,Jan-16,?,?,'$25,000',?,Operating
+OSVehicle,https://www.osvehicle.com/france-aquinetic/,Jan-16,?,?,?,?,Operating
+Revl,http://www.revl.xyz,Jan-16,?,?,?,?,Operating
+'Kisan Network',http://www.kisannetwork.com,Jan-16,?,?,?,?,Operating
+Paystack,https://www.paystack.co,Jan-16,?,?,?,?,Operating
+'Able Health',http://ablehealth.co,Jan-16,?,?,?,?,Operating
+'Varden Labs',http://vardenlabs.com/,Jan-16,?,?,'$4,620,000',?,Dead
+Castle,http://entercastle.com/,Jan-16,?,?,'$3,272,000',?,Dead
+HaloLife,https://halolife.com/,Jan-16,?,?,'$120,000',?,Dead
+YesGraph,https://www.yesgraph.com,Jun-16,?,?,'$2,420,000',?,Exited
+MessageBird,https://www.messagebird.com/,Jun-16,?,?,'$60,120,000',?,Operating
+'The Athletic',https://theathletic.com/,Jun-16,?,?,'$27,700,000',?,Operating
+Starcity,https://www.starcity.com/,Jun-16,?,?,'$20,370,000',?,Operating
+Yoshi,https://www.startyoshi.com/,Jun-16,?,?,'$15,920,000',?,Operating
+Flutterwave,https://www.flutterwave.com,Jun-16,?,?,'$10,220,000',?,Operating
+'Iris Automations',http://www.irisonboard.com,Jun-16,?,?,'$10,000,000',?,Operating
+'New Incentives',http://www.newincentives.org/,Jun-16,?,?,'$8,478,000',?,Operating
+Jumpcut,http://jumpcut.com,Jun-16,?,?,'$7,120,000',?,Operating
+People.ai,https://people.ai/,Jun-16,?,?,'$7,120,000',?,Operating
+JustRide,http://justride.in/,Jun-16,?,?,'$6,400,000',?,Operating
+Suiteness,http://www.suiteness.com,Jun-16,?,?,'$6,120,000',?,Operating
+ZeroDB,https://nucypher.com/,Jun-16,?,?,'$5,050,000',?,Operating
+Joy,https://withjoy.com/,Jun-16,?,?,'$4,620,000',?,Operating
+Scale,https://scaleapi.com,Jun-16,?,?,'$4,620,000',?,Operating
+Burrow,https://burrow.com/,Jun-16,?,?,'$4,300,000',?,Operating
+OOHLALA,http://www.oohlalamobile.com,Jun-16,?,?,'$4,120,000',?,Operating
+Flex,http://www.flexfits.com,Jun-16,?,?,'$4,120,000',?,Operating
+'TL Biolabs',https://tlbiolabs.com,Jun-16,?,?,'$4,000,000',?,Operating
+Sixa,https://sixa.io,Jun-16,?,?,'$3,941,854 ',?,Operating
+Meesho,http://www.meesho.com/,Jun-16,?,?,'$3,700,000',?,Operating
+Validere,http://validere.com/,Jun-16,?,?,'$3,681,037 ',?,Operating
+'Nova Credit',http://neednova.com/,Jun-16,?,?,'$3,670,000',?,Operating
+Athelas,https://athelas.com/,Jun-16,?,?,'$3,620,000',?,Operating
+Coub,http://coub.com,Jun-16,?,?,'$3,620,000',?,Operating
+'Seneca Systems',https://www.senecagov.com/,Jun-16,?,?,'$3,500,000',?,Operating
+Proxy,https://www.proxy.co/,Jun-16,?,?,'$3,200,000',?,Operating
+Revlo,https://www.revlo.co/,Jun-16,?,?,'$3,149,827 ',?,Operating
+Wallarm,https://wallarm.com,Jun-16,?,?,'$2,920,000',?,Operating
+'Multiply Labs',https://www.multiplylabs.com/,Jun-16,?,?,'$2,820,000',?,Operating
+Miso,http://miso.kr,Jun-16,?,?,'$2,700,000',?,Operating
+ApolloShield,http://www.apolloshield.com/,Jun-16,?,?,'$2,620,000',?,Operating
+Looklive,http://www.looklive.com,Jun-16,?,?,'$2,353,975 ',?,Operating
+Robby,https://robby.io/,Jun-16,?,?,'$2,120,000',?,Operating
+CrowdAI,https://crowdai.com/,Jun-16,?,?,'$2,120,000',?,Operating
+Lollicam,http://lollic.am,Jun-16,?,?,'$2,000,000',?,Operating
+WorkRamp,https://www.workramp.com,Jun-16,?,?,'$1,920,000',?,Operating
+Vidcode,http://www.vidcode.com,Jun-16,?,?,'$1,620,000',?,Operating
+'Elemeno Health',http://www.elemenohealth.com/,Jun-16,?,?,'$1,420,000',?,Operating
+Saleswhale,http://saleswhale.com,Jun-16,?,?,'$1,320,000',?,Operating
+Skylights,http://www.skylights.aero/,Jun-16,?,?,'$1,300,000',?,Operating
+BulldozAIR,http://www.bulldozair.com/,Jun-16,?,?,'$1,234,846 ',?,Operating
+'OMG Digital',http://omgdigitalinc.com/,Jun-16,?,?,'$1,220,000',?,Operating
+Simbi,https://simbi.com/,Jun-16,?,?,'$1,200,000',?,Operating
+NeoWize,http://www.neowize.com/,Jun-16,?,?,'$840,000',?,Operating
+SimpleCitizen,http://www.simplecitizen.com/,Jun-16,?,?,'$820,000',?,Operating
+Polymail,http://polymail.io,Jun-16,?,?,'$820,000',?,Operating
+Whyd,https://whyd.com,Jun-16,?,?,'$820,000',?,Operating
+Squire,http://getsquire.com,Jun-16,?,?,'$770,000',?,Operating
+Aptonomy,http://www.aptonomy.com/home,Jun-16,?,?,'$620,000',?,Operating
+'Airo Health',http://www.getairo.com/,Jun-16,?,?,'$143,793 ',?,Operating
+Selfycart,https://www.selfycart.com/,Jun-16,?,?,'$120,000',?,Operating
+SMARTSITE,http://www.smartsitesafety.com/,Jun-16,?,?,'$120,000',?,Operating
+'Quero Education',http://quero.education/,Jun-16,?,?,'$120,000',?,Operating
+HiOperator,http://www.hioperator.com/,Jun-16,?,?,'$120,000',?,Operating
+Opsolutely,https://www.opsolutely.com/,Jun-16,?,?,'$120,000',?,Operating
+Mosaic,https://saymosaic.com,Jun-16,?,?,'$120,000',?,Operating
+UtilityScore,https://www.myutilityscore.com/#howitworks,Jun-16,?,?,'$120,000',?,Operating
+Lendsnap,https://lendsnap.com/,Jun-16,?,?,'$120,000',?,Operating
+Sway,https://swayfinance.com,Jun-16,?,?,'$120,000',?,Operating
+RoseRocket,http://www.roserocket.com/,Jun-16,?,?,'$120,000',?,Operating
+RigPlenish,http://www.rigplenish.com,Jun-16,?,?,'$120,000',?,Operating
+DevColor,http://www.devcolor.org/,Jun-16,?,?,'$120,000',?,Operating
+Eventgeek,http://www.eventgeek.com/,Jun-16,?,?,'$120,000',?,Operating
+Ohmygreen,http://www.ohmygreen.com,Jun-16,?,?,'$120,000',?,Operating
+'Raptor Maps',http://www.raptormaps.com/,Jun-16,?,?,'$120,000',?,Operating
+Vote.org,https://www.vote.org/,Jun-16,?,?,'$120,000',?,Operating
+PatientBank,https://www.patientbank.us,Jun-16,?,?,'$120,000',?,Operating
+Xberts,https://www.xberts.com/,Jun-16,?,?,'$120,000',?,Operating
+Airfordable,http://www.airfordable.com/,Jun-16,?,?,'$120,000',?,Operating
+Exponent,https://www.expo.io,Jun-16,?,?,'$120,000',?,Operating
+Haywheel,http://haywheel.com,Jun-16,?,?,'$120,000',?,Operating
+GoGoGrandparent,https://www.gogograndparent.com/,Jun-16,?,?,'$120,000',?,Operating
+Legalist,https://www.legalist.com/,Jun-16,?,?,'$120,000',?,Operating
+Upgraded,http://www.upgraded.io/,Jun-16,?,?,'$120,000',?,Operating
+Fabric,http://fabric.me/,Jun-16,?,?,'$120,000',?,Operating
+Metapacket,http://metapacket.com/,Jun-16,?,?,'$120,000',?,Operating
+ConstructVR,https://www.constructvr.io/,Jun-16,?,?,'$120,000',?,Operating
+Emote,http://www.emotenow.com/,Jun-16,?,?,'$120,000',?,Operating
+SmartPath,http://smartpathfinancial.com/,Jun-16,?,?,'$120,000',?,Operating
+Amberbox,https://amberbox.com/,Jun-16,?,?,'$120,000',?,Operating
+Livement,https://boletomovil.com,Jun-16,?,?,'$120,000',?,Operating
+OneChronos,https://www.onechronos.com,Jun-16,?,?,'$120,000',?,Operating
+'GTrack Technologies',http://www.gtracktechnologies.com/,Jun-16,?,?,'$120,000',?,Operating
+Vetcove,https://www.vetcove.com/,Jun-16,?,?,'$120,000',?,Operating
+Curtsy,http://www.curtsyapp.com/,Jun-16,?,?,'$120,000',?,Operating
+RocketLit,http://www.rocketlit.com/,Jun-16,?,?,'$120,000',?,Operating
+Luminostics,http://www.luminostics.com,Jun-16,?,?,'$120,000',?,Operating
+Mentat,http://www.thementat.com/,Jun-16,?,?,'$120,000',?,Operating
+Fellow,https://joinfellow.com/,Jun-16,?,?,'$120,000',?,Operating
+Instrumentl,https://www.instrumentl.com/,Jun-16,?,?,'$120,000',?,Operating
+'Women Who Code',http://www.womenwhocode.com/,Jun-16,?,?,'$100,000',?,Operating
+Mindori,http://mindori.com/,Jun-16,?,?,?,?,Operating
+Innov8,http://www.innov8.work/,Jun-16,?,?,?,?,Operating
+Techmate,https://jointechmate.com,Jun-16,?,?,?,?,Operating
+CoinTent,http://cointent.com/,Jun-16,?,?,'$1,195,000',?,Dead
+Penny,https://www.pennyapp.io,Jan-17,?,?,'$1,200,000',?,Exited
+Hivy,http://hivyapp.com/,Jan-17,?,?,?,?,Exited
+'Indigo Fair',https://www.indigofair.com,Jan-17,?,?,'$15,950,000',?,Operating
+KidPass,https://kidpass.com/,Jan-17,?,?,'$11,400,000',?,Operating
+Rippling,https://www.rippling.com/,Jan-17,?,?,'$7,000,000',?,Operating
+'Voodoo Manufacturing',https://www.voodoomfg.com/,Jan-17,?,?,'$6,650,000',?,Operating
+Tolemi,http://www.tolemi.com,Jan-17,?,?,'$6,110,000',?,Operating
+'Ledger Investing',https://ledgerinvesting.com,Jan-17,?,?,'$5,279,000',?,Operating
+DocTalk,http://www.getdoctalk.com/,Jan-17,?,?,'$5,000,000',?,Operating
+Solugen,https://www.solugentech.com/,Jan-17,?,?,'$4,400,000',?,Operating
+Lively,https://livelyme.com,Jan-17,?,?,'$4,200,000',?,Operating
+Armory,http://www.armory.io/,Jan-17,?,?,'$4,000,000',?,Operating
+Bitrise,https://www.bitrise.io/,Jan-17,?,?,'$3,516,960',?,Operating
+Peer5,http://peer5.com,Jan-17,?,?,'$3,500,000',?,Operating
+Indee,http://www.indeelabs.com,Jan-17,?,?,'$3,263,610',?,Operating
+Riley,https://getrileynow.com/,Jan-17,?,?,'$3,100,000',?,Operating
+WaystoCap,https://www.waystocap.com/,Jan-17,?,?,'$3,000,000',?,Operating
+Snappr,https://www.snappr.co,Jan-17,?,?,'$3,000,000',?,Operating
+'Upkeep Maintenance Management',http://www.onupkeep.com/,Jan-17,?,?,'$2,820,000',?,Operating
+Trade,http://www.tradeghana.co/,Jan-17,?,?,'$2,675,000',?,Operating
+'Simple Habit',https://www.simplehabit.com/,Jan-17,?,?,'$2,500,000',?,Operating
+BloomAPI,https://www.bloomapi.com/,Jan-17,?,?,'$2,400,000',?,Operating
+Playment,https://playment.io,Jan-17,?,?,'$2,400,000',?,Operating
+Bulletin,https://bulletin.co,Jan-17,?,?,'$2,200,000',?,Operating
+Upcall,http://www.upcall.com,Jan-17,?,?,'$2,200,000',?,Operating
+Wifi.com.ng,http://wifi.com.ng,Jan-17,?,?,'$2,100,000',?,Operating
+'Paragon One',http://www.paragonone.com/,Jan-17,?,?,'$2,000,000',?,Operating
+lvl5,http://www.lvl5.ai/,Jan-17,?,?,'$2,000,000',?,Operating
+Collectly,http://collectly.co,Jan-17,?,?,'$1,900,000',?,Operating
+Fiix,https://www.fiix.io,Jan-17,?,?,'$1,818,487 ',?,Operating
+Fibo,https://www.fiboapp.com/,Jan-17,?,?,'$1,800,000',?,Operating
+'Supr Daily',http://www.suprdaily.com/,Jan-17,?,?,'$1,668,570',?,Operating
+MDAcne,http://www.MDacne.com,Jan-17,?,?,'$1,600,000',?,Operating
+Apozy,https://www.apozy.com,Jan-17,?,?,'$1,550,000',?,Operating
+Tetra,https://asktetra.com/,Jan-17,?,?,'$1,500,000',?,Operating
+Credy,https://www.credy.in/,Jan-17,?,?,'$1,400,000',?,Operating
+Hogaru,https://www.hogaru.com,Jan-17,?,?,'$1,370,000',?,Operating
+'The Mednet',https://www.themednet.org/,Jan-17,?,?,'$1,300,000',?,Operating
+Arthena,http://arthena.com,Jan-17,?,?,'$1,200,000',?,Operating
+'Vize Software',http://www.vize.io,Jan-17,?,?,'$999,777 ',?,Operating
+InnaMed,http://www.innamed.com,Jan-17,?,?,'$781,142 ',?,Operating
+Soomgo,https://soomgo.com,Jan-17,?,?,'$592,105 ',?,Operating
+Moneytis,https://moneytis.com,Jan-17,?,?,'$497,637 ',?,Operating
+Scaphold.io,https://www.scaphold.io,Jan-17,?,?,'$165,000',?,Operating
+'Aella Credit',https://www.aellacredit.com,Jan-17,?,?,'$150,000',?,Operating
+RankScience,https://www.rankscience.com/,Jan-17,?,?,'$125,000',?,Operating
+Beek,https://www.beek.io/,Jan-17,?,?,'$125,000',?,Operating
+NanoNets,https://nanonets.com,Jan-17,?,?,'$120,000',?,Operating
+Symple,http://getsymple.com,Jan-17,?,?,'$120,000',?,Operating
+Scribe,http://www.tryscribe.com,Jan-17,?,?,'$120,000',?,Operating
+Cowlar,http://www.cowlar.com,Jan-17,?,?,'$50,000',?,Operating
+Millibatt,https://www.millibatt.com/,Jan-17,?,?,?,?,Operating
+AlemHealth,http://www.alemhealth.com/,Jan-17,?,?,?,?,Operating
+'Clear Genetics',http://www.cleargenetics.com,Jan-17,?,?,?,?,Operating
+Algoriz,https://algoriz.com/,Jan-17,?,?,?,?,Operating
+'Wifi Dabba',http://wifidabba.com/,Jan-17,?,?,?,?,Operating
+'Bulk MRO',https://www.bulkmro.com/,Jan-17,?,?,?,?,Operating
+Pit.ai,https://www.pit.ai/,Jan-17,?,?,?,?,Operating
+Marketfox,https://www.marketfox.io,Jan-17,?,?,?,?,Operating
+Quiki,https://www.getscopeai.com,Jan-17,?,?,?,?,Operating
+XIX.ai,http://xix.ai/,Jan-17,?,?,?,?,Operating
+'Dost Education',http://www.dosteducation.com,Jan-17,?,?,?,?,Operating
+LitHit,https://lithit.com/,Jan-17,?,?,?,?,Operating
+'Token Transit',https://tokentransit.com/,Jan-17,?,?,?,?,Operating
+Humi,https://www.humi.ca,Jan-17,?,?,?,?,Operating
+IQBoxy,https://www.veryfi.com/,Jan-17,?,?,?,?,Operating
+SmartAlto,http://www.smartalto.com,Jan-17,?,?,?,?,Operating
+Boxouse,https://boxouse.com/,Jan-17,?,?,?,?,Operating
+Terark,https://terark.com,Jan-17,?,?,?,?,Operating
+Kangpe,https://www.kangpe.com/,Jan-17,?,?,?,?,Operating
+ServX,http://servx.in,Jan-17,?,?,?,?,Operating
+'Bulk MRO',https://www.bulkmro.com/,Jan-17,?,?,?,?,Operating
+Cartcam,https://www.cartcam.com/,Jan-17,?,?,?,?,Operating
+Rezi,https://www.rentrezi.com/,Jan-17,?,?,?,?,Operating
+Sycamore,https://www.mysycamore.com/,Jan-17,?,?,?,?,Operating
+Vinsight,http://www.vinsight.co,Jan-17,?,?,?,?,Operating
+'Clover Intelligence',https://voiceops.com,Jan-17,?,?,?,?,Operating
+'Wright Electric',https://weflywright.com,Jan-17,?,?,?,?,Operating
+FloydHub,https://www.floydhub.com,Jan-17,?,?,?,?,Operating
+Origin,http://eatorigin.com/,Jan-17,?,?,?,?,Operating
+Zestful,http://zestful.com,Jan-17,?,?,?,?,Operating
+Speak,http://usespeakeasy.com,Jan-17,?,?,?,?,Operating
+Breaker,https://www.breaker.audio,Jan-17,?,?,?,?,Operating
+Volans-i,http://www.volans-i.com,Jan-17,?,?,?,?,Operating
+Buypower,https://www.buypower.ng/,Jan-17,?,?,?,?,Operating
+AON3D,https://aon3d.com,Jan-17,?,?,?,?,Operating
+'Bicycle AI',http://bicycleai.com/,Jan-17,?,?,?,?,Operating
+Pantheon,http://www.pantheonvr.com,Jan-17,?,?,?,?,Operating
+Kudi,https://kudi.ai/,Jan-17,?,?,?,?,Operating
+DELEE,https://www.delee.live/,Jan-17,?,?,?,?,Operating
+Movebutter,http://www.movebutter.com,Jan-17,?,?,?,?,Operating
+Neema,http://www.getneema.com/,Jan-17,?,?,?,?,Operating
+'Effective Altruism',https://www.effectivealtruism.org/,Jan-17,?,?,?,?,Operating
+Tress,https://www.tressapp.co,Jan-17,?,?,?,?,Operating
+'Volt Health',https://www.volthealth.com/,Jan-17,?,?,?,?,Operating
+FirstHand,http://www.shopfirsthand.com/,Jan-17,?,?,?,?,Operating
+Niles,https://niles.ai,Jan-17,?,?,?,?,Operating
+'Cambridge Bio-Augmentation Systems',http://www.cbas.global,Jan-17,?,?,?,?,Operating
+ReturnBase,https://returnbase.com,Jan-17,?,?,?,?,Operating
+'Sinovia Technologies',https://www.sinoviatech.com,Jan-17,?,?,?,?,Operating
+Sandbox,http://www.sandboxbanking.com/,Jan-17,?,?,?,?,Operating
+'Mere Coffee',http://www.merecoffee.com/,Jan-17,?,?,?,?,Operating
+'No Lean Season',http://www.noleanseason.org/,Jan-17,?,?,?,?,Operating
+Solve,https://www.solve.com/,Jun-17,?,?,'$120,000',?,Exited
+'Escher Reality',http://www.escherreality.com,Jun-17,?,?,'$120,000',?,Exited
+'May Mobility',http://maymobility.com/,Jun-17,?,?,'$11,620,000',?,Operating
+CarDash,https://www.cardash.com,Jun-17,?,?,'$5,300,000',?,Operating
+'Standard Cognition',https://www.standardcognition.com/,Jun-17,?,?,'$5,120,000',?,Operating
+Zendar,http://www.zendar.io/,Jun-17,?,?,'$4,300,000',?,Operating
+'Quilt Data',https://quiltdata.com/,Jun-17,?,?,'$4,180,000',?,Operating
+'Lambda School',https://lambdaschool.com/,Jun-17,?,?,'$4,120,000',?,Operating
+D-ID,http://www.d-id.com,Jun-17,?,?,'$4,000,000',?,Operating
+Dahmakan,http://www.dahmakan.com,Jun-17,?,?,'$3,900,000',?,Operating
+Muzmatch,https://muzmatch.com/,Jun-17,?,?,'$3,890,145 ',?,Operating
+'Carrot Fertility',https://www.get-carrot.com,Jun-17,?,?,'$3,720,000',?,Operating
+Tpaga,https://tpaga.co/,Jun-17,?,?,'$3,570,000',?,Operating
+Feather,http://rentfeather.com,Jun-17,?,?,'$3,500,000',?,Operating
+Sourceress,http://sourceress.com,Jun-17,?,?,'$3,500,000',?,Operating
+Guilded,http://www.guilded.gg,Jun-17,?,?,'$3,320,000',?,Operating
+Darmiyan,https://www.darmiyan.com/,Jun-17,?,?,'$3,080,000',?,Operating
+'Fat Lama',http://fatlama.com/,Jun-17,?,?,'$3,077,858 ',?,Operating
+Templarbit,https://www.templarbit.com,Jun-17,?,?,'$3,000,000',?,Operating
+'Mystery Science',http://mysteryscience.com,Jun-17,?,?,'$2,800,000',?,Operating
+Gustav,https://hellogustav.com,Jun-17,?,?,'$2,730,000',?,Operating
+PullRequest,https://www.pullrequest.com/,Jun-17,?,?,'$2,420,000',?,Operating
+BillionToOne,https://www.billiontoone.com,Jun-17,?,?,'$2,400,000',?,Operating
+Advano,http://advanotech.com,Jun-17,?,?,'$2,300,000',?,Operating
+'Original Tech',https://www.useoriginal.com/,Jun-17,?,?,'$2,000,000',?,Operating
+Enzyme,https://www.enzyme.com,Jun-17,?,?,'$1,970,000',?,Operating
+Peergrade,https://www.peergrade.io/,Jun-17,?,?,'$1,890,000',?,Operating
+Skyways,http://skyways.com,Jun-17,?,?,'$1,600,000',?,Operating
+Headstart,https://www.headstartapp.com,Jun-17,?,?,'$1,525,000',?,Operating
+Thematic,http://www.getthematic.com,Jun-17,?,?,'$1,340,000',?,Operating
+Flowspace,https://www.flow.space/,Jun-17,?,?,'$1,200,000',?,Operating
+'Forever Labs',https://foreverlabs.com,Jun-17,?,?,'$1,025,000',?,Operating
+Elucd,https://www.elucd.com,Jun-17,?,?,'$1,000,000',?,Operating
+'Modern Fertility',https://modernfertility.com,Jun-17,?,?,'$1,000,000',?,Operating
+HotelFlex,http://www.hotelflex.io,Jun-17,?,?,'$770,000',?,Operating
+Guggy,https://guggy.com,Jun-17,?,?,'$520,000',?,Operating
+RideAlong,http://www.getridealong.com,Jun-17,?,?,'$275,000',?,Operating
+Bxblue,https://www.bxblue.com.br,Jun-17,?,?,'$240,000',?,Operating
+Sunu,http://sunu.io/,Jun-17,?,?,'$220,000',?,Operating
+Entocycle,https://www.entocycle.com,Jun-17,?,?,'$179,055 ',?,Operating
+Goosebump,https://www.goosebump.com,Jun-17,?,?,'$170,000',?,Operating
+'Helium Heathcare',https://heliumhealthcare.com,Jun-17,?,?,'$170,000',?,Operating
+GameLynx,https://gamelynx.gg/,Jun-17,?,?,'$142,629 ',?,Operating
+'Value Voting',https://www.valuevoting.com/,Jun-17,?,?,'$120,000',?,Operating
+Sunfolding,http://www.sunfolding.com/,Jun-17,?,?,'$120,000',?,Operating
+Net30,https://net30.io/,Jun-17,?,?,'$120,000',?,Operating
+OneLocal,https://www.onelocal.com,Jun-17,?,?,'$120,000',?,Operating
+Sixty,https://www.usesixty.com,Jun-17,?,?,'$120,000',?,Operating
+Fastpad,https://fastpad.com/,Jun-17,?,?,'$120,000',?,Operating
+AutoHub,https://www.autohub.io/,Jun-17,?,?,'$120,000',?,Operating
+'SMB Rate',https://smbrate.com/,Jun-17,?,?,'$120,000',?,Operating
+Gopher,https://www.gopher.email/,Jun-17,?,?,'$120,000',?,Operating
+'Loop Support',https://www.loopsupport.com/,Jun-17,?,?,'$120,000',?,Operating
+PayFazz,https://www.payfazz.com/,Jun-17,?,?,'$120,000',?,Operating
+Roofr,http://roofr.com,Jun-17,?,?,'$120,000',?,Operating
+'Kestrel Materials',http://materialcomforts.com/,Jun-17,?,?,'$120,000',?,Operating
+Gameday,https://playgameday.com/,Jun-17,?,?,'$120,000',?,Operating
+'70 Million Jobs',https://www.70millionjobs.com/,Jun-17,?,?,'$120,000',?,Operating
+Airthium,http://www.airthium.com/,Jun-17,?,?,'$120,000',?,Operating
+CocuSocial,https://www.cocusocial.com,Jun-17,?,?,'$120,000',?,Operating
+HealthWiz,http://www.myhealthwiz.com,Jun-17,?,?,'$120,000',?,Operating
+HelpWear,http://helpwear.ca/,Jun-17,?,?,'$120,000',?,Operating
+Honeydue,https://www.honeydue.com/,Jun-17,?,?,'$120,000',?,Operating
+Nimble,http://www.hirenimble.com,Jun-17,?,?,'$120,000',?,Operating
+UpCodes,https://up.codes,Jun-17,?,?,'$120,000',?,Operating
+Wildfire,http://getwildfire.com,Jun-17,?,?,'$120,000',?,Operating
+Vanido,https://vanido.io,Jun-17,?,?,'$120,000',?,Operating
+Covetly,https://www.covetlyapp.com/,Jun-17,?,?,'$120,000',?,Operating
+Audm,https://www.audm.com/,Jun-17,?,?,'$120,000',?,Operating
+Dropleaf,https://dropleaf.io/,Jun-17,?,?,'$120,000',?,Operating
+Flock,https://www.flocksafety.com/,Jun-17,?,?,'$120,000',?,Operating
+'Rev Genomics',https://www.revgenomics.com/,Jun-17,?,?,'$120,000',?,Operating
+Meetingbird,http://www.meetingbird.com/,Jun-17,?,?,'$120,000',?,Operating
+Mystro,https://www.mystrodriver.com/,Jun-17,?,?,'$120,000',?,Operating
+OncoBox,http://www.oncobox.com,Jun-17,?,?,'$120,000',?,Operating
+Retool,https://tryretool.com,Jun-17,?,?,'$120,000',?,Operating
+'Modular Science',http://www.modularscience.com/,Jun-17,?,?,'$120,000',?,Operating
+'Just Appraised',https://www.justappraised.com/,Jun-17,?,?,'$120,000',?,Operating
+Piggy,https://piggy.co.in/,Jun-17,?,?,'$120,000',?,Operating
+'Dharma Labs',https://dharma.io/,Jun-17,?,?,'$120,000',?,Operating
+Indivio,https://indiv.io/,Jun-17,?,?,'$120,000',?,Operating
+'Relationship Hero',https://relationshiphero.com/,Jun-17,?,?,'$120,000',?,Operating
+ShiftDoc,https://www.shiftdoc.com,Jun-17,?,?,'$120,000',?,Operating
+'Warren Payment',https://www.warrenpay.com/,Jun-17,?,?,'$120,000',?,Operating
+'10 By 10',https://www.10by10.io/,Jun-17,?,?,'$120,000',?,Operating
+'Helix Nanotechnologies',http://helixnano.com/,Jun-17,?,?,'$120,000',?,Operating
+LotusPay,https://www.lotuspay.com,Jun-17,?,?,'$120,000',?,Operating
+Surematics,https://surematics.com/,Jun-17,?,?,'$120,000',?,Operating
+Disclosures.io,https://disclosures.io/,Jun-17,?,?,'$120,000',?,Operating
+'Leon & George',https://www.leonandgeorge.com,Jun-17,?,?,'$120,000',?,Operating
+'Caelum Health',https://caelumhealth.com/,Jun-17,?,?,'$120,000',?,Operating
+Greo,https://greo.com/,Jun-17,?,?,'$120,000',?,Operating
+Pyka,http://www.flypyka.com,Jun-17,?,?,'$120,000',?,Operating
+'PreDxion Bio',http://predxionbio.com,Jun-17,?,?,'$120,000',?,Operating
+'Life Bot',http://www.asklifebot.com,Jun-17,?,?,'$120,000',?,Operating
+Plasticity,https://www.plasticity.ai/,Jun-17,?,?,'$120,000',?,Operating
+'Totemic Labs',http://www.totemiclabs.com/,Jun-17,?,?,'$120,000',?,Operating
+CashFree,http://www.cashfree.com,Jun-17,?,?,'$120,000',?,Operating
+VergeSense,http://www.vergesense.com/,Jun-17,?,?,'$120,000',?,Operating
+AssemblyAI,https://assemblyai.com/,Jun-17,?,?,'$120,000',?,Operating
+Ubiq,https://www.goubiq.com/,Jun-17,?,?,'$23,452 ',?,Operating
+'YC S17 Stealth 115',http://,Jun-17,?,?,?,?,Operating
+'Contract Simply',http://contractsimply.com/,Jun-17,?,?,?,?,Operating
+'VIDA & Co.',http://www.shopvida.com/,Jun-17,?,?,?,?,Operating
+'YC S17 Stealth 121',http://,Jun-17,?,?,?,?,Operating
+NextDrop,http://nextdrop.co,Jun-17,?,?,?,?,Operating
+FriendSpot,http://getfriendspot.com,Jun-17,?,?,?,?,Operating
+'YC S17 Stealth 123',http://,Jun-17,?,?,?,?,Operating
+Slik,http://slik.ai/,Jun-17,?,?,?,?,Operating
+CureSkin,http://cureskin.com,Jun-17,?,?,?,?,Operating
+Polly,https://polly.fun/,Jun-17,?,?,?,?,Operating
+Lyrebird,https://lyrebird.ai/,Jun-17,?,?,?,?,Operating
+'Cambridge Cancer Genomics',https://www.cancergenomics.co.uk,Jun-17,?,?,?,?,Operating
+'YC S17 Stealth 118',http://,Jun-17,?,?,?,?,Operating
+'YC S17 Stealth 116',http://,Jun-17,?,?,?,?,Operating
+'Prism IO',http://prism.io,Jun-17,?,?,?,?,Operating
+'YC S17 Stealth 122',http://,Jun-17,?,?,?,?,Operating
+Py,https://www.downloadpy.com,Jun-17,?,?,?,?,Operating
+ZenSourcer,https://www.zensourcer.com,Jun-17,?,?,?,?,Operating
+WheelStreet,http://wheelstreet.com,Jun-17,?,?,?,?,Operating
+'YC S17 Stealth 119',http://,Jun-17,?,?,?,?,Operating
+'YC S17 Stealth 117',http://,Jun-17,?,?,?,?,Operating
+'YC S17 Stealth 124',http://,Jun-17,?,?,?,?,Operating
+'YC S17 Stealth 120',http://,Jun-17,?,?,?,?,Operating

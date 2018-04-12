@@ -44200,6 +44200,7 @@ function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider
         $httpProvider.defaults.headers.common.Accept = "application/json";
         $httpProvider.defaults.headers.common['Content-Type'] = "application/json";
         // $httpProvider.defaults.useXDomain = true;
+        $httpProvider.interceptors.push('httpInterceptor');
 
         $locationProvider.html5Mode(true);
 
@@ -44269,7 +44270,31 @@ app.constant('tagUrl', '/api/tag')
         clientId: 'starthubclientidforextremeusers',
         clientSecret: 'XY7kmzoNzl100',
         grantType: 'password'
-    });;/**
+    });;app.factory('httpInterceptor', ['$q', '$rootScope',
+    function ($q, $rootScope) {
+        var loadingCount = 0;
+
+        return {
+            request: function (config) {
+                if (++loadingCount === 1) {
+                    Pace.restart();
+                    $rootScope.$broadcast('loading:progress');
+                } 
+                return config || $q.when(config);
+            },
+
+            response: function (response) {
+                if (--loadingCount === 0) $rootScope.$broadcast('loading:finish');
+                return response || $q.when(response);
+            },
+
+            responseError: function (response) {
+                if (--loadingCount === 0) $rootScope.$broadcast('loading:finish');
+                return $q.reject(response);
+            }
+        };
+    }
+]);;/**
  * Created by Harrison on 3/19/2018.
  */
 
@@ -44326,7 +44351,7 @@ app.run(['$http', '$rootScope', '$cookies', '$state', '$timeout', function ($htt
             return Stomp.over(socket);
         },
         sendMessage: function (recipient, data, options) {
-            provider.getStompClient().send(recipient, options, data);
+            this.getStompClient().send(recipient, options, data);
         },
         executeRequest: function (subscriber, onMessageReceived, recipient, data, options) {
             if (Array.prototype.slice.call(arguments).length > 2) {
@@ -44335,13 +44360,13 @@ app.run(['$http', '$rootScope', '$cookies', '$state', '$timeout', function ($htt
                 recipient = subscriber;
                 subscriber = null;
                 onMessageReceived = null;
-                provider.connectToSocket(function (frame) {
+                this.connectToSocket(function (frame) {
                     console.log('Connected: ' + frame);
                     provider.getStompClient().subscribe(subscriber, onMessageReceived);
                     provider.getStompClient().send(recipient, options, data);
                 });
             } else {
-                provider.subscribe(subscriber, onMessageReceived);
+                this.subscribe(subscriber, onMessageReceived);
             }
         },
         subscribe: function (subscriber, options, onMessageReceived) {
@@ -44349,19 +44374,19 @@ app.run(['$http', '$rootScope', '$cookies', '$state', '$timeout', function ($htt
                 onMessageReceived = options;
                 options = {};
             }
-            provider.connectToSocket(function (frame) {
+            this.connectToSocket(function (frame) {
                 console.log('Connected: ' + frame);
                 provider.getStompClient().subscribe(subscriber, onMessageReceived, options);
             });
         },
         unsubscribe: function(id, options) {
-            provider.getStompClient().unsubscribe(id, options);
+            this.getStompClient().unsubscribe(id, options);
         },
         connectToSocket: function (callback) {
-            provider.getStompClient().connect({}, callback);
+            this.getStompClient().connect({}, callback);
         },
         disconnectSocket: function () {
-            provider.getStompClient().disconnect();
+            this.getStompClient().disconnect();
         }
     };
     return provider;
@@ -44480,6 +44505,10 @@ app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 
 
         $scope.feeds = [];
         var SUBSCRIBER_ID = 'feed-subscriber-007';
+        
+        $timeout(function() {
+            $(".note-editable").attr("contenteditable","false");
+        }, 10);
 
         FeedService.subscribeToService('/exchange/feed', {id: SUBSCRIBER_ID}, function (feed) {
             $scope.feed = JSON.parse(feed.body);
@@ -44500,10 +44529,15 @@ app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 
         };
 
         $scope.vote = function (upVote, feedId) {
+            Pace.restart();
             FeedService.vote({
                 upVote: upVote,
                 feedId: feedId
             });
+        };
+
+        $scope.viewPost = function(post) {
+            $scope.post = post;
         };
 
         $scope.$on('$destroy', function() {

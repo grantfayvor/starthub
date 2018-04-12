@@ -16,6 +16,12 @@ public class Tag {
     @Column(unique = true)
     private String name;
 
+    public Tag() {}
+
+    public Tag(String name) {
+        this.name = name;
+    }
+
     public long getId() {
         return id;
     }

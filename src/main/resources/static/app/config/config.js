@@ -6,6 +6,7 @@ function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider
         $httpProvider.defaults.headers.common.Accept = "application/json";
         $httpProvider.defaults.headers.common['Content-Type'] = "application/json";
         // $httpProvider.defaults.useXDomain = true;
+        $httpProvider.interceptors.push('httpInterceptor');
 
         $locationProvider.html5Mode(true);
 
