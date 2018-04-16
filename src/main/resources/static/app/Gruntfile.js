@@ -10,15 +10,19 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     'lib/stomp.js',
+                    'angular/ng-file-upload-shim.js',
                     'angular/angular.js',
-//                    'angular/angular-sanitize.js',
+                    'angular/angular-sanitize.js',
                     'angular/angular-cookies.js',
                     'angular/angular-ui-router.js',
+                    'angular/ng-file-upload.js',
                     'angular/angular-summernote.js',
+                    'entry/*.js',
                     'config/*.js',
                     'service/*.js',
                     'main.js',
-                    'modules/**/*.js'],
+                    'modules/**/*.js'
+                ],
                 dest: 'compiled/js/<%= pkg.name %>.js'
             }
         },
@@ -37,7 +41,8 @@ module.exports = function (grunt) {
                 'config/*.js',
                 'service/*.js',
                 'main.js',
-                'modules/**/*.js'],
+                'modules/**/*.js'
+            ],
             options: {
                 globals: {
                     jQuery: true,

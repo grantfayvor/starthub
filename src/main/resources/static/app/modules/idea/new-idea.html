@@ -87,7 +87,7 @@
                         <div class="media-left">
                             <span class="btn btn-default btn-file">
                                 Attachment
-                                <input type="file">
+                                <input type="file" ngf-select ng-model="idea.document" name="document">
                             </span>
                         </div>
                         <div id="demo-attach-file" class="media-body"></div>
@@ -132,5 +132,9 @@
 </div>
 
 <script type="text/javascript">
-    // $('#tags').chosen({width:'100%'});
+    $('.btn-file :file').on('fileselect', function (event, numFiles, label, fileSize) {
+        $('#demo-attach-file').html(
+            '<strong class="box-block text-capitalize"><i class="fa fa-paperclip fa-fw"></i> ' + label +
+            '</strong><small class="text-muted">' + fileSize + '</small>');
+    });
 </script>

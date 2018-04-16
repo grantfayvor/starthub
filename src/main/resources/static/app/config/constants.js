@@ -11,4 +11,10 @@ app.constant('tagUrl', '/api/tag')
         clientId: 'starthubclientidforextremeusers',
         clientSecret: 'XY7kmzoNzl100',
         grantType: 'password'
+    })
+    .constant('rankStat', {
+        deadWeight: 0,
+        exitedWeight: 5,
+        operatingWeight: 4,
+        noOfEvents: 3
     });

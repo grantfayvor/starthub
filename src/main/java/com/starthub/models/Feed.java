@@ -29,9 +29,9 @@ public class Feed extends Auditable<String> {
     @JsonIgnore
     @Null
     private List<User> viewers;
-    @Column
-    @ColumnDefault("0")
-    private double rank;
+    @JoinColumn
+    @OneToOne
+    private Rank rank;
     @Column
     @ColumnDefault("0")
     private int upVote;
@@ -78,11 +78,11 @@ public class Feed extends Auditable<String> {
         this.viewers = viewers;
     }
 
-    public double getRank() {
+    public Rank getRank() {
         return rank;
     }
 
-    public void setRank(double rank) {
+    public void setRank(Rank rank) {
         this.rank = rank;
     }
 

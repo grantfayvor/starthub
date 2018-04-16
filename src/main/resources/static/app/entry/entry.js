@@ -1,4 +1,4 @@
-var app = angular.module('starthub', ['ui.router', 'ngCookies', 'summernote']);
+var app = angular.module('starthub', ['ngSanitize', 'ui.router', 'ngCookies', 'ngFileUpload', 'summernote']);
 
 app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', /* 'socketProvider', */
 function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider, $urlRouterProvider/*, socketProvider*/) {

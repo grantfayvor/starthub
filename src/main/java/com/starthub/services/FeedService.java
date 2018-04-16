@@ -2,7 +2,9 @@ package com.starthub.services;
 
 import com.starthub.messages.FeedMessage;
 import com.starthub.models.Feed;
+import com.starthub.models.Rank;
 import com.starthub.repositories.FeedRepository;
+import com.starthub.repositories.RankRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,6 +18,8 @@ import org.springframework.stereotype.Service;
 public class FeedService extends AbstractService<Feed, Long> {
 
     private FeedRepository repository;
+    @Autowired
+    private RankRepository rankRepository;
 
     public FeedService(@Autowired FeedRepository repository) {
         super(repository);
@@ -38,5 +42,9 @@ public class FeedService extends AbstractService<Feed, Long> {
 
     private int downVote(long feedId) {
         return this.repository.downVote(feedId);
+    }
+
+    public Rank saveRank(Rank rank) {
+        return this.rankRepository.save(rank);
     }
 }

@@ -1,6 +1,7 @@
 package com.starthub.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
 import java.util.List;
@@ -11,13 +12,17 @@ import java.util.List;
 
 @Entity
 @Table(name = "ideas")
-public class Idea extends Auditable<String>{
+public class Idea{
 
     @Id
     @GeneratedValue
     private long id;
     @Column(columnDefinition = "longtext not null")
     private String body;
+    @Transient
+    private MultipartFile document;
+    @Column
+    private String documentLocation;
     @Column(insertable = false, updatable = false)
     @ManyToMany(fetch = FetchType.EAGER)
     private List<Tag> tags;
@@ -36,6 +41,22 @@ public class Idea extends Auditable<String>{
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public MultipartFile getDocument() {
+        return document;
+    }
+
+    public void setDocument(MultipartFile document) {
+        this.document = document;
+    }
+
+    public String getDocumentLocation() {
+        return documentLocation;
+    }
+
+    public void setDocumentLocation(String documentLocation) {
+        this.documentLocation = documentLocation;
     }
 
     public List<Tag> getTags() {

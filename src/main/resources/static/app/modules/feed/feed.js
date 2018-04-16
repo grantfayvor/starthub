@@ -2,22 +2,24 @@
  * Created by Harrison on 03/03/2018.
  */
 
-app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 'FeedService',
-    function ($rootScope, $scope, $state, $timeout, FeedService) {
+app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 'FeedService', 'RankService', 'AlertService',
+    function ($rootScope, $scope, $state, $timeout, FeedService, RankService, AlertService) {
 
         $scope.feeds = [];
-        var SUBSCRIBER_ID = 'feed-subscriber-007';
-        
-        $timeout(function() {
-            $(".note-editable").attr("contenteditable","false");
-        }, 10);
+        var SUBSCRIBER_ID = 'feed-subscriber-' + Math.floor(Math.random() * Math.floor(10));
 
-        FeedService.subscribeToService('/exchange/feed', {id: SUBSCRIBER_ID}, function (feed) {
+        // $timeout(function () {
+        //     $(".note-editable").attr("contenteditable", "false");
+        // }, 100);
+
+        FeedService.subscribeToService('/exchange/feed', {
+            id: SUBSCRIBER_ID
+        }, function (feed) {
             $scope.feed = JSON.parse(feed.body);
             $scope.feeds.content = $scope.feeds.content.map(function (feed) {
                 return feed.id == $scope.feed.id ? $scope.feed : feed;
             });
-            $timeout(function() {
+            $timeout(function () {
                 $scope.$apply();
             });
         });
@@ -38,11 +40,22 @@ app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 
             });
         };
 
-        $scope.viewPost = function(post) {
-            $scope.post = post;
+        $scope.viewPost = function (feed) {
+            $scope.feed = feed;
+            $scope.feed.idea.createdAt = $scope.convertDate(feed.idea.createdAt);
+            $scope.noOfStars = RankService.calcRankMean($scope.feed.rank);
+            $scope.starArray = [];
+            for(var i =0; i < 5; i++) {
+                $scope.starArray.push(i);
+            }
+            $('#feed-modal').modal('show');
+        };
+        
+        $scope.convertDate = function (date) {
+            return new Date(parseInt(date)).toUTCString();
         };
 
-        $scope.$on('$destroy', function() {
+        $scope.$on('$destroy', function () {
             FeedService.unsubscribeFromService(SUBSCRIBER_ID, {});
             FeedService.disconnectSocket();
         });
@@ -66,11 +79,11 @@ app.service('FeedService', ['APIService', 'feedUrl', 'socketProvider', function 
         socketProvider.subscribe(subscriber, options, onMessageReceived);
     };
 
-    this.unsubscribeFromService = function(id, options) {
+    this.unsubscribeFromService = function (id, options) {
         socketProvider.unsubscribe(id, options);
     };
 
-    this.disconnectSocket = function() {
+    this.disconnectSocket = function () {
         socketProvider.disconnectSocket();
     };
 
@@ -78,7 +91,7 @@ app.service('FeedService', ['APIService', 'feedUrl', 'socketProvider', function 
         socketProvider.getStompClient().subscriptions[id] = callback;
     };
 
-    this.getStompClient = function() {
+    this.getStompClient = function () {
         return socketProvider.getStompClient();
     };
 

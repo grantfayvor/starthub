@@ -4,7 +4,7 @@
     <!-- <h1 class="page-header text-overflow">Ideas Feed</h1> -->
 
     <!--Searchbox-->
-    <div class="searchbox">
+    <div class="searchbox col-sm-5 col-xs-5 pull-right">
         <div class="input-group custom-search-form">
             <input type="text" class="form-control" placeholder="Search..">
             <span class="input-group-btn">
@@ -36,11 +36,11 @@
 
     <div class="fixed-fluid">
 
-        <div class="fluid">
+        <div class="fluid col-sm-9 col-xs-9" style="margin:auto;margin-right:10%;margin-left:10%;" data-ng-repeat="feed in feeds.content">
 
             <!--Summernote-->
 
-            <div class="panel col-sm-5 col-xs-5" data-ng-repeat="feed in feeds.content">
+            <div class="panel">
                 <div class="panel-body">
                     <div class="media-block">
                         <a class="media-left" href="#">
@@ -49,7 +49,7 @@
                         <div class="media-body">
                             <div class="pad-btm">
                                 <a href="#" class="btn-link text-semibold media-heading box-inline">
-                                    <span data-ng-bind="feed.idea.createdBy">
+                                    <span data-ng-bind="feed.createdBy"></span>
                                 </a>
                                 added a new idea
                                 <!-- <span class="text-semibold">General photos</span> -->
@@ -58,7 +58,11 @@
                                     <i class="demo-pli-smartphone-3 icon-lg"></i> - From Mobile - 11 min ago</p>
 
                             </div>
-                            <summernote height="100" airmode editable="false" data-ng-click="viewPost(feed)" data-ng-model="feed.idea.body"></summernote>
+                            <div class="pad-btm" data-ng-bind-html="feed.idea.body"></div>
+                            <!-- <summernote height="100" airmode editable="false" data-ng-click="viewPost(feed)" data-ng-model="feed.idea.body"></summernote> -->
+                            <a href="javascript:;" data-ng-click="viewPost(feed)" class="pull-right">
+                                <span>more...</span>
+                            </a>
                         </div>
                         <div class="media">
                             <div class="media-right">
@@ -118,3 +122,181 @@
 <!-- </div> -->
 <!--===================================================-->
 <!--END CONTENT CONTAINER-->
+
+<!--Default Bootstrap Modal-->
+<!--===================================================-->
+<div class="modal fade" id="feed-modal" role="dialog" tabindex="-1" aria-labelledby="demo-default-modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!--Modal header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <i class="pci-cross pci-circle"></i>
+                </button>
+                <!-- <h4 class="modal-title">Modal Heading</h4> -->
+            </div>
+
+            <!--Modal body-->
+            <div class="modal-body">
+                <div class="fluid">
+
+                    <!-- VIEW MESSAGE -->
+                    <!--===================================================-->
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="mar-btm pad-btm bord-btm">
+                                <h3 class="page-header text-overflow">
+                                    <span class="label label-normal label-info" data-ng-repeat="tag in feed.idea.tags" data-ng-bind="tag.name"></span>
+                                    <div class="pull-right">
+                                        <ul class="list-inline">
+                                            <li data-ng-repeat="star in starArray" data-ng-class="{'mail-starred': $index <= noOfStars}">
+                                                <div class="mail-star">
+                                                    <a href="#">
+                                                        <i class="demo-psi-star"></i>
+                                                    </a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </h3>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-7">
+
+                                    <!--Sender Information-->
+                                    <div class="media">
+                                        <span class="media-left">
+                                            <img src="img/profile-photos/8.png" class="img-circle img-sm" alt="Profile Picture">
+                                        </span>
+                                        <div class="media-body">
+                                            <div class="text-bold">
+                                                <span data-ng-bind="feed.createdBy"></span>
+                                            </div>
+                                            <!-- <small class="text-muted">lisa.aqua@themeon.net</small> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="hr-sm visible-xs">
+                                <div class="col-sm-5 clearfix">
+
+                                    <!--Details Information-->
+                                    <div class="pull-right text-right">
+                                        <p class="mar-no">
+                                            <small class="text-muted">
+                                                <span data-ng-bind="convertDate(feed.createdAt)"></span>
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pad-ver">
+                                <div class="col-xs-7">
+
+                                    <!--Mail toolbar-->
+                                    <button class="btn btn-sm btn-default">
+                                        <i class="demo-pli-printer"></i>
+                                    </button>
+                                    <!-- <div class="btn-group btn-group">
+                                        <button class="btn btn-sm btn-default">
+                                            <i class="demo-pli-information"></i>
+                                        </button>
+                                        <button class="btn btn-sm btn-default">
+                                            <i class="demo-pli-recycling"></i> Remove</button>
+                                    </div> -->
+                                </div>
+                                <div class="col-xs-5 clearfix">
+                                    <div class="pull-right">
+
+                                        <!--Reply & forward buttons-->
+                                        <div class="btn-group btn-group">
+                                            <a class="btn btn-sm btn-default" href="#">
+                                                <i class="demo-psi-left-4"></i>
+                                            </a>
+                                            <a class="btn btn-sm btn-default" href="#">
+                                                <i class="demo-psi-right-4"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Message-->
+                            <!--===================================================-->
+                            <div class="pad-ver bord-ver">
+                                <div class="pad-btm" data-ng-bind-html="feed.idea.body"></div>
+                                <!-- <summernote height="400" airmode editable="false" data-ng-model="feed.idea.body"></summernote> -->
+                            </div>
+                            <!--===================================================-->
+                            <!--End Message-->
+
+                            <!-- Attach Files-->
+                            <!--===================================================-->
+                            <!-- <div class="pad-ver mar-ver bord-btm">
+                                <p class="text-main text-bold box-inline">
+                                    <i class="demo-psi-paperclip icon-fw"></i> Attachments
+                                    <span>(2) - </span>
+                                </p>
+                                <a href="#" class="btn-link">Download all</a> |
+                                <a href="#" class="btn-link">View all images</a>
+
+                                <ul class="mail-attach-list list-ov">
+                                    <li>
+                                        <a href="#" class="thumbnail">
+                                            <div class="mail-file-img">
+                                                <img class="image-responsive" src="img/bg-img/bg-img-4.jpg" alt="image">
+                                            </div>
+                                            <div class="caption">
+                                                <p class="text-primary mar-no">Nature.jpg</p>
+                                                <small class="text-muted">Added: May 01, 2016</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="thumbnail">
+                                            <div class="mail-file-img">
+                                                <img class="image-responsive" src="img/bg-img/bg-img-3.jpg" alt="image">
+                                            </div>
+                                            <div class="caption">
+                                                <p class="text-primary mar-no">Forest.png</p>
+                                                <small class="text-muted">Added: May 07, 2016</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div> -->
+                            <!--===================================================-->
+                            <!-- End Attach Files-->
+
+
+                            <!--Quick reply : Summernote Placeholder -->
+                            <!-- <div id="demo-mail-textarea" class="mail-message-reply bg-gray-light">
+                                <strong>Reply</strong> or
+                                <strong>Forward</strong> this message...
+                            </div> -->
+
+                            <!--Send button-->
+                            <!-- <div class="pad-ver">
+                                <button id="demo-mail-send-btn" type="button" class="btn btn-primary hide">
+                                    <span class="demo-psi-mail-send icon-lg icon-fw"></span>
+                                    Send Message
+                                </button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!--===================================================-->
+                    <!-- END VIEW MESSAGE -->
+
+                </div>
+            </div>
+
+            <!--Modal footer-->
+            <div class="modal-footer">
+                <button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--===================================================-->
+<!--End Default Bootstrap Modal-->
