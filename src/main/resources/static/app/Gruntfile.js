@@ -17,6 +17,7 @@ module.exports = function (grunt) {
                     'angular/angular-ui-router.js',
                     'angular/ng-file-upload.js',
                     'angular/angular-summernote.js',
+                    'angular/ng-infinite-scroll.js',
                     'entry/*.js',
                     'config/*.js',
                     'service/*.js',

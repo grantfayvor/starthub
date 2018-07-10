@@ -47806,11 +47806,80 @@ angular.module('summernote', [])
       }
     };
   }]);
-;var app = angular.module('starthub', ['ngSanitize', 'ui.router', 'ngCookies', 'ngFileUpload', 'summernote']);
+;/* ng-infinite-scroll - v1.0.0 - 2013-02-23 */
+var mod;
 
-app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', /* 'socketProvider', */
-function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider, $urlRouterProvider/*, socketProvider*/) {
+mod = angular.module('infinite-scroll', []);
 
+mod.directive('infiniteScroll', [
+    '$rootScope', '$window', '$timeout',
+    function ($rootScope, $window, $timeout) {
+        return {
+            link: function (scope, elem, attrs) {
+                var checkWhenEnabled, handler, scrollDistance, scrollEnabled;
+                $window = angular.element($window);
+                scrollDistance = 0;
+                if (attrs.infiniteScrollDistance != null) {
+                    scope.$watch(attrs.infiniteScrollDistance, function (value) {
+                        return scrollDistance = parseInt(value, 10);
+                    });
+                }
+                scrollEnabled = true;
+                checkWhenEnabled = false;
+                if (attrs.infiniteScrollDisabled != null) {
+                    scope.$watch(attrs.infiniteScrollDisabled, function (value) {
+                        scrollEnabled = !value;
+                        if (scrollEnabled && checkWhenEnabled) {
+                            checkWhenEnabled = false;
+                            return handler();
+                        }
+                    });
+                }
+                var lastScrollTop = 0;
+                handler = function () {
+                    var scrollTop = $window.scrollTop();
+                    console.log("scrollTop : " + scrollTop + " lastScrollTop : " + lastScrollTop);
+                    if (scrollTop > lastScrollTop) {
+                        var elementBottom, remaining, shouldScroll, windowBottom;
+                        windowBottom = $window.height() + $window.scrollTop();
+                        elementBottom = elem.offset().top + elem.height();
+                        remaining = elementBottom - windowBottom;
+                        shouldScroll = remaining <= $window.height() * scrollDistance;
+                        if (shouldScroll && scrollEnabled) {
+                            if ($rootScope.$$phase) {
+                                return scope.$eval(attrs.infiniteScroll);
+                            } else {
+                                return scope.$apply(attrs.infiniteScroll);
+                            }
+                        } else if (shouldScroll) {
+                            return checkWhenEnabled = true;
+                        }
+                    }
+                    lastScrollTop = scrollTop;
+                };
+                $window.on('scroll', handler);
+                scope.$on('$destroy', function () {
+                    return $window.off('scroll', handler);
+                });
+                return $timeout((function () {
+                    if (attrs.infiniteScrollImmediateCheck) {
+                        if (scope.$eval(attrs.infiniteScrollImmediateCheck)) {
+                            return handler();
+                        }
+                    } else {
+                        return handler();
+                    }
+                }), 0);
+            }
+        };
+    }
+]);;var app = angular.module('starthub', ['ngSanitize', 'ui.router', 'ngCookies', 'ngFileUpload', 'summernote', 'infinite-scroll']);
+
+app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', '$logProvider',
+    function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider, $urlRouterProvider, $logProvider) {
+
+        $logProvider.debugEnabled(true);
+        
         $httpProvider.defaults.headers.common.Accept = "application/json";
         $httpProvider.defaults.headers.common['Content-Type'] = "application/json";
         // $httpProvider.defaults.useXDomain = true;
@@ -47830,7 +47899,7 @@ function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider
             .state('home.dashboard', {
                 url: 'dashboard',
                 templateUrl: '/app/dashboard.html',
-                controller: 'MainController'
+                controller: 'FeedController'
             })
             .state('home.new-idea', {
                 url: 'new-idea',
@@ -47870,8 +47939,7 @@ function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider
             });
 
     }
-]);
-;/**
+]);;/**
  * Created by Harrison on 3/17/2018.
  */
 
@@ -48157,12 +48225,10 @@ app.service('AuthService', ['$http', 'APIService', 'authInfo', 'baseUrl', 'userU
 app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 'FeedService', 'RankService', 'AlertService',
     function ($rootScope, $scope, $state, $timeout, FeedService, RankService, AlertService) {
 
-        $scope.feeds = [];
-        var SUBSCRIBER_ID = 'feed-subscriber-' + Math.floor(Math.random() * Math.floor(10));
-
-        // $timeout(function () {
-        //     $(".note-editable").attr("contenteditable", "false");
-        // }, 100);
+        $scope.feeds = {
+            content: []
+        };
+        var SUBSCRIBER_ID = 'feed-subscriber-' + Math.floor(Math.random() * Math.floor(999));
 
         FeedService.subscribeToService('/exchange/feed', {
             id: SUBSCRIBER_ID
@@ -48178,7 +48244,23 @@ app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 
 
         $scope.getIdeasFeed = function (pageNumber, pageSize) {
             FeedService.getIdeasFeed(pageNumber, pageSize, function (response) {
-                $scope.feeds = response.data;
+                if (response && response.data && response.data.content.length > 0) {
+                    var previousContents = $scope.feeds.content;
+                    $scope.feeds = response.data;
+                    if (previousContents.length > 0) {
+                        if (previousContents.length >= 30) {
+                            $scope.feeds.content.splice(0, 10);
+                        }
+                        $scope.feeds.content.unshift(previousContents);
+                    }
+                } else {
+                    if (document.getElementsByClassName('alert-primary')) {
+                        $('.alert-primary').remove();
+                    }
+                    $timeout(function () {
+                        AlertService.alertify("you've reached the end of the page", true);
+                    }, 10);
+                }
             }, function (response) {
                 console.log(response);
             });
@@ -48193,18 +48275,38 @@ app.controller('FeedController', ['$rootScope', '$scope', '$state', '$timeout', 
         };
 
         $scope.viewPost = function (feed) {
+            Pace.restart();
             $scope.feed = feed;
             $scope.feed.idea.createdAt = $scope.convertDate(feed.idea.createdAt);
             $scope.noOfStars = RankService.calcRankMean($scope.feed.rank);
             $scope.starArray = [];
-            for(var i =0; i < 5; i++) {
+            for (var i = 0; i < 5; i++) {
                 $scope.starArray.push(i);
             }
             $('#feed-modal').modal('show');
         };
-        
+
         $scope.convertDate = function (date) {
             return new Date(parseInt(date)).toUTCString();
+        };
+
+        $scope.getTimeSincePost = function (date) {
+            date = new Date(parseInt(date));
+            var today = new Date();
+            var millisecondsDifference = (today - date); // milliseconds between now & date
+            var secondsDifference = Math.round(millisecondsDifference / 1000); //seconds
+            var minutesDifference = Math.round(millisecondsDifference / 60000); // minutes
+            var hoursDifference = Math.floor(millisecondsDifference / 3600000); // hours
+            var daysDifference = Math.floor(millisecondsDifference / 86400000); // days
+            if (daysDifference >= 1) {
+                return Math.round(daysDifference) + " days";
+            } else if (hoursDifference >= 1) {
+                return Math.round(hoursDifference) + " hours";
+            } else if (minutesDifference >= 1) {
+                return Math.round(minutesDifference) + " minutes";
+            } else {
+                return Math.round(secondsDifference) + " seconds";
+            }
         };
 
         $scope.$on('$destroy', function () {
@@ -48272,18 +48374,14 @@ app.controller('IdeaController', ['$rootScope', '$scope', '$state', '$timeout', 
                 $scope.idea['tags[' + i + '].id'] = data[0];
                 $scope.idea['tags[' + i + '].name'] = data[1];
             }
-            // $('#tags').val().forEach(function (tag) {
-            //     var data = tag.split(",");
-            //     $scope.idea.tags.push({
-            //         id: data[0],
-            //         name: data[1]
-            //     });
-            // });
             Pace.restart();
             IdeaService.addIdea($scope.idea, function (response) {
                 if (Boolean(response.data) === true || response.data === true) {
                     $scope.idea = {};
-                    $('.chosen-choices').html('<li class="search-field"><input type="text" value="Choose related tags..." class="default" autocomplete="off" style="width: 152.203px;" tabindex="4"></li>');
+                    document.getElementById('tags').getElementsByTagName('option').forEach(function(option) {
+                        option.removeAttribute('selected');
+                    });
+                    // $('.chosen-choices').html('<li class="search-field"><input type="text" value="Choose related tags..." class="default" autocomplete="off" style="width: 152.203px;" tabindex="4"></li>');
                     AlertService.alertify("The Idea was successfully posted", false);
                 } else {
                     AlertService.alertify("An error occurred while trying to post the idea. Please try again", false);
@@ -48300,6 +48398,15 @@ app.controller('IdeaController', ['$rootScope', '$scope', '$state', '$timeout', 
                 $scope.ideas = response.data;
             }, function (response) {
                 console.error(response);
+            });
+        };
+
+        $scope.getMyIdeas = function () {
+            IdeaService.getMyIdeas(function(response) {
+                $scope.ideas = response.data;
+            }, function (response) {
+                console.error(response);
+                AlertService.alertify("an error occurred while trying to fetch your ideas");
             });
         };
 
@@ -48320,10 +48427,6 @@ app.controller('IdeaController', ['$rootScope', '$scope', '$state', '$timeout', 
 
 app.service('IdeaService', ['Upload', 'APIService', 'ideaUrl', function (Upload, APIService, ideaUrl) {
 
-    // this.addIdea = function (idea, successHandler, errorHandler) {
-    //     APIService.post(ideaUrl, idea, successHandler, errorHandler);
-    // };
-
     this.addIdea = function (idea, successHandler, errorHandler) {
         Upload.upload({
             url: ideaUrl,
@@ -48331,12 +48434,16 @@ app.service('IdeaService', ['Upload', 'APIService', 'ideaUrl', function (Upload,
             method: 'POST'
         }).then(successHandler, errorHandler, function (evt) {
             var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-            console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
+            console.log('progress: ' + progressPercentage + '% ');
         });
     };
 
     this.getRecentIdeas = function (successHandler, errorHandler) {
         APIService.get(ideaUrl, successHandler, errorHandler);
+    };
+
+    this.getMyIdeas = function (successHandler, errorHandler) {
+        APIService.get(ideaUrl +'/user', successHandler, errorHandler);
     };
 }]);;app.factory('TagService', ['APIService', 'tagUrl', function (APIService, tagUrl) {
 

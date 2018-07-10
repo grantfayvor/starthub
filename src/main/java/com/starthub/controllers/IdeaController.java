@@ -3,8 +3,11 @@ package com.starthub.controllers;
 import com.starthub.models.Idea;
 import com.starthub.services.IdeaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
 
 /**
  * Created by Harrison on 03/03/2018.
@@ -25,6 +28,12 @@ public class IdeaController extends CRUDController<Idea, Long> {
     @Override
     public boolean save(@ModelAttribute Idea idea) {
         return service.save(idea) != null;
+    }
+
+    @RequestMapping("/user")
+    public Page<Idea> findUserIdeas(Principal principal, @RequestParam("pageNumber") int pageNumber,
+                                    @RequestParam("pageSize") int pageSize) {
+        return service.findUserIdeas(principal.getName(), pageNumber, pageSize);
     }
 
 }

@@ -37,17 +37,17 @@ public class UtilController {
         else trainer.trainClassifier(path);
     }
 
-    @RequestMapping("/testClassifier")
-    @ResponseBody
-    public String testClassifier(@RequestParam("text") String text) throws Exception {
-        return new ClassifierUtil().classify(text);
-    }
-
-    @RequestMapping("/testDecisionMaking")
-    @ResponseBody
-    public Map<String, Double> testDecisionMaking(@RequestParam("text") String text) throws Exception {
-        return new DecisionTreeUtil().makeDecision(text);
-    }
+//    @RequestMapping("/testClassifier")
+//    @ResponseBody
+//    public String testClassifier(@RequestParam("text") String text) throws Exception {
+//        return new ClassifierUtil().classify(text);
+//    }
+//
+//    @RequestMapping("/testDecisionMaking")
+//    @ResponseBody
+//    public Map<String, Double> testDecisionMaking(@RequestParam("text") String text) throws Exception {
+//        return new DecisionTreeUtil().makeDecision(text);
+//    }
 
     @RequestMapping("/sgm2arff")
     @ResponseBody

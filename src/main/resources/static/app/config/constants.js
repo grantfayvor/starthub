@@ -6,6 +6,7 @@ app.constant('tagUrl', '/api/tag')
     .constant('ideaUrl', '/api/idea')
     .constant('feedUrl', '/api/feed')
     .constant('userUrl', '/api/user')
+    .constant('walletUrl', '/api/wallet')
     .constant('baseUrl', 'localhost:9000')
     .constant('authInfo', {
         clientId: 'starthubclientidforextremeusers',
