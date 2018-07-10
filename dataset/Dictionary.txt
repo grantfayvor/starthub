@@ -516,7 +516,7 @@ foc,4
 focus,3
 follow,2
 foodor,1
-for,89
+for,88
 form,1
 former,3
 foxpas,1
@@ -655,7 +655,7 @@ io,44
 io/,24
 ipad,2
 iphon,6
-is,107
+is,106
 issu,2
 it,10
 itun,3
@@ -691,7 +691,7 @@ jun-14,86
 jun-15,107
 jun-16,96
 jun-17,124
-just,5
+just,6
 justspot,1
 kaleidoscop,1
 kalibr,1
@@ -1009,7 +1009,7 @@ review,4
 revl,2
 ridecel,1
 riges,1
-right,2
+right,3
 rigplen,1
 rippl,1
 robot,3
@@ -1163,7 +1163,7 @@ test,2
 tetrasci,1
 text,4
 textpaym,1
-th,83
+th,82
 that,60
 the,6
 their,22

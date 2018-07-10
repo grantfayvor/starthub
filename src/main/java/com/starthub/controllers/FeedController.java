@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.security.Principal;
+
 
 /**
  * Created by Harrison on 3/24/2018.
@@ -41,9 +43,22 @@ public class FeedController {
         return feedService.findOne(id);
     }
 
+    @RequestMapping("/user")
+    @ResponseBody
+    public Page<Feed> findUserFeed(Principal principal, @RequestParam("pageNumber") int pageNumber,
+                                   @RequestParam("pageSize") int pageSize) {
+        return feedService.findByCreatedBy(principal.getName(), pageNumber, pageSize);
+    }
+
+    @RequestMapping("/rank")
+    @ResponseBody
+    public Page<Feed> findFeedOrderByRank(@RequestParam("pageNumber") int pageNumber, @RequestParam("pageSize") int pageSize) {
+        return feedService.findFeedOrderByRank(pageNumber, pageSize);
+    }
+
     @MessageMapping("/vote")
     @SendTo("/exchange/feed")
-    public Feed vote(@Payload FeedMessage feedMessage) throws Exception{
+    public Feed vote(@Payload FeedMessage feedMessage) throws Exception {
         return feedService.vote(feedMessage);
     }
 }

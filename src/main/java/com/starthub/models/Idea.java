@@ -12,7 +12,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "ideas")
-public class Idea{
+public class Idea extends Auditable<String> {
 
     @Id
     @GeneratedValue
@@ -61,6 +61,10 @@ public class Idea{
 
     public List<Tag> getTags() {
         return tags;
+    }
+
+    public void addTag(Tag tag) {
+        this.tags.add(tag);
     }
 
     public void setTags(List<Tag> tags) {

@@ -1,7 +1,7 @@
 <!--Page Title-->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<div id="page-title" data-ng-init="getRecentIdeas()">
-    <h1 class="page-header text-overflow">View Recent Ideas</h1>
+<div id="page-title" data-ng-init="getMyIdeas()">
+    <h1 class="page-header text-overflow">My Ideas</h1>
 
     <!--Searchbox-->
     <div class="searchbox">
@@ -40,27 +40,32 @@
         </div>
         <div class="panel-body">
 
-            <summernote data-ng-repeat="idea in ideas" data-ng-bind="idea.body" height="100px" airMode></summernote>
+            <div class="fixed-fluid">
 
-            <!--Summernote-->
-            <!--===================================================-->
-            <div id="demo-summernote-airmode" data-ng-repeat="idea in ideas" data-ng-init="initializeSummernote($index)">
-                <h4>Select a text to reveal the toolbar.</h4>
-                <p>Air-mode gives clearer interface with hidden toolbar.
-                    <br> To reveal toolbar, select a text where you want to shape up. Simply turn on
-                    <code>airMode</code> and just focus on text.</p>
-                <br>
-                <p>This is an Air-mode editable area.</p>
-                <ul>
-                    <li>Select a text to reveal the toolbar.</li>
-                    <li>Edit
-                        <b>rich document on-the-fly, so elastic!</b>
-                    </li>
-                </ul>
-                <p>End of air-mode area</p>
+                <div class="fluid col-sm-9 col-xs-9" style="margin:auto;margin-right:10%;margin-left:10%;" data-ng-repeat="idea in ideas.content">
+        
+                    <!--Summernote-->
+        
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="media-block">
+                                <a class="media-left" href="#">
+                                    <img class="img-circle img-sm" alt="Profile Picture" src="img/profile-photos/10.png">
+                                </a>
+                                <div class="media-body">
+                                    
+                                    <div class="pad-btm" data-ng-bind-html="idea.body"></div>
+                                    <!-- <summernote height="100" airmode editable="false" data-ng-click="viewPost(feed)" data-ng-model="feed.idea.body"></summernote> -->
+                                    <a href="javascript:;" data-ng-click="viewPost(idea)" class="pull-right">
+                                        <span>more...</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
             </div>
-            <!--===================================================-->
-            <!-- End Summernote -->
 
         </div>
     </div>
