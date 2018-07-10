@@ -30,10 +30,6 @@ public class FeedService extends AbstractService<Feed, Long> {
         return repository.findAllByOrderByUpdatedAtDesc(new PageRequest(pageNumber, pageSize));
     }
 
-    public Page<Feed> findByCreatedBy(String username, int pageNumber, int pageSize) {
-        return repository.findAllByCreatedBy(username, new PageRequest(pageNumber, pageSize));
-    }
-
     public Feed vote(FeedMessage message) throws Exception {
         if (message.isUpVote()) upVote(message.getFeedId());
         else downVote(message.getFeedId());
@@ -50,9 +46,5 @@ public class FeedService extends AbstractService<Feed, Long> {
 
     public Rank saveRank(Rank rank) {
         return this.rankRepository.save(rank);
-    }
-
-    public Page<Feed> findFeedOrderByRank(int pageNumber, int pageSize) {
-        return repository.findAllOrderByRank(new PageRequest(pageNumber, pageSize));
     }
 }

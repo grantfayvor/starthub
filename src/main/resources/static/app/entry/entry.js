@@ -1,10 +1,8 @@
-var app = angular.module('starthub', ['ngSanitize', 'ui.router', 'ngCookies', 'ngFileUpload', 'summernote', 'infinite-scroll']);
+var app = angular.module('starthub', ['ngSanitize', 'ui.router', 'ngCookies', 'ngFileUpload', 'summernote']);
 
-app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', '$logProvider',
-    function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider, $urlRouterProvider, $logProvider) {
+app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stateProvider', '$urlRouterProvider', /* 'socketProvider', */
+function ($httpProvider, $interpolateProvider, $locationProvider, $stateProvider, $urlRouterProvider/*, socketProvider*/) {
 
-        $logProvider.debugEnabled(true);
-        
         $httpProvider.defaults.headers.common.Accept = "application/json";
         $httpProvider.defaults.headers.common['Content-Type'] = "application/json";
         // $httpProvider.defaults.useXDomain = true;
@@ -24,7 +22,7 @@ app.config(['$httpProvider', '$interpolateProvider', '$locationProvider', '$stat
             .state('home.dashboard', {
                 url: 'dashboard',
                 templateUrl: '/app/dashboard.html',
-                controller: 'FeedController'
+                controller: 'MainController'
             })
             .state('home.new-idea', {
                 url: 'new-idea',

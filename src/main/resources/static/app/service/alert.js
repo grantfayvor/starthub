@@ -4,7 +4,7 @@ app.factory('AlertService', function () {
         $.niftyNoty({
             type: 'primary', //primary
             container: 'floating', //floating
-            html: '<strong>' + message + '</strong>',
+            html: '<strong>' + message + '</strong>', //'<strong>Well done!</strong> You successfully read this important alert message.'
             closeBtn: 'true', //true
             floating: {
                 position: "top-right",

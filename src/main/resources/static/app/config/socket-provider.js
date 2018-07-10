@@ -46,7 +46,6 @@ app.factory('socketProvider', function () {
         },
         disconnectSocket: function () {
             this.getStompClient().disconnect();
-            socket = new SockJS('/starthub-ws');
         }
     };
     return provider;

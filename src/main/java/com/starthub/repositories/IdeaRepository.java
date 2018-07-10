@@ -1,8 +1,6 @@
 package com.starthub.repositories;
 
 import com.starthub.models.Idea;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,5 +11,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IdeaRepository extends JpaRepository<Idea, Long> {
 
-    Page<Idea> findAllByCreatedByOrderByUpdatedAtDesc(String username, Pageable pageable);
 }

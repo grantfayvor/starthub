@@ -18,8 +18,6 @@ public interface FeedRepository extends JpaRepository<Feed, Long> {
 
     Page<Feed> findAllByOrderByUpdatedAtDesc(Pageable pageable);
 
-    Page<Feed> findAllByCreatedBy(String username, Pageable pageable);
-
     @Query("UPDATE Feed f SET f.upVote = f.upVote + 1 WHERE f.id=?1")
     @Transactional
     @Modifying
@@ -29,7 +27,4 @@ public interface FeedRepository extends JpaRepository<Feed, Long> {
     @Transactional
     @Modifying
     int downVote(long feedId);
-
-    @Query("SELECT f FROM Feed f ORDER BY f.rank.exitedProb DESC, f.rank.operatingProb DESC")
-    Page<Feed> findAllOrderByRank(Pageable pageable);
 }

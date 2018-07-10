@@ -27,5 +27,3 @@ nbdist/
 src/main/resources/static/app/node_modules
 
 src/main/resources/templates/templateFiles
-
-src/main/resources/static/documents
